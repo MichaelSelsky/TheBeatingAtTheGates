@@ -11,6 +11,8 @@ import SpriteKit
 import BeatingGatesCommon
 
 class ViewController: UIViewController {
+    
+    let controllerInput = ControllerInput()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -26,6 +28,8 @@ class ViewController: UIViewController {
             
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .AspectFill
+            
+            controllerInput.start()
             
             skView.presentScene(scene)
         }
