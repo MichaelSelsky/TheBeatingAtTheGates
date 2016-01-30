@@ -11,8 +11,19 @@ import VirtualGameController
 
 let VgcAppIdentifier: String = "BeatingAtTheGates"
 
+typealias Peripheral = VirtualGameController.Peripheral
+typealias PeripheralConnectionHandler = (Peripheral) -> Void
+
 class GameController {
-    init() {
+    
+    let peripheralConnectionHandler: PeripheralConnectionHandler
+    let peripheralDisconnectionHandler: PeripheralConnectionHandler
+    
+    init(connectionHandler: PeripheralConnectionHandler, disconnectionHandler: PeripheralConnectionHandler) {
+        
+        peripheralConnectionHandler = connectionHandler
+        peripheralDisconnectionHandler = disconnectionHandler
+        
         VgcManager.startAs(.Peripheral, appIdentifier: VgcAppIdentifier, includesPeerToPeer: true)
         
         VgcManager.peripheral.deviceInfo = DeviceInfo(deviceUID: "", vendorName: "", attachedToDevice: false, profileType: .Gamepad, controllerType: .Software, supportsMotion: false)
@@ -44,6 +55,9 @@ class GameController {
             return
         }
         
+        let peripheral = VgcManager.peripheral
+        peripheralConnectionHandler(peripheral)
+        
         VgcManager.peripheral.connectToService(service)
         VgcManager.peripheral.stopBrowsingForServices()
     }
@@ -53,11 +67,13 @@ class GameController {
     }
     
     @objc func peripheralDidConnect(note: NSNotification) {
-        
+        let peripheral = VgcManager.peripheral
+        peripheralConnectionHandler(peripheral)
     }
     
     @objc func peripheralDidDisconnect(note: NSNotification) {
-        
+        let peripheral = VgcManager.peripheral
+        peripheralDisconnectionHandler(peripheral)
     }
     
     deinit {
