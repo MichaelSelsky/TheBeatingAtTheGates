@@ -11,6 +11,14 @@
 		4C7562C31C5C859400B1FC01 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562C21C5C859300B1FC01 /* GameController.framework */; };
 		4C7562C41C5CFE7700B1FC01 /* ControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7562C01C5C856B00B1FC01 /* ControllerInput.swift */; };
 		4C7562C51C5CFED400B1FC01 /* VirtualGameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C362A1AE1C5C73D4004667EF /* VirtualGameController.framework */; };
+		4C7562F21C5D268500B1FC01 /* BeatingGatesCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C7562F11C5D268500B1FC01 /* BeatingGatesCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C7562F91C5D268500B1FC01 /* BeatingGatesCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */; };
+		4C7563001C5D268500B1FC01 /* BeatingGatesCommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7562FF1C5D268500B1FC01 /* BeatingGatesCommonTests.swift */; };
+		4C7563041C5D268500B1FC01 /* BeatingGatesCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */; };
+		4C7563051C5D268500B1FC01 /* BeatingGatesCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4C75630D1C5D2B0500B1FC01 /* BeatingGatesCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */; };
+		4C7563101C5D2B5A00B1FC01 /* BeatingGatesCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */; };
+		4C7563111C5D2B5A00B1FC01 /* BeatingGatesCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C362A1771C5C6AF9004667EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1761C5C6AF9004667EF /* AppDelegate.swift */; };
 		C362A1791C5C6AF9004667EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1781C5C6AF9004667EF /* ViewController.swift */; };
 		C362A17C1C5C6AF9004667EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C362A17A1C5C6AF9004667EF /* Main.storyboard */; };
@@ -47,6 +55,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4C7562FA1C5D268500B1FC01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3F473D31C5C5FD300B70519 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C7562EE1C5D268500B1FC01;
+			remoteInfo = BeatingGatesCommon;
+		};
+		4C7562FC1C5D268500B1FC01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3F473D31C5C5FD300B70519 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3F473DA1C5C5FD300B70519;
+			remoteInfo = "The Beating at the Gates-iOS";
+		};
+		4C7563021C5D268500B1FC01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3F473D31C5C5FD300B70519 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C7562EE1C5D268500B1FC01;
+			remoteInfo = BeatingGatesCommon;
+		};
+		4C75630E1C5D2B1D00B1FC01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3F473D31C5C5FD300B70519 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C7562EE1C5D268500B1FC01;
+			remoteInfo = BeatingGatesCommon;
+		};
 		C362A1851C5C6AFA004667EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C3F473D31C5C5FD300B70519 /* Project object */;
@@ -85,6 +121,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		4C7563121C5D2B5A00B1FC01 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4C7563111C5D2B5A00B1FC01 /* BeatingGatesCommon.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3FFF3CB1C5D06D1009961A5 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -92,6 +139,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C3FFF3CC1C5D06D1009961A5 /* CMUnistrokeGestureRecognizer.framework in Embed Frameworks */,
+				4C7563051C5D268500B1FC01 /* BeatingGatesCommon.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +150,12 @@
 		4C7562BC1C5C7EDE00B1FC01 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		4C7562C01C5C856B00B1FC01 /* ControllerInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerInput.swift; sourceTree = "<group>"; };
 		4C7562C21C5C859300B1FC01 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
+		4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BeatingGatesCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C7562F11C5D268500B1FC01 /* BeatingGatesCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeatingGatesCommon.h; sourceTree = "<group>"; };
+		4C7562F31C5D268500B1FC01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C7562F81C5D268500B1FC01 /* BeatingGatesCommonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeatingGatesCommonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C7562FF1C5D268500B1FC01 /* BeatingGatesCommonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatingGatesCommonTests.swift; sourceTree = "<group>"; };
+		4C7563011C5D268500B1FC01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C362A1741C5C6AF9004667EF /* The Beating of the Gates-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Beating of the Gates-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C362A1761C5C6AF9004667EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C362A1781C5C6AF9004667EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -151,11 +205,28 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4C7562EB1C5D268500B1FC01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C7562F51C5D268500B1FC01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C7562F91C5D268500B1FC01 /* BeatingGatesCommon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C362A1711C5C6AF9004667EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4C7562C51C5CFED400B1FC01 /* VirtualGameController.framework in Frameworks */,
+				4C75630D1C5D2B0500B1FC01 /* BeatingGatesCommon.framework in Frameworks */,
+				4C7563101C5D2B5A00B1FC01 /* BeatingGatesCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,9 +249,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C7562C31C5C859400B1FC01 /* GameController.framework in Frameworks */,
-				C362A1AF1C5C73D4004667EF /* VirtualGameController.framework in Frameworks */,
 				C3FFF3CA1C5D06D1009961A5 /* CMUnistrokeGestureRecognizer.framework in Frameworks */,
 				C362A1AD1C5C73CE004667EF /* VirtualGameController.framework in Frameworks */,
+				4C7563041C5D268500B1FC01 /* BeatingGatesCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +309,33 @@
 				C362A1921C5C6AFA004667EF /* The Beating of the GatesUITests */,
 			);
 			name = tvOS;
+			sourceTree = "<group>";
+		};
+		4C7562F01C5D268500B1FC01 /* BeatingGatesCommon */ = {
+			isa = PBXGroup;
+			children = (
+				4C7562F11C5D268500B1FC01 /* BeatingGatesCommon.h */,
+				4C7562F31C5D268500B1FC01 /* Info.plist */,
+			);
+			path = BeatingGatesCommon;
+			sourceTree = "<group>";
+		};
+		4C7562FE1C5D268500B1FC01 /* BeatingGatesCommonTests */ = {
+			isa = PBXGroup;
+			children = (
+				4C7562FF1C5D268500B1FC01 /* BeatingGatesCommonTests.swift */,
+				4C7563011C5D268500B1FC01 /* Info.plist */,
+			);
+			path = BeatingGatesCommonTests;
+			sourceTree = "<group>";
+		};
+		4C75630C1C5D268D00B1FC01 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4C7562F01C5D268500B1FC01 /* BeatingGatesCommon */,
+				4C7562FE1C5D268500B1FC01 /* BeatingGatesCommonTests */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 		C362A1751C5C6AF9004667EF /* The Beating of the Gates */ = {
@@ -298,6 +396,7 @@
 				4C7562BB1C5C6B9B00B1FC01 /* tvOS */,
 				4C7562BA1C5C6B7900B1FC01 /* iOS */,
 				C3FFF3C41C5D06D1009961A5 /* CMUnistrokeGestureRecognizer */,
+				4C75630C1C5D268D00B1FC01 /* Common */,
 				C3F473DC1C5C5FD300B70519 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -312,6 +411,8 @@
 				C362A1841C5C6AFA004667EF /* The Beating of the GatesTests-tvOS.xctest */,
 				C362A18F1C5C6AFA004667EF /* The Beating of the GatesUITests-tvOS.xctest */,
 				C3FFF3C31C5D06D1009961A5 /* CMUnistrokeGestureRecognizer.framework */,
+				4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */,
+				4C7562F81C5D268500B1FC01 /* BeatingGatesCommonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -383,6 +484,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		4C7562EC1C5D268500B1FC01 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C7562F21C5D268500B1FC01 /* BeatingGatesCommon.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3FFF3C01C5D06D1009961A5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -399,6 +508,43 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		4C7562EE1C5D268500B1FC01 /* BeatingGatesCommon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C75630A1C5D268500B1FC01 /* Build configuration list for PBXNativeTarget "BeatingGatesCommon" */;
+			buildPhases = (
+				4C7562EA1C5D268500B1FC01 /* Sources */,
+				4C7562EB1C5D268500B1FC01 /* Frameworks */,
+				4C7562EC1C5D268500B1FC01 /* Headers */,
+				4C7562ED1C5D268500B1FC01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BeatingGatesCommon;
+			productName = BeatingGatesCommon;
+			productReference = 4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4C7562F71C5D268500B1FC01 /* BeatingGatesCommonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C75630B1C5D268500B1FC01 /* Build configuration list for PBXNativeTarget "BeatingGatesCommonTests" */;
+			buildPhases = (
+				4C7562F41C5D268500B1FC01 /* Sources */,
+				4C7562F51C5D268500B1FC01 /* Frameworks */,
+				4C7562F61C5D268500B1FC01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C7562FB1C5D268500B1FC01 /* PBXTargetDependency */,
+				4C7562FD1C5D268500B1FC01 /* PBXTargetDependency */,
+			);
+			name = BeatingGatesCommonTests;
+			productName = BeatingGatesCommonTests;
+			productReference = 4C7562F81C5D268500B1FC01 /* BeatingGatesCommonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C362A1731C5C6AF9004667EF /* The Beating of the Gates-tvOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C362A19C1C5C6AFA004667EF /* Build configuration list for PBXNativeTarget "The Beating of the Gates-tvOS" */;
@@ -407,10 +553,12 @@
 				C362A1711C5C6AF9004667EF /* Frameworks */,
 				C362A1721C5C6AF9004667EF /* Resources */,
 				C3FFF3731C5C7445009961A5 /* Copy Frameworks */,
+				4C7563121C5D2B5A00B1FC01 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4C75630F1C5D2B1D00B1FC01 /* PBXTargetDependency */,
 			);
 			name = "The Beating of the Gates-tvOS";
 			productName = "The Beating of the Gates";
@@ -467,6 +615,7 @@
 			);
 			dependencies = (
 				C3FFF3C91C5D06D1009961A5 /* PBXTargetDependency */,
+				4C7563031C5D268500B1FC01 /* PBXTargetDependency */,
 			);
 			name = "The Beating at the Gates-iOS";
 			productName = "The Beating at the Gates";
@@ -537,6 +686,14 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Grant J. Butler";
 				TargetAttributes = {
+					4C7562EE1C5D268500B1FC01 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 9XLL7J2WX4;
+					};
+					4C7562F71C5D268500B1FC01 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = C3F473DA1C5C5FD300B70519;
+					};
 					C362A1731C5C6AF9004667EF = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 9XLL7J2WX4;
@@ -585,11 +742,27 @@
 				C362A1831C5C6AFA004667EF /* The Beating of the GatesTests-tvOS */,
 				C362A18E1C5C6AFA004667EF /* The Beating of the GatesUITests-tvOS */,
 				C3FFF3C21C5D06D1009961A5 /* CMUnistrokeGestureRecognizer */,
+				4C7562EE1C5D268500B1FC01 /* BeatingGatesCommon */,
+				4C7562F71C5D268500B1FC01 /* BeatingGatesCommonTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4C7562ED1C5D268500B1FC01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C7562F61C5D268500B1FC01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C362A1721C5C6AF9004667EF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -682,6 +855,21 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4C7562EA1C5D268500B1FC01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C7562F41C5D268500B1FC01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C7563001C5D268500B1FC01 /* BeatingGatesCommonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C362A1701C5C6AF9004667EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -749,6 +937,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4C7562FB1C5D268500B1FC01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C7562EE1C5D268500B1FC01 /* BeatingGatesCommon */;
+			targetProxy = 4C7562FA1C5D268500B1FC01 /* PBXContainerItemProxy */;
+		};
+		4C7562FD1C5D268500B1FC01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3F473DA1C5C5FD300B70519 /* The Beating at the Gates-iOS */;
+			targetProxy = 4C7562FC1C5D268500B1FC01 /* PBXContainerItemProxy */;
+		};
+		4C7563031C5D268500B1FC01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C7562EE1C5D268500B1FC01 /* BeatingGatesCommon */;
+			targetProxy = 4C7563021C5D268500B1FC01 /* PBXContainerItemProxy */;
+		};
+		4C75630F1C5D2B1D00B1FC01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C7562EE1C5D268500B1FC01 /* BeatingGatesCommon */;
+			targetProxy = 4C75630E1C5D2B1D00B1FC01 /* PBXContainerItemProxy */;
+		};
 		C362A1861C5C6AFA004667EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C362A1731C5C6AF9004667EF /* The Beating of the Gates-tvOS */;
@@ -804,6 +1012,72 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4C7563061C5D268500B1FC01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BeatingGatesCommon/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.selsky.BeatingGatesCommon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4C7563071C5D268500B1FC01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BeatingGatesCommon/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.selsky.BeatingGatesCommon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4C7563081C5D268500B1FC01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BeatingGatesCommonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.selsky.BeatingGatesCommonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The Beating at the Gates-iOS.app/The Beating at the Gates-iOS";
+			};
+			name = Debug;
+		};
+		4C7563091C5D268500B1FC01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BeatingGatesCommonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.selsky.BeatingGatesCommonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The Beating at the Gates-iOS.app/The Beating at the Gates-iOS";
+			};
+			name = Release;
+		};
 		C362A1961C5C6AFA004667EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1114,6 +1388,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4C75630A1C5D268500B1FC01 /* Build configuration list for PBXNativeTarget "BeatingGatesCommon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C7563061C5D268500B1FC01 /* Debug */,
+				4C7563071C5D268500B1FC01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C75630B1C5D268500B1FC01 /* Build configuration list for PBXNativeTarget "BeatingGatesCommonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C7563081C5D268500B1FC01 /* Debug */,
+				4C7563091C5D268500B1FC01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C362A19C1C5C6AFA004667EF /* Build configuration list for PBXNativeTarget "The Beating of the Gates-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
