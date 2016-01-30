@@ -127,6 +127,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C7562B91C5C6B6800B1FC01 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			path = "../The Beating of the Gates";
+			sourceTree = "<group>";
+		};
+		4C7562BA1C5C6B7900B1FC01 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C3F473DD1C5C5FD300B70519 /* The Beating at the Gates */,
+				C3F473F21C5C5FD300B70519 /* The Beating at the GatesTests */,
+				C3F473FD1C5C5FD300B70519 /* The Beating at the GatesUITests */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4C7562BB1C5C6B9B00B1FC01 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				C362A1751C5C6AF9004667EF /* The Beating of the Gates */,
+				C362A1871C5C6AFA004667EF /* The Beating of the GatesTests */,
+				C362A1921C5C6AFA004667EF /* The Beating of the GatesUITests */,
+			);
+			name = tvOS;
+			sourceTree = "<group>";
+		};
 		C362A1751C5C6AF9004667EF /* The Beating of the Gates */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,12 +188,8 @@
 		C3F473D21C5C5FD300B70519 = {
 			isa = PBXGroup;
 			children = (
-				C3F473DD1C5C5FD300B70519 /* The Beating at the Gates */,
-				C3F473F21C5C5FD300B70519 /* The Beating at the GatesTests */,
-				C3F473FD1C5C5FD300B70519 /* The Beating at the GatesUITests */,
-				C362A1751C5C6AF9004667EF /* The Beating of the Gates */,
-				C362A1871C5C6AFA004667EF /* The Beating of the GatesTests */,
-				C362A1921C5C6AFA004667EF /* The Beating of the GatesUITests */,
+				4C7562BB1C5C6B9B00B1FC01 /* tvOS */,
+				4C7562BA1C5C6B7900B1FC01 /* iOS */,
 				C3F473DC1C5C5FD300B70519 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -208,6 +232,7 @@
 		C3F473FD1C5C5FD300B70519 /* The Beating at the GatesUITests */ = {
 			isa = PBXGroup;
 			children = (
+				4C7562B91C5C6B6800B1FC01 /* New Group */,
 				C3F473FE1C5C5FD300B70519 /* The_Beating_at_the_GatesUITests.swift */,
 				C3F474001C5C5FD300B70519 /* Info.plist */,
 			);
@@ -783,6 +808,7 @@
 				C362A1971C5C6AFA004667EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C362A19D1C5C6AFA004667EF /* Build configuration list for PBXNativeTarget "The Beating of the GatesTests-tvOS" */ = {
 			isa = XCConfigurationList;
@@ -791,6 +817,7 @@
 				C362A1991C5C6AFA004667EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C362A19E1C5C6AFA004667EF /* Build configuration list for PBXNativeTarget "The Beating of the GatesUITests-tvOS" */ = {
 			isa = XCConfigurationList;
@@ -799,6 +826,7 @@
 				C362A19B1C5C6AFA004667EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C3F473D61C5C5FD300B70519 /* Build configuration list for PBXProject "The Beating at the Gates" */ = {
 			isa = XCConfigurationList;
