@@ -41,6 +41,9 @@
 		C3FFF3EE1C5D09A2009961A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FFF3ED1C5D09A2009961A5 /* UIKit.framework */; };
 		C3FFF3F01C5D09AA009961A5 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FFF3EF1C5D09AA009961A5 /* GLKit.framework */; };
 		C3FFF3F21C5D09B0009961A5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FFF3F11C5D09B0009961A5 /* CoreGraphics.framework */; };
+		C3FFF4151C5D2129009961A5 /* TitleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4141C5D2129009961A5 /* TitleScene.swift */; };
+		C3FFF4171C5D212E009961A5 /* TitleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C3FFF4161C5D212E009961A5 /* TitleScene.sks */; };
+		C3FFF4191C5D2146009961A5 /* Game.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3FFF4181C5D2146009961A5 /* Game.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +145,9 @@
 		C3FFF3ED1C5D09A2009961A5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3FFF3EF1C5D09AA009961A5 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		C3FFF3F11C5D09B0009961A5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C3FFF4141C5D2129009961A5 /* TitleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleScene.swift; sourceTree = "<group>"; };
+		C3FFF4161C5D212E009961A5 /* TitleScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TitleScene.sks; sourceTree = "<group>"; };
+		C3FFF4181C5D2146009961A5 /* Game.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Game.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,7 +247,10 @@
 				C362A1761C5C6AF9004667EF /* AppDelegate.swift */,
 				4C7562C01C5C856B00B1FC01 /* ControllerInput.swift */,
 				C362A1781C5C6AF9004667EF /* ViewController.swift */,
+				C3FFF4141C5D2129009961A5 /* TitleScene.swift */,
+				C3FFF4161C5D212E009961A5 /* TitleScene.sks */,
 				C362A17A1C5C6AF9004667EF /* Main.storyboard */,
+				C3FFF4181C5D2146009961A5 /* Game.xcassets */,
 				C362A17D1C5C6AF9004667EF /* Assets.xcassets */,
 				C362A17F1C5C6AF9004667EF /* Info.plist */,
 			);
@@ -586,7 +595,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C362A17E1C5C6AF9004667EF /* Assets.xcassets in Resources */,
+				C3FFF4171C5D212E009961A5 /* TitleScene.sks in Resources */,
 				C362A17C1C5C6AF9004667EF /* Main.storyboard in Resources */,
+				C3FFF4191C5D2146009961A5 /* Game.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,6 +686,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3FFF4151C5D2129009961A5 /* TitleScene.swift in Sources */,
 				C362A1791C5C6AF9004667EF /* ViewController.swift in Sources */,
 				C362A1771C5C6AF9004667EF /* AppDelegate.swift in Sources */,
 				4C7562C41C5CFE7700B1FC01 /* ControllerInput.swift in Sources */,
@@ -1172,6 +1184,7 @@
 				C3FFF3CF1C5D06D1009961A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
