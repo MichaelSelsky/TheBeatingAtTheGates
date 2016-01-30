@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C362A1771C5C6AF9004667EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1761C5C6AF9004667EF /* AppDelegate.swift */; };
+		C362A1791C5C6AF9004667EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1781C5C6AF9004667EF /* ViewController.swift */; };
+		C362A17C1C5C6AF9004667EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C362A17A1C5C6AF9004667EF /* Main.storyboard */; };
+		C362A17E1C5C6AF9004667EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C362A17D1C5C6AF9004667EF /* Assets.xcassets */; };
+		C362A1891C5C6AFA004667EF /* The_Beating_of_the_GatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1881C5C6AFA004667EF /* The_Beating_of_the_GatesTests.swift */; };
+		C362A1941C5C6AFA004667EF /* The_Beating_of_the_GatesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1931C5C6AFA004667EF /* The_Beating_of_the_GatesUITests.swift */; };
 		C3F473DF1C5C5FD300B70519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F473DE1C5C5FD300B70519 /* AppDelegate.swift */; };
 		C3F473E11C5C5FD300B70519 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F473E01C5C5FD300B70519 /* ViewController.swift */; };
 		C3F473E41C5C5FD300B70519 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F473E21C5C5FD300B70519 /* Main.storyboard */; };
@@ -17,6 +23,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C362A1851C5C6AFA004667EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3F473D31C5C5FD300B70519 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C362A1731C5C6AF9004667EF;
+			remoteInfo = "The Beating of the Gates";
+		};
+		C362A1901C5C6AFA004667EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3F473D31C5C5FD300B70519 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C362A1731C5C6AF9004667EF;
+			remoteInfo = "The Beating of the Gates";
+		};
 		C3F473F01C5C5FD300B70519 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C3F473D31C5C5FD300B70519 /* Project object */;
@@ -34,22 +54,55 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C3F473DB1C5C5FD300B70519 /* The Beating at the Gates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Beating at the Gates.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C362A1741C5C6AF9004667EF /* The Beating of the Gates-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Beating of the Gates-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C362A1761C5C6AF9004667EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C362A1781C5C6AF9004667EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C362A17B1C5C6AF9004667EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C362A17D1C5C6AF9004667EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C362A17F1C5C6AF9004667EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C362A1841C5C6AFA004667EF /* The Beating of the GatesTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Beating of the GatesTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C362A1881C5C6AFA004667EF /* The_Beating_of_the_GatesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Beating_of_the_GatesTests.swift; sourceTree = "<group>"; };
+		C362A18A1C5C6AFA004667EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C362A18F1C5C6AFA004667EF /* The Beating of the GatesUITests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Beating of the GatesUITests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C362A1931C5C6AFA004667EF /* The_Beating_of_the_GatesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Beating_of_the_GatesUITests.swift; sourceTree = "<group>"; };
+		C362A1951C5C6AFA004667EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3F473DB1C5C5FD300B70519 /* The Beating at the Gates-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Beating at the Gates-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F473DE1C5C5FD300B70519 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3F473E01C5C5FD300B70519 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C3F473E31C5C5FD300B70519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C3F473E51C5C5FD300B70519 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3F473E81C5C5FD300B70519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3F473EA1C5C5FD300B70519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C3F473EF1C5C5FD300B70519 /* The Beating at the GatesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Beating at the GatesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3F473EF1C5C5FD300B70519 /* The Beating at the GatesTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Beating at the GatesTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F473F31C5C5FD300B70519 /* The_Beating_at_the_GatesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Beating_at_the_GatesTests.swift; sourceTree = "<group>"; };
 		C3F473F51C5C5FD300B70519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C3F473FA1C5C5FD300B70519 /* The Beating at the GatesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Beating at the GatesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3F473FA1C5C5FD300B70519 /* The Beating at the GatesUITests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Beating at the GatesUITests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F473FE1C5C5FD300B70519 /* The_Beating_at_the_GatesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Beating_at_the_GatesUITests.swift; sourceTree = "<group>"; };
 		C3F474001C5C5FD300B70519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C362A1711C5C6AF9004667EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C362A1811C5C6AFA004667EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C362A18C1C5C6AFA004667EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3F473D81C5C5FD300B70519 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -74,12 +127,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C362A1751C5C6AF9004667EF /* The Beating of the Gates */ = {
+			isa = PBXGroup;
+			children = (
+				C362A1761C5C6AF9004667EF /* AppDelegate.swift */,
+				C362A1781C5C6AF9004667EF /* ViewController.swift */,
+				C362A17A1C5C6AF9004667EF /* Main.storyboard */,
+				C362A17D1C5C6AF9004667EF /* Assets.xcassets */,
+				C362A17F1C5C6AF9004667EF /* Info.plist */,
+			);
+			path = "The Beating of the Gates";
+			sourceTree = "<group>";
+		};
+		C362A1871C5C6AFA004667EF /* The Beating of the GatesTests */ = {
+			isa = PBXGroup;
+			children = (
+				C362A1881C5C6AFA004667EF /* The_Beating_of_the_GatesTests.swift */,
+				C362A18A1C5C6AFA004667EF /* Info.plist */,
+			);
+			path = "The Beating of the GatesTests";
+			sourceTree = "<group>";
+		};
+		C362A1921C5C6AFA004667EF /* The Beating of the GatesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C362A1931C5C6AFA004667EF /* The_Beating_of_the_GatesUITests.swift */,
+				C362A1951C5C6AFA004667EF /* Info.plist */,
+			);
+			path = "The Beating of the GatesUITests";
+			sourceTree = "<group>";
+		};
 		C3F473D21C5C5FD300B70519 = {
 			isa = PBXGroup;
 			children = (
 				C3F473DD1C5C5FD300B70519 /* The Beating at the Gates */,
 				C3F473F21C5C5FD300B70519 /* The Beating at the GatesTests */,
 				C3F473FD1C5C5FD300B70519 /* The Beating at the GatesUITests */,
+				C362A1751C5C6AF9004667EF /* The Beating of the Gates */,
+				C362A1871C5C6AFA004667EF /* The Beating of the GatesTests */,
+				C362A1921C5C6AFA004667EF /* The Beating of the GatesUITests */,
 				C3F473DC1C5C5FD300B70519 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,9 +173,12 @@
 		C3F473DC1C5C5FD300B70519 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C3F473DB1C5C5FD300B70519 /* The Beating at the Gates.app */,
-				C3F473EF1C5C5FD300B70519 /* The Beating at the GatesTests.xctest */,
-				C3F473FA1C5C5FD300B70519 /* The Beating at the GatesUITests.xctest */,
+				C3F473DB1C5C5FD300B70519 /* The Beating at the Gates-iOS.app */,
+				C3F473EF1C5C5FD300B70519 /* The Beating at the GatesTests-iOS.xctest */,
+				C3F473FA1C5C5FD300B70519 /* The Beating at the GatesUITests-iOS.xctest */,
+				C362A1741C5C6AF9004667EF /* The Beating of the Gates-tvOS.app */,
+				C362A1841C5C6AFA004667EF /* The Beating of the GatesTests-tvOS.xctest */,
+				C362A18F1C5C6AFA004667EF /* The Beating of the GatesUITests-tvOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,9 +217,62 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C3F473DA1C5C5FD300B70519 /* The Beating at the Gates */ = {
+		C362A1731C5C6AF9004667EF /* The Beating of the Gates-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C3F474031C5C5FD300B70519 /* Build configuration list for PBXNativeTarget "The Beating at the Gates" */;
+			buildConfigurationList = C362A19C1C5C6AFA004667EF /* Build configuration list for PBXNativeTarget "The Beating of the Gates-tvOS" */;
+			buildPhases = (
+				C362A1701C5C6AF9004667EF /* Sources */,
+				C362A1711C5C6AF9004667EF /* Frameworks */,
+				C362A1721C5C6AF9004667EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "The Beating of the Gates-tvOS";
+			productName = "The Beating of the Gates";
+			productReference = C362A1741C5C6AF9004667EF /* The Beating of the Gates-tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C362A1831C5C6AFA004667EF /* The Beating of the GatesTests-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C362A19D1C5C6AFA004667EF /* Build configuration list for PBXNativeTarget "The Beating of the GatesTests-tvOS" */;
+			buildPhases = (
+				C362A1801C5C6AFA004667EF /* Sources */,
+				C362A1811C5C6AFA004667EF /* Frameworks */,
+				C362A1821C5C6AFA004667EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C362A1861C5C6AFA004667EF /* PBXTargetDependency */,
+			);
+			name = "The Beating of the GatesTests-tvOS";
+			productName = "The Beating of the GatesTests";
+			productReference = C362A1841C5C6AFA004667EF /* The Beating of the GatesTests-tvOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C362A18E1C5C6AFA004667EF /* The Beating of the GatesUITests-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C362A19E1C5C6AFA004667EF /* Build configuration list for PBXNativeTarget "The Beating of the GatesUITests-tvOS" */;
+			buildPhases = (
+				C362A18B1C5C6AFA004667EF /* Sources */,
+				C362A18C1C5C6AFA004667EF /* Frameworks */,
+				C362A18D1C5C6AFA004667EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C362A1911C5C6AFA004667EF /* PBXTargetDependency */,
+			);
+			name = "The Beating of the GatesUITests-tvOS";
+			productName = "The Beating of the GatesUITests";
+			productReference = C362A18F1C5C6AFA004667EF /* The Beating of the GatesUITests-tvOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		C3F473DA1C5C5FD300B70519 /* The Beating at the Gates-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3F474031C5C5FD300B70519 /* Build configuration list for PBXNativeTarget "The Beating at the Gates-iOS" */;
 			buildPhases = (
 				C3F473D71C5C5FD300B70519 /* Sources */,
 				C3F473D81C5C5FD300B70519 /* Frameworks */,
@@ -140,14 +282,14 @@
 			);
 			dependencies = (
 			);
-			name = "The Beating at the Gates";
+			name = "The Beating at the Gates-iOS";
 			productName = "The Beating at the Gates";
-			productReference = C3F473DB1C5C5FD300B70519 /* The Beating at the Gates.app */;
+			productReference = C3F473DB1C5C5FD300B70519 /* The Beating at the Gates-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C3F473EE1C5C5FD300B70519 /* The Beating at the GatesTests */ = {
+		C3F473EE1C5C5FD300B70519 /* The Beating at the GatesTests-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C3F474061C5C5FD300B70519 /* Build configuration list for PBXNativeTarget "The Beating at the GatesTests" */;
+			buildConfigurationList = C3F474061C5C5FD300B70519 /* Build configuration list for PBXNativeTarget "The Beating at the GatesTests-iOS" */;
 			buildPhases = (
 				C3F473EB1C5C5FD300B70519 /* Sources */,
 				C3F473EC1C5C5FD300B70519 /* Frameworks */,
@@ -158,14 +300,14 @@
 			dependencies = (
 				C3F473F11C5C5FD300B70519 /* PBXTargetDependency */,
 			);
-			name = "The Beating at the GatesTests";
+			name = "The Beating at the GatesTests-iOS";
 			productName = "The Beating at the GatesTests";
-			productReference = C3F473EF1C5C5FD300B70519 /* The Beating at the GatesTests.xctest */;
+			productReference = C3F473EF1C5C5FD300B70519 /* The Beating at the GatesTests-iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C3F473F91C5C5FD300B70519 /* The Beating at the GatesUITests */ = {
+		C3F473F91C5C5FD300B70519 /* The Beating at the GatesUITests-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C3F474091C5C5FD300B70519 /* Build configuration list for PBXNativeTarget "The Beating at the GatesUITests" */;
+			buildConfigurationList = C3F474091C5C5FD300B70519 /* Build configuration list for PBXNativeTarget "The Beating at the GatesUITests-iOS" */;
 			buildPhases = (
 				C3F473F61C5C5FD300B70519 /* Sources */,
 				C3F473F71C5C5FD300B70519 /* Frameworks */,
@@ -176,9 +318,9 @@
 			dependencies = (
 				C3F473FC1C5C5FD300B70519 /* PBXTargetDependency */,
 			);
-			name = "The Beating at the GatesUITests";
+			name = "The Beating at the GatesUITests-iOS";
 			productName = "The Beating at the GatesUITests";
-			productReference = C3F473FA1C5C5FD300B70519 /* The Beating at the GatesUITests.xctest */;
+			productReference = C3F473FA1C5C5FD300B70519 /* The Beating at the GatesUITests-iOS.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -191,6 +333,17 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Grant J. Butler";
 				TargetAttributes = {
+					C362A1731C5C6AF9004667EF = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					C362A1831C5C6AFA004667EF = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = C362A1731C5C6AF9004667EF;
+					};
+					C362A18E1C5C6AFA004667EF = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = C362A1731C5C6AF9004667EF;
+					};
 					C3F473DA1C5C5FD300B70519 = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -217,14 +370,40 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C3F473DA1C5C5FD300B70519 /* The Beating at the Gates */,
-				C3F473EE1C5C5FD300B70519 /* The Beating at the GatesTests */,
-				C3F473F91C5C5FD300B70519 /* The Beating at the GatesUITests */,
+				C3F473DA1C5C5FD300B70519 /* The Beating at the Gates-iOS */,
+				C3F473EE1C5C5FD300B70519 /* The Beating at the GatesTests-iOS */,
+				C3F473F91C5C5FD300B70519 /* The Beating at the GatesUITests-iOS */,
+				C362A1731C5C6AF9004667EF /* The Beating of the Gates-tvOS */,
+				C362A1831C5C6AFA004667EF /* The Beating of the GatesTests-tvOS */,
+				C362A18E1C5C6AFA004667EF /* The Beating of the GatesUITests-tvOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C362A1721C5C6AF9004667EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C362A17E1C5C6AF9004667EF /* Assets.xcassets in Resources */,
+				C362A17C1C5C6AF9004667EF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C362A1821C5C6AFA004667EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C362A18D1C5C6AFA004667EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3F473D91C5C5FD300B70519 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -252,6 +431,31 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C362A1701C5C6AF9004667EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C362A1791C5C6AF9004667EF /* ViewController.swift in Sources */,
+				C362A1771C5C6AF9004667EF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C362A1801C5C6AFA004667EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C362A1891C5C6AFA004667EF /* The_Beating_of_the_GatesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C362A18B1C5C6AFA004667EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C362A1941C5C6AFA004667EF /* The_Beating_of_the_GatesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3F473D71C5C5FD300B70519 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,19 +484,37 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C362A1861C5C6AFA004667EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C362A1731C5C6AF9004667EF /* The Beating of the Gates-tvOS */;
+			targetProxy = C362A1851C5C6AFA004667EF /* PBXContainerItemProxy */;
+		};
+		C362A1911C5C6AFA004667EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C362A1731C5C6AF9004667EF /* The Beating of the Gates-tvOS */;
+			targetProxy = C362A1901C5C6AFA004667EF /* PBXContainerItemProxy */;
+		};
 		C3F473F11C5C5FD300B70519 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C3F473DA1C5C5FD300B70519 /* The Beating at the Gates */;
+			target = C3F473DA1C5C5FD300B70519 /* The Beating at the Gates-iOS */;
 			targetProxy = C3F473F01C5C5FD300B70519 /* PBXContainerItemProxy */;
 		};
 		C3F473FC1C5C5FD300B70519 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C3F473DA1C5C5FD300B70519 /* The Beating at the Gates */;
+			target = C3F473DA1C5C5FD300B70519 /* The Beating at the Gates-iOS */;
 			targetProxy = C3F473FB1C5C5FD300B70519 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		C362A17A1C5C6AF9004667EF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C362A17B1C5C6AF9004667EF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		C3F473E21C5C5FD300B70519 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -312,6 +534,92 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C362A1961C5C6AFA004667EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "The Beating of the Gates/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.grantjbutler.The-Beating-of-the-Gates";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		C362A1971C5C6AFA004667EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "The Beating of the Gates/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.grantjbutler.The-Beating-of-the-Gates";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		C362A1981C5C6AFA004667EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "The Beating of the GatesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.grantjbutler.The-Beating-of-the-GatesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The Beating of the Gates.app/The Beating of the Gates";
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		C362A1991C5C6AFA004667EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "The Beating of the GatesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.grantjbutler.The-Beating-of-the-GatesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The Beating of the Gates.app/The Beating of the Gates";
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		C362A19A1C5C6AFA004667EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "The Beating of the GatesUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.grantjbutler.The-Beating-of-the-GatesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_TARGET_NAME = "The Beating of the Gates";
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		C362A19B1C5C6AFA004667EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "The Beating of the GatesUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.grantjbutler.The-Beating-of-the-GatesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_TARGET_NAME = "The Beating of the Gates";
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 		C3F474011C5C5FD300B70519 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -468,6 +776,30 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C362A19C1C5C6AFA004667EF /* Build configuration list for PBXNativeTarget "The Beating of the Gates-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C362A1961C5C6AFA004667EF /* Debug */,
+				C362A1971C5C6AFA004667EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C362A19D1C5C6AFA004667EF /* Build configuration list for PBXNativeTarget "The Beating of the GatesTests-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C362A1981C5C6AFA004667EF /* Debug */,
+				C362A1991C5C6AFA004667EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C362A19E1C5C6AFA004667EF /* Build configuration list for PBXNativeTarget "The Beating of the GatesUITests-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C362A19A1C5C6AFA004667EF /* Debug */,
+				C362A19B1C5C6AFA004667EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C3F473D61C5C5FD300B70519 /* Build configuration list for PBXProject "The Beating at the Gates" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -477,29 +809,32 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C3F474031C5C5FD300B70519 /* Build configuration list for PBXNativeTarget "The Beating at the Gates" */ = {
+		C3F474031C5C5FD300B70519 /* Build configuration list for PBXNativeTarget "The Beating at the Gates-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3F474041C5C5FD300B70519 /* Debug */,
 				C3F474051C5C5FD300B70519 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		C3F474061C5C5FD300B70519 /* Build configuration list for PBXNativeTarget "The Beating at the GatesTests" */ = {
+		C3F474061C5C5FD300B70519 /* Build configuration list for PBXNativeTarget "The Beating at the GatesTests-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3F474071C5C5FD300B70519 /* Debug */,
 				C3F474081C5C5FD300B70519 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		C3F474091C5C5FD300B70519 /* Build configuration list for PBXNativeTarget "The Beating at the GatesUITests" */ = {
+		C3F474091C5C5FD300B70519 /* Build configuration list for PBXNativeTarget "The Beating at the GatesUITests-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3F4740A1C5C5FD300B70519 /* Debug */,
 				C3F4740B1C5C5FD300B70519 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
