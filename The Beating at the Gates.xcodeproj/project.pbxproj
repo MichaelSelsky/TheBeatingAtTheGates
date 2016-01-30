@@ -51,7 +51,11 @@
 		C3FFF41A1C5D2C6A009961A5 /* TitleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4141C5D2129009961A5 /* TitleScene.swift */; };
 		C3FFF41C1C5D2E77009961A5 /* TitleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C3FFF4161C5D212E009961A5 /* TitleScene.sks */; };
 		C3FFF41D1C5D2E7B009961A5 /* TitleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C3FFF4161C5D212E009961A5 /* TitleScene.sks */; };
-		C3FFF41F1C5D392E009961A5 /* Game.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3FFF4181C5D2146009961A5 /* Game.xcassets */; };
+		C3FFF4201C5D4176009961A5 /* Game.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3FFF4181C5D2146009961A5 /* Game.xcassets */; };
+		C3FFF4211C5D4178009961A5 /* Game.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3FFF4181C5D2146009961A5 /* Game.xcassets */; };
+		C3FFF4241C5D4394009961A5 /* LaneNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4221C5D4243009961A5 /* LaneNode.swift */; };
+		C3FFF4291C5D448E009961A5 /* GridScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4271C5D448A009961A5 /* GridScene.swift */; };
+		C3FFF42A1C5D4492009961A5 /* GridScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C3FFF4251C5D4476009961A5 /* GridScene.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,7 +205,10 @@
 		C3FFF3F11C5D09B0009961A5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C3FFF4141C5D2129009961A5 /* TitleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitleScene.swift; path = "../The Beating of the Gates/TitleScene.swift"; sourceTree = "<group>"; };
 		C3FFF4161C5D212E009961A5 /* TitleScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = TitleScene.sks; path = "The Beating of the Gates/TitleScene.sks"; sourceTree = "<group>"; };
-		C3FFF4181C5D2146009961A5 /* Game.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Game.xcassets; path = "../The Beating of the Gates/Game.xcassets"; sourceTree = "<group>"; };
+		C3FFF4181C5D2146009961A5 /* Game.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Game.xcassets; path = "The Beating of the Gates/Game.xcassets"; sourceTree = "<group>"; };
+		C3FFF4221C5D4243009961A5 /* LaneNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaneNode.swift; sourceTree = "<group>"; };
+		C3FFF4251C5D4476009961A5 /* GridScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GridScene.sks; sourceTree = "<group>"; };
+		C3FFF4271C5D448A009961A5 /* GridScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,8 +320,8 @@
 		4C7562F01C5D268500B1FC01 /* BeatingGatesCommon */ = {
 			isa = PBXGroup;
 			children = (
-				C3FFF4181C5D2146009961A5 /* Game.xcassets */,
 				C3FFF4141C5D2129009961A5 /* TitleScene.swift */,
+				C3FFF4221C5D4243009961A5 /* LaneNode.swift */,
 				4C7562F11C5D268500B1FC01 /* BeatingGatesCommon.h */,
 				4C7562F31C5D268500B1FC01 /* Info.plist */,
 			);
@@ -347,6 +354,8 @@
 				C362A1761C5C6AF9004667EF /* AppDelegate.swift */,
 				4C7562C01C5C856B00B1FC01 /* ControllerInput.swift */,
 				C362A1781C5C6AF9004667EF /* ViewController.swift */,
+				C3FFF4251C5D4476009961A5 /* GridScene.sks */,
+				C3FFF4271C5D448A009961A5 /* GridScene.swift */,
 				C362A17A1C5C6AF9004667EF /* Main.storyboard */,
 				C362A17D1C5C6AF9004667EF /* Assets.xcassets */,
 				C362A17F1C5C6AF9004667EF /* Info.plist */,
@@ -483,6 +492,7 @@
 		C3FFF41E1C5D2E8A009961A5 /* Shared Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C3FFF4181C5D2146009961A5 /* Game.xcassets */,
 				C3FFF4161C5D212E009961A5 /* TitleScene.sks */,
 			);
 			name = "Shared Resources";
@@ -758,7 +768,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3FFF41F1C5D392E009961A5 /* Game.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -776,6 +785,8 @@
 				C362A17E1C5C6AF9004667EF /* Assets.xcassets in Resources */,
 				C3FFF41C1C5D2E77009961A5 /* TitleScene.sks in Resources */,
 				C362A17C1C5C6AF9004667EF /* Main.storyboard in Resources */,
+				C3FFF4201C5D4176009961A5 /* Game.xcassets in Resources */,
+				C3FFF42A1C5D4492009961A5 /* GridScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -800,6 +811,7 @@
 				C3F473E91C5C5FD300B70519 /* LaunchScreen.storyboard in Resources */,
 				C3FFF41D1C5D2E7B009961A5 /* TitleScene.sks in Resources */,
 				C3F473E61C5C5FD300B70519 /* Assets.xcassets in Resources */,
+				C3FFF4211C5D4178009961A5 /* Game.xcassets in Resources */,
 				C3F473E41C5C5FD300B70519 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -866,6 +878,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3FFF41A1C5D2C6A009961A5 /* TitleScene.swift in Sources */,
+				C3FFF4241C5D4394009961A5 /* LaneNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -883,6 +896,7 @@
 			files = (
 				C362A1791C5C6AF9004667EF /* ViewController.swift in Sources */,
 				C362A1771C5C6AF9004667EF /* AppDelegate.swift in Sources */,
+				C3FFF4291C5D448E009961A5 /* GridScene.swift in Sources */,
 				4C7562C41C5CFE7700B1FC01 /* ControllerInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
