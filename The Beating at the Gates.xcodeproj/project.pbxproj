@@ -273,6 +273,7 @@
 				C362A1701C5C6AF9004667EF /* Sources */,
 				C362A1711C5C6AF9004667EF /* Frameworks */,
 				C362A1721C5C6AF9004667EF /* Resources */,
+				C3FFF3731C5C7445009961A5 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -326,6 +327,7 @@
 				C3F473D71C5C5FD300B70519 /* Sources */,
 				C3F473D81C5C5FD300B70519 /* Frameworks */,
 				C3F473D91C5C5FD300B70519 /* Resources */,
+				C362A1B11C5C740E004667EF /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -478,6 +480,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C362A1B11C5C740E004667EF /* Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/VirtualGameController.framework",
+			);
+			name = "Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		C3FFF3731C5C7445009961A5 /* Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/tvOS/VirtualGameController.framework",
+			);
+			name = "Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C362A1701C5C6AF9004667EF /* Sources */ = {
