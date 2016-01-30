@@ -13,6 +13,8 @@
 		C362A17E1C5C6AF9004667EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C362A17D1C5C6AF9004667EF /* Assets.xcassets */; };
 		C362A1891C5C6AFA004667EF /* The_Beating_of_the_GatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1881C5C6AFA004667EF /* The_Beating_of_the_GatesTests.swift */; };
 		C362A1941C5C6AFA004667EF /* The_Beating_of_the_GatesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1931C5C6AFA004667EF /* The_Beating_of_the_GatesUITests.swift */; };
+		C362A1AD1C5C73CE004667EF /* VirtualGameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C362A1AC1C5C73CE004667EF /* VirtualGameController.framework */; };
+		C362A1AF1C5C73D4004667EF /* VirtualGameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C362A1AE1C5C73D4004667EF /* VirtualGameController.framework */; };
 		C3F473DF1C5C5FD300B70519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F473DE1C5C5FD300B70519 /* AppDelegate.swift */; };
 		C3F473E11C5C5FD300B70519 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F473E01C5C5FD300B70519 /* ViewController.swift */; };
 		C3F473E41C5C5FD300B70519 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F473E21C5C5FD300B70519 /* Main.storyboard */; };
@@ -66,6 +68,8 @@
 		C362A18F1C5C6AFA004667EF /* The Beating of the GatesUITests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Beating of the GatesUITests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C362A1931C5C6AFA004667EF /* The_Beating_of_the_GatesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Beating_of_the_GatesUITests.swift; sourceTree = "<group>"; };
 		C362A1951C5C6AFA004667EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C362A1AC1C5C73CE004667EF /* VirtualGameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VirtualGameController.framework; path = Carthage/Build/iOS/VirtualGameController.framework; sourceTree = SOURCE_ROOT; };
+		C362A1AE1C5C73D4004667EF /* VirtualGameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VirtualGameController.framework; path = Carthage/Build/tvOS/VirtualGameController.framework; sourceTree = SOURCE_ROOT; };
 		C3F473DB1C5C5FD300B70519 /* The Beating at the Gates-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Beating at the Gates-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F473DE1C5C5FD300B70519 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3F473E01C5C5FD300B70519 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C362A1AF1C5C73D4004667EF /* VirtualGameController.framework in Frameworks */,
+				C362A1AD1C5C73CE004667EF /* VirtualGameController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +164,7 @@
 		C362A1751C5C6AF9004667EF /* The Beating of the Gates */ = {
 			isa = PBXGroup;
 			children = (
+				C362A1AA1C5C73B6004667EF /* Frameworks */,
 				C362A1761C5C6AF9004667EF /* AppDelegate.swift */,
 				C362A1781C5C6AF9004667EF /* ViewController.swift */,
 				C362A17A1C5C6AF9004667EF /* Main.storyboard */,
@@ -185,6 +192,22 @@
 			path = "The Beating of the GatesUITests";
 			sourceTree = "<group>";
 		};
+		C362A1AA1C5C73B6004667EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C362A1AE1C5C73D4004667EF /* VirtualGameController.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C362A1AB1C5C73BD004667EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C362A1AC1C5C73CE004667EF /* VirtualGameController.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C3F473D21C5C5FD300B70519 = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +233,7 @@
 		C3F473DD1C5C5FD300B70519 /* The Beating at the Gates */ = {
 			isa = PBXGroup;
 			children = (
+				C362A1AB1C5C73BD004667EF /* Frameworks */,
 				C3F473DE1C5C5FD300B70519 /* AppDelegate.swift */,
 				C3F473E01C5C5FD300B70519 /* ViewController.swift */,
 				C3F473E21C5C5FD300B70519 /* Main.storyboard */,
@@ -732,6 +756,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "The Beating at the Gates/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.grantjbutler.The-Beating-at-the-Gates";
@@ -743,6 +772,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "The Beating at the Gates/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.grantjbutler.The-Beating-at-the-Gates";
