@@ -8,12 +8,12 @@
 
 import SpriteKit
 
-class TitleScene: SKScene {
+public class TitleScene: SKScene {
 	
 	private var titleLabelNode: SKLabelNode!
 	private var statusLabelNode: SKLabelNode!
 	
-	var status: String? {
+	public var status: String? {
 		get {
 			return statusLabelNode.text
 		}
@@ -30,7 +30,7 @@ class TitleScene: SKScene {
 		statusLabelNode.position = CGPoint(x: self.frame.midX, y: self.frame.midY / 2)
 	}
 	
-	override func didMoveToView(view: SKView) {
+	override public func didMoveToView(view: SKView) {
 		commonInit()
     }
     

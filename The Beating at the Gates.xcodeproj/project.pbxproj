@@ -17,7 +17,6 @@
 		4C7563041C5D268500B1FC01 /* BeatingGatesCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */; };
 		4C7563051C5D268500B1FC01 /* BeatingGatesCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4C75630D1C5D2B0500B1FC01 /* BeatingGatesCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */; };
-		4C7563101C5D2B5A00B1FC01 /* BeatingGatesCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */; };
 		4C7563111C5D2B5A00B1FC01 /* BeatingGatesCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C362A1771C5C6AF9004667EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1761C5C6AF9004667EF /* AppDelegate.swift */; };
 		C362A1791C5C6AF9004667EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1781C5C6AF9004667EF /* ViewController.swift */; };
@@ -49,9 +48,10 @@
 		C3FFF3EE1C5D09A2009961A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FFF3ED1C5D09A2009961A5 /* UIKit.framework */; };
 		C3FFF3F01C5D09AA009961A5 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FFF3EF1C5D09AA009961A5 /* GLKit.framework */; };
 		C3FFF3F21C5D09B0009961A5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FFF3F11C5D09B0009961A5 /* CoreGraphics.framework */; };
-		C3FFF4151C5D2129009961A5 /* TitleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4141C5D2129009961A5 /* TitleScene.swift */; };
-		C3FFF4171C5D212E009961A5 /* TitleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C3FFF4161C5D212E009961A5 /* TitleScene.sks */; };
-		C3FFF4191C5D2146009961A5 /* Game.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3FFF4181C5D2146009961A5 /* Game.xcassets */; };
+		C3FFF41A1C5D2C6A009961A5 /* TitleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4141C5D2129009961A5 /* TitleScene.swift */; };
+		C3FFF41C1C5D2E77009961A5 /* TitleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C3FFF4161C5D212E009961A5 /* TitleScene.sks */; };
+		C3FFF41D1C5D2E7B009961A5 /* TitleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C3FFF4161C5D212E009961A5 /* TitleScene.sks */; };
+		C3FFF41F1C5D392E009961A5 /* Game.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3FFF4181C5D2146009961A5 /* Game.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,9 +199,9 @@
 		C3FFF3ED1C5D09A2009961A5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3FFF3EF1C5D09AA009961A5 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		C3FFF3F11C5D09B0009961A5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C3FFF4141C5D2129009961A5 /* TitleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleScene.swift; sourceTree = "<group>"; };
-		C3FFF4161C5D212E009961A5 /* TitleScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TitleScene.sks; sourceTree = "<group>"; };
-		C3FFF4181C5D2146009961A5 /* Game.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Game.xcassets; sourceTree = "<group>"; };
+		C3FFF4141C5D2129009961A5 /* TitleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitleScene.swift; path = "../The Beating of the Gates/TitleScene.swift"; sourceTree = "<group>"; };
+		C3FFF4161C5D212E009961A5 /* TitleScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = TitleScene.sks; path = "The Beating of the Gates/TitleScene.sks"; sourceTree = "<group>"; };
+		C3FFF4181C5D2146009961A5 /* Game.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Game.xcassets; path = "../The Beating of the Gates/Game.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,7 +226,6 @@
 			files = (
 				4C7562C51C5CFED400B1FC01 /* VirtualGameController.framework in Frameworks */,
 				4C75630D1C5D2B0500B1FC01 /* BeatingGatesCommon.framework in Frameworks */,
-				4C7563101C5D2B5A00B1FC01 /* BeatingGatesCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +313,8 @@
 		4C7562F01C5D268500B1FC01 /* BeatingGatesCommon */ = {
 			isa = PBXGroup;
 			children = (
+				C3FFF4181C5D2146009961A5 /* Game.xcassets */,
+				C3FFF4141C5D2129009961A5 /* TitleScene.swift */,
 				4C7562F11C5D268500B1FC01 /* BeatingGatesCommon.h */,
 				4C7562F31C5D268500B1FC01 /* Info.plist */,
 			);
@@ -332,6 +333,7 @@
 		4C75630C1C5D268D00B1FC01 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C3FFF41E1C5D2E8A009961A5 /* Shared Resources */,
 				4C7562F01C5D268500B1FC01 /* BeatingGatesCommon */,
 				4C7562FE1C5D268500B1FC01 /* BeatingGatesCommonTests */,
 			);
@@ -345,10 +347,7 @@
 				C362A1761C5C6AF9004667EF /* AppDelegate.swift */,
 				4C7562C01C5C856B00B1FC01 /* ControllerInput.swift */,
 				C362A1781C5C6AF9004667EF /* ViewController.swift */,
-				C3FFF4141C5D2129009961A5 /* TitleScene.swift */,
-				C3FFF4161C5D212E009961A5 /* TitleScene.sks */,
 				C362A17A1C5C6AF9004667EF /* Main.storyboard */,
-				C3FFF4181C5D2146009961A5 /* Game.xcassets */,
 				C362A17D1C5C6AF9004667EF /* Assets.xcassets */,
 				C362A17F1C5C6AF9004667EF /* Info.plist */,
 			);
@@ -479,6 +478,14 @@
 				C3FFF3DD1C5D0760009961A5 /* CMUnistrokeRecognizerTypes.h */,
 			);
 			path = CMUnistrokeRecognizer;
+			sourceTree = "<group>";
+		};
+		C3FFF41E1C5D2E8A009961A5 /* Shared Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C3FFF4161C5D212E009961A5 /* TitleScene.sks */,
+			);
+			name = "Shared Resources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -688,7 +695,6 @@
 				TargetAttributes = {
 					4C7562EE1C5D268500B1FC01 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 9XLL7J2WX4;
 					};
 					4C7562F71C5D268500B1FC01 = {
 						CreatedOnToolsVersion = 7.2;
@@ -696,7 +702,6 @@
 					};
 					C362A1731C5C6AF9004667EF = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 9XLL7J2WX4;
 					};
 					C362A1831C5C6AFA004667EF = {
 						CreatedOnToolsVersion = 7.2;
@@ -753,6 +758,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3FFF41F1C5D392E009961A5 /* Game.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,9 +774,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C362A17E1C5C6AF9004667EF /* Assets.xcassets in Resources */,
-				C3FFF4171C5D212E009961A5 /* TitleScene.sks in Resources */,
+				C3FFF41C1C5D2E77009961A5 /* TitleScene.sks in Resources */,
 				C362A17C1C5C6AF9004667EF /* Main.storyboard in Resources */,
-				C3FFF4191C5D2146009961A5 /* Game.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -793,6 +798,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3F473E91C5C5FD300B70519 /* LaunchScreen.storyboard in Resources */,
+				C3FFF41D1C5D2E7B009961A5 /* TitleScene.sks in Resources */,
 				C3F473E61C5C5FD300B70519 /* Assets.xcassets in Resources */,
 				C3F473E41C5C5FD300B70519 /* Main.storyboard in Resources */,
 			);
@@ -859,6 +865,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3FFF41A1C5D2C6A009961A5 /* TitleScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -874,7 +881,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3FFF4151C5D2129009961A5 /* TitleScene.swift in Sources */,
 				C362A1791C5C6AF9004667EF /* ViewController.swift in Sources */,
 				C362A1771C5C6AF9004667EF /* AppDelegate.swift in Sources */,
 				4C7562C41C5CFE7700B1FC01 /* ControllerInput.swift in Sources */,
@@ -1016,7 +1022,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1038,7 +1043,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1085,6 +1089,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
@@ -1107,6 +1112,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
@@ -1265,6 +1271,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -1281,6 +1288,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -1345,6 +1353,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1367,6 +1376,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
