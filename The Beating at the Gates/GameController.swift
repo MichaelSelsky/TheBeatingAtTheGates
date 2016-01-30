@@ -19,12 +19,11 @@ class GameController {
     }
     
     func start() {
-        VgcManager.peripheral.browseForServices()
-        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "foundService:", name: VgcPeripheralFoundService, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "lostService:", name: VgcPeripheralLostService, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "peripheralDidConnect:", name: VgcPeripheralDidConnectNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "peripheralDidDisconnect:", name: VgcPeripheralDidDisconnectNotification, object: nil)
+        VgcManager.peripheral.browseForServices()
     }
     
     func stop() {
@@ -36,28 +35,32 @@ class GameController {
         let a = VgcManager.elements.buttonA
         a.value = 1.0
         VgcManager.peripheral.sendElementState(a)
-
+        a.value = 0.0
+        VgcManager.peripheral.sendElementState(a)
     }
     
-    private func foundService(note: NSNotification) {
+    @objc func foundService(note: NSNotification) {
         guard let service = VgcManager.peripheral.availableServices.first else {
             return
         }
         
         VgcManager.peripheral.connectToService(service)
         VgcManager.peripheral.stopBrowsingForServices()
-        test()
     }
     
-    private func lostService(note: NSNotification) {
+    @objc func lostService(note: NSNotification) {
         
     }
     
-    private func peripheralDidConnect(note: NSNotification) {
+    @objc func peripheralDidConnect(note: NSNotification) {
         
     }
     
-    private func peripheralDidDisconnect(note: NSNotification) {
+    @objc func peripheralDidDisconnect(note: NSNotification) {
         
+    }
+    
+    deinit {
+        stop()
     }
 }

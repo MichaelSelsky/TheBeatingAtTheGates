@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4C7562BD1C5C7EDE00B1FC01 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7562BC1C5C7EDE00B1FC01 /* GameController.swift */; };
+		4C7562C31C5C859400B1FC01 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562C21C5C859300B1FC01 /* GameController.framework */; };
+		4C7562C41C5CFE7700B1FC01 /* ControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7562C01C5C856B00B1FC01 /* ControllerInput.swift */; };
+		4C7562C51C5CFED400B1FC01 /* VirtualGameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C362A1AE1C5C73D4004667EF /* VirtualGameController.framework */; };
 		C362A1771C5C6AF9004667EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1761C5C6AF9004667EF /* AppDelegate.swift */; };
 		C362A1791C5C6AF9004667EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1781C5C6AF9004667EF /* ViewController.swift */; };
 		C362A17C1C5C6AF9004667EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C362A17A1C5C6AF9004667EF /* Main.storyboard */; };
@@ -15,7 +18,6 @@
 		C362A1891C5C6AFA004667EF /* The_Beating_of_the_GatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1881C5C6AFA004667EF /* The_Beating_of_the_GatesTests.swift */; };
 		C362A1941C5C6AFA004667EF /* The_Beating_of_the_GatesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1931C5C6AFA004667EF /* The_Beating_of_the_GatesUITests.swift */; };
 		C362A1AD1C5C73CE004667EF /* VirtualGameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C362A1AC1C5C73CE004667EF /* VirtualGameController.framework */; };
-		C362A1AF1C5C73D4004667EF /* VirtualGameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C362A1AE1C5C73D4004667EF /* VirtualGameController.framework */; };
 		C3F473DF1C5C5FD300B70519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F473DE1C5C5FD300B70519 /* AppDelegate.swift */; };
 		C3F473E11C5C5FD300B70519 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F473E01C5C5FD300B70519 /* ViewController.swift */; };
 		C3F473E41C5C5FD300B70519 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F473E21C5C5FD300B70519 /* Main.storyboard */; };
@@ -58,6 +60,8 @@
 
 /* Begin PBXFileReference section */
 		4C7562BC1C5C7EDE00B1FC01 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		4C7562C01C5C856B00B1FC01 /* ControllerInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerInput.swift; sourceTree = "<group>"; };
+		4C7562C21C5C859300B1FC01 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
 		C362A1741C5C6AF9004667EF /* The Beating of the Gates-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Beating of the Gates-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C362A1761C5C6AF9004667EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C362A1781C5C6AF9004667EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C7562C51C5CFED400B1FC01 /* VirtualGameController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,7 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C362A1AF1C5C73D4004667EF /* VirtualGameController.framework in Frameworks */,
+				4C7562C31C5C859400B1FC01 /* GameController.framework in Frameworks */,
 				C362A1AD1C5C73CE004667EF /* VirtualGameController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +173,7 @@
 			children = (
 				C362A1AA1C5C73B6004667EF /* Frameworks */,
 				C362A1761C5C6AF9004667EF /* AppDelegate.swift */,
+				4C7562C01C5C856B00B1FC01 /* ControllerInput.swift */,
 				C362A1781C5C6AF9004667EF /* ViewController.swift */,
 				C362A17A1C5C6AF9004667EF /* Main.storyboard */,
 				C362A17D1C5C6AF9004667EF /* Assets.xcassets */,
@@ -197,6 +203,7 @@
 		C362A1AA1C5C73B6004667EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C7562C21C5C859300B1FC01 /* GameController.framework */,
 				C362A1AE1C5C73D4004667EF /* VirtualGameController.framework */,
 			);
 			name = Frameworks;
@@ -389,6 +396,7 @@
 				TargetAttributes = {
 					C362A1731C5C6AF9004667EF = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 9XLL7J2WX4;
 					};
 					C362A1831C5C6AFA004667EF = {
 						CreatedOnToolsVersion = 7.2;
@@ -524,6 +532,7 @@
 			files = (
 				C362A1791C5C6AF9004667EF /* ViewController.swift in Sources */,
 				C362A1771C5C6AF9004667EF /* AppDelegate.swift in Sources */,
+				4C7562C41C5CFE7700B1FC01 /* ControllerInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,10 +636,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "The Beating of the Gates/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.grantjbutler.The-Beating-of-the-Gates";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.1;
@@ -642,10 +658,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "The Beating of the Gates/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.grantjbutler.The-Beating-of-the-Gates";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.1;
