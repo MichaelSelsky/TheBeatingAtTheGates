@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BBGroover.h"
+#import <BBGroover/BBGrooverBeat.h>
 
 @interface BBVoice : NSObject
 

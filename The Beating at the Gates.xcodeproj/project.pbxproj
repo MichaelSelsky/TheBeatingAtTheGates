@@ -18,6 +18,11 @@
 		4C7563051C5D268500B1FC01 /* BeatingGatesCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4C75630D1C5D2B0500B1FC01 /* BeatingGatesCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */; };
 		4C7563111C5D2B5A00B1FC01 /* BeatingGatesCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C306506A1C5DA83A003461A1 /* BBGroover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FFF4501C5DA2C9009961A5 /* BBGroover.framework */; };
+		C306506B1C5DA83A003461A1 /* BBGroover.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3FFF4501C5DA2C9009961A5 /* BBGroover.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C306506D1C5DAB2C003461A1 /* BBGrooverBeat.h in Headers */ = {isa = PBXBuildFile; fileRef = C306506C1C5DAAF8003461A1 /* BBGrooverBeat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C30650701C5DC59C003461A1 /* CheckForEnemyRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C306506F1C5DC59C003461A1 /* CheckForEnemyRule.swift */; };
+		C30650721C5DC659003461A1 /* EntityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30650711C5DC659003461A1 /* EntityType.swift */; };
 		C362A1771C5C6AF9004667EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1761C5C6AF9004667EF /* AppDelegate.swift */; };
 		C362A1791C5C6AF9004667EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1781C5C6AF9004667EF /* ViewController.swift */; };
 		C362A17C1C5C6AF9004667EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C362A17A1C5C6AF9004667EF /* Main.storyboard */; };
@@ -66,14 +71,13 @@
 		C3FFF4421C5D70F0009961A5 /* MonsterMoveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4411C5D70F0009961A5 /* MonsterMoveState.swift */; };
 		C3FFF4441C5D70F8009961A5 /* MonsterAttackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4431C5D70F8009961A5 /* MonsterAttackState.swift */; };
 		C3FFF4481C5D98A2009961A5 /* RulesComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4471C5D98A2009961A5 /* RulesComponent.swift */; };
-		C3FFF4531C5DA2C9009961A5 /* BBGroover.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FFF4521C5DA2C9009961A5 /* BBGroover.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3FFF4571C5DA2C9009961A5 /* BBGroover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FFF4501C5DA2C9009961A5 /* BBGroover.framework */; };
 		C3FFF4581C5DA2C9009961A5 /* BBGroover.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3FFF4501C5DA2C9009961A5 /* BBGroover.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C3FFF4651C5DA2D0009961A5 /* BBGroove.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FFF45C1C5DA2D0009961A5 /* BBGroove.h */; };
+		C3FFF4651C5DA2D0009961A5 /* BBGroove.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FFF45C1C5DA2D0009961A5 /* BBGroove.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3FFF4661C5DA2D0009961A5 /* BBGroove.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF45D1C5DA2D0009961A5 /* BBGroove.m */; };
-		C3FFF4671C5DA2D0009961A5 /* BBGroover.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FFF45E1C5DA2D0009961A5 /* BBGroover.h */; };
+		C3FFF4671C5DA2D0009961A5 /* BBGroover.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FFF45E1C5DA2D0009961A5 /* BBGroover.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3FFF4681C5DA2D0009961A5 /* BBGroover.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF45F1C5DA2D0009961A5 /* BBGroover.m */; };
-		C3FFF4691C5DA2D0009961A5 /* BBVoice.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FFF4601C5DA2D0009961A5 /* BBVoice.h */; };
+		C3FFF4691C5DA2D0009961A5 /* BBVoice.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FFF4601C5DA2D0009961A5 /* BBVoice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3FFF46A1C5DA2D0009961A5 /* BBVoice.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4611C5DA2D0009961A5 /* BBVoice.m */; };
 		C3FFF46B1C5DA2D0009961A5 /* NSNumber+Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FFF4631C5DA2D0009961A5 /* NSNumber+Utilities.h */; };
 		C3FFF46C1C5DA2D0009961A5 /* NSNumber+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4641C5DA2D0009961A5 /* NSNumber+Utilities.m */; };
@@ -107,6 +111,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4C7562EE1C5D268500B1FC01;
 			remoteInfo = BeatingGatesCommon;
+		};
+		C30650681C5DA832003461A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3F473D31C5C5FD300B70519 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3FFF44F1C5DA2C9009961A5;
+			remoteInfo = BBGroover;
 		};
 		C362A1851C5C6AFA004667EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -160,6 +171,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				4C7563111C5D2B5A00B1FC01 /* BeatingGatesCommon.framework in Embed Frameworks */,
+				C306506B1C5DA83A003461A1 /* BBGroover.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,6 +201,9 @@
 		4C7562F81C5D268500B1FC01 /* BeatingGatesCommonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeatingGatesCommonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C7562FF1C5D268500B1FC01 /* BeatingGatesCommonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatingGatesCommonTests.swift; sourceTree = "<group>"; };
 		4C7563011C5D268500B1FC01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C306506C1C5DAAF8003461A1 /* BBGrooverBeat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBGrooverBeat.h; sourceTree = "<group>"; };
+		C306506F1C5DC59C003461A1 /* CheckForEnemyRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckForEnemyRule.swift; sourceTree = "<group>"; };
+		C30650711C5DC659003461A1 /* EntityType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityType.swift; sourceTree = "<group>"; };
 		C362A1741C5C6AF9004667EF /* The Beating of the Gates-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Beating of the Gates-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C362A1761C5C6AF9004667EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C362A1781C5C6AF9004667EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -249,14 +264,13 @@
 		C3FFF4431C5D70F8009961A5 /* MonsterAttackState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterAttackState.swift; sourceTree = "<group>"; };
 		C3FFF4471C5D98A2009961A5 /* RulesComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesComponent.swift; sourceTree = "<group>"; };
 		C3FFF4501C5DA2C9009961A5 /* BBGroover.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BBGroover.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3FFF4521C5DA2C9009961A5 /* BBGroover.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBGroover.h; sourceTree = "<group>"; };
-		C3FFF4541C5DA2C9009961A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C3FFF45C1C5DA2D0009961A5 /* BBGroove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBGroove.h; sourceTree = "<group>"; };
-		C3FFF45D1C5DA2D0009961A5 /* BBGroove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGroove.m; sourceTree = "<group>"; };
-		C3FFF45E1C5DA2D0009961A5 /* BBGroover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBGroover.h; sourceTree = "<group>"; };
-		C3FFF45F1C5DA2D0009961A5 /* BBGroover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGroover.m; sourceTree = "<group>"; };
-		C3FFF4601C5DA2D0009961A5 /* BBVoice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBVoice.h; sourceTree = "<group>"; };
-		C3FFF4611C5DA2D0009961A5 /* BBVoice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBVoice.m; sourceTree = "<group>"; };
+		C3FFF4541C5DA2C9009961A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = BBGroover/Info.plist; sourceTree = "<group>"; };
+		C3FFF45C1C5DA2D0009961A5 /* BBGroove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBGroove.h; path = BBGroover/BBGroove.h; sourceTree = "<group>"; };
+		C3FFF45D1C5DA2D0009961A5 /* BBGroove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBGroove.m; path = BBGroover/BBGroove.m; sourceTree = "<group>"; };
+		C3FFF45E1C5DA2D0009961A5 /* BBGroover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBGroover.h; path = BBGroover/BBGroover.h; sourceTree = "<group>"; };
+		C3FFF45F1C5DA2D0009961A5 /* BBGroover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBGroover.m; path = BBGroover/BBGroover.m; sourceTree = "<group>"; };
+		C3FFF4601C5DA2D0009961A5 /* BBVoice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBVoice.h; path = BBGroover/BBVoice.h; sourceTree = "<group>"; };
+		C3FFF4611C5DA2D0009961A5 /* BBVoice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBVoice.m; path = BBGroover/BBVoice.m; sourceTree = "<group>"; };
 		C3FFF4631C5DA2D0009961A5 /* NSNumber+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Utilities.h"; sourceTree = "<group>"; };
 		C3FFF4641C5DA2D0009961A5 /* NSNumber+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Utilities.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -281,6 +295,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C306506A1C5DA83A003461A1 /* BBGroover.framework in Frameworks */,
 				4C7562C51C5CFED400B1FC01 /* VirtualGameController.framework in Frameworks */,
 				4C75630D1C5D2B0500B1FC01 /* BeatingGatesCommon.framework in Frameworks */,
 			);
@@ -378,6 +393,7 @@
 		4C7562F01C5D268500B1FC01 /* BeatingGatesCommon */ = {
 			isa = PBXGroup;
 			children = (
+				C306506E1C5DB043003461A1 /* Rules */,
 				C3FFF43B1C5D703C009961A5 /* State Machines */,
 				C3FFF4381C5D66A8009961A5 /* Nodes */,
 				C3FFF4311C5D65A6009961A5 /* Components */,
@@ -408,6 +424,14 @@
 				4C7562FE1C5D268500B1FC01 /* BeatingGatesCommonTests */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		C306506E1C5DB043003461A1 /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				C306506F1C5DC59C003461A1 /* CheckForEnemyRule.swift */,
+			);
+			name = Rules;
 			sourceTree = "<group>";
 		};
 		C362A1751C5C6AF9004667EF /* The Beating of the Gates */ = {
@@ -468,7 +492,6 @@
 				4C7562BA1C5C6B7900B1FC01 /* iOS */,
 				4C75630C1C5D268D00B1FC01 /* Common */,
 				C3FFF4491C5DA2A0009961A5 /* Vendor */,
-				C3FFF4511C5DA2C9009961A5 /* BBGroover */,
 				C3F473DC1C5C5FD300B70519 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -567,6 +590,7 @@
 			isa = PBXGroup;
 			children = (
 				C3FFF4321C5D65F4009961A5 /* SkeletonEntity.swift */,
+				C30650711C5DC659003461A1 /* EntityType.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -626,18 +650,11 @@
 				C3FFF45F1C5DA2D0009961A5 /* BBGroover.m */,
 				C3FFF4601C5DA2D0009961A5 /* BBVoice.h */,
 				C3FFF4611C5DA2D0009961A5 /* BBVoice.m */,
+				C306506C1C5DAAF8003461A1 /* BBGrooverBeat.h */,
+				C3FFF4541C5DA2C9009961A5 /* Info.plist */,
 				C3FFF4621C5DA2D0009961A5 /* Categories */,
 			);
 			name = BBGroover;
-			sourceTree = "<group>";
-		};
-		C3FFF4511C5DA2C9009961A5 /* BBGroover */ = {
-			isa = PBXGroup;
-			children = (
-				C3FFF4521C5DA2C9009961A5 /* BBGroover.h */,
-				C3FFF4541C5DA2C9009961A5 /* Info.plist */,
-			);
-			path = BBGroover;
 			sourceTree = "<group>";
 		};
 		C3FFF4621C5DA2D0009961A5 /* Categories */ = {
@@ -678,10 +695,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3FFF4651C5DA2D0009961A5 /* BBGroove.h in Headers */,
+				C306506D1C5DAB2C003461A1 /* BBGrooverBeat.h in Headers */,
 				C3FFF4691C5DA2D0009961A5 /* BBVoice.h in Headers */,
 				C3FFF4671C5DA2D0009961A5 /* BBGroover.h in Headers */,
 				C3FFF46B1C5DA2D0009961A5 /* NSNumber+Utilities.h in Headers */,
-				C3FFF4531C5DA2C9009961A5 /* BBGroover.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,6 +755,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C30650691C5DA832003461A1 /* PBXTargetDependency */,
 				4C75630F1C5D2B1D00B1FC01 /* PBXTargetDependency */,
 			);
 			name = "The Beating of the Gates-tvOS";
@@ -1078,6 +1096,8 @@
 				C3FFF4331C5D65F4009961A5 /* SkeletonEntity.swift in Sources */,
 				C3FFF43E1C5D70C7009961A5 /* IntelligenceComponent.swift in Sources */,
 				C3FFF41A1C5D2C6A009961A5 /* TitleScene.swift in Sources */,
+				C30650701C5DC59C003461A1 /* CheckForEnemyRule.swift in Sources */,
+				C30650721C5DC659003461A1 /* EntityType.swift in Sources */,
 				C3FFF4371C5D66A5009961A5 /* EntityNode.swift in Sources */,
 				C3FFF4241C5D4394009961A5 /* LaneNode.swift in Sources */,
 				C3FFF4421C5D70F0009961A5 /* MonsterMoveState.swift in Sources */,
@@ -1190,6 +1210,11 @@
 			isa = PBXTargetDependency;
 			target = 4C7562EE1C5D268500B1FC01 /* BeatingGatesCommon */;
 			targetProxy = 4C75630E1C5D2B1D00B1FC01 /* PBXContainerItemProxy */;
+		};
+		C30650691C5DA832003461A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3FFF44F1C5DA2C9009961A5 /* BBGroover */;
+			targetProxy = C30650681C5DA832003461A1 /* PBXContainerItemProxy */;
 		};
 		C362A1861C5C6AFA004667EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1631,6 +1656,8 @@
 		C3FFF45A1C5DA2C9009961A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1642,6 +1669,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.grantjbutler.BBGroover;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1650,6 +1678,8 @@
 		C3FFF45B1C5DA2C9009961A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1661,6 +1691,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.grantjbutler.BBGroover;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1766,6 +1797,7 @@
 				C3FFF45B1C5DA2C9009961A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

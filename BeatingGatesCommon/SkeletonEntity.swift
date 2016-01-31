@@ -9,7 +9,7 @@
 import GameplayKit
 import SpriteKit
 
-public class SkeletonEntity: GKEntity {
+public class SkeletonEntity: GKEntity, EntityType {
 	
 	var renderComponent: RenderComponent {
 		guard let renderComponent = componentForClass(RenderComponent.self) else { fatalError("A SkeletonEntity must have a RenderComponent.") }
@@ -17,6 +17,10 @@ public class SkeletonEntity: GKEntity {
 	}
 	
 	public let team: Team
+	
+	var size: EntitySize {
+		return .OneByOne
+	}
 	
 	public init(team: Team) {
 		self.team = team
@@ -36,6 +40,10 @@ public class SkeletonEntity: GKEntity {
 			MonsterAttackState()
 		])
 		addComponent(intelligenceComponent)
+		
+		let rulesComponent = RulesComponent(rules: [
+			
+		])
 		
 		let spriteNode = SKSpriteNode(imageNamed: "\(team)Skeleton")
 		renderComponent.node.addChild(spriteNode)

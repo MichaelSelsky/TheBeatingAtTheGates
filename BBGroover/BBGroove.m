@@ -16,6 +16,14 @@
 	return groove;
 }
 
+- (instancetype)init {
+	self = [super init];
+	if (self) {
+		_voices = @[];
+	}
+	return self;
+}
+
 #pragma mark Instance Methods
 - (BBGrooverBeat) maxSubdivision {
     return [[_voices valueForKeyPath:@"@max.subdivision"] unsignedIntegerValue];
@@ -23,7 +31,7 @@
 
 - (void) addVoice:(BBVoice *)object {
     NSMutableArray *newVoices = [NSMutableArray arrayWithArray:_voices];
-    [newVoices addObject:newVoices];
+    [newVoices addObject:object];
     
     _voices = newVoices;
 }

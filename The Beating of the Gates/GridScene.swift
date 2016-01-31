@@ -9,13 +9,36 @@
 import SpriteKit
 import BeatingGatesCommon
 import GameplayKit
+import BBGroover
 
-class GridScene: SKScene {
+class GridScene: SKScene, BBGrooverDelegate {
 	
 	private var entities: Set<GKEntity> = Set()
+	private lazy var groover: BBGroover = { [unowned self] in
+		let voice = BBVoice(values: [true, true, true, true])
+		
+		let groove = BBGroove()
+		groove.tempo = 105
+		groove.beatUnit = BBGrooverBeat(rawValue: 4)
+		groove.beats = 4
+		groove.addVoice(voice)
+		
+		let groover = BBGroover(groove: groove)
+		groover.delegate = self
+		return groover
+	}()
+	
+	private let rulesComponentSystem = GKComponentSystem(componentClass: RulesComponent.self)
 	
 	override func didMoveToView(view: SKView) {
 		setupLanes(inView: view)
+		
+		groover.startGrooving()
+		
+		let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
+		dispatch_after(delayTime, dispatch_get_main_queue()) {
+			self.spawnMonster(AlliedMonster(team: .Blue, monster: .Skeleton), lane: 0, column: 8)
+		}
     }
 	
 	private func setupLanes(inView view: SKView) {
@@ -31,11 +54,6 @@ class GridScene: SKScene {
 			
 			addChild(laneNode)
 		}
-		
-		let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
-		dispatch_after(delayTime, dispatch_get_main_queue()) {
-			self.spawnMonster(AlliedMonster(team: .Blue, monster: .Skeleton), lane: 0, column: 8)
-		}
 	}
 	
 	func spawnMonster(monster: AlliedMonster, lane: Int, column: Int) {
@@ -44,15 +62,38 @@ class GridScene: SKScene {
 		guard let tileNode = laneNode.childNodeWithName("Tile\(column)") else { return }
 		
 		let calculatedTileNode = tileNode.calculateAccumulatedFrame()
+		let tileNodeCenter = CGPoint(x: calculatedTileNode.midX, y: calculatedTileNode.midY)
+		let entityCenter = self.convertPoint(tileNodeCenter, fromNode: laneNode)
 		
 		let entity = SkeletonEntity(team: monster.team)
+		
+		if let rulesComponent = entity.componentForClass(RulesComponent.self) {
+			rulesComponentSystem.addComponent(rulesComponent)
+		}
+		
 		entities.insert(entity)
 		
 		if let renderNode = entity.componentForClass(RenderComponent.self)?.node {
-			renderNode.position = CGPoint(x: calculatedTileNode.midX, y: calculatedTileNode.midY)
+			renderNode.position = entityCenter
 			renderNode.zPosition = 10
-			laneNode.addChild(renderNode)
+			addChild(renderNode)
 		}
+	}
+	
+	func groover(groover: BBGroover!, didTick tick: UInt) {
+		// TODO: Trigger idle?
+		
+		if tick % 4 == 1 {
+			if let components = rulesComponentSystem.components as? [RulesComponent] {
+				for component in components {
+					component.updateWithTick(tick)
+				}
+			}
+		}
+	}
+	
+	func groover(groover: BBGroover!, voicesDidTick voices: [AnyObject]!) {
+		// Do nothing.
 	}
 	
 }
