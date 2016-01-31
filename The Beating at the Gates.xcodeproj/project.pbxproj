@@ -24,6 +24,7 @@
 		4C75631A1C5D464D00B1FC01 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7563181C5D464D00B1FC01 /* spark.png */; };
 		4C7563201C5D741000B1FC01 /* Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C75631D1C5D6BA600B1FC01 /* Gesture.swift */; };
 		4C7563291C5DE19100B1FC01 /* HealthComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7563271C5DE18800B1FC01 /* HealthComponent.swift */; };
+		4CD9A7D31C5E8BE90094AAF5 /* SummonParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4CD9A7D21C5E8BE90094AAF5 /* SummonParticle.sks */; };
 		C306506A1C5DA83A003461A1 /* BBGroover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FFF4501C5DA2C9009961A5 /* BBGroover.framework */; };
 		C306506B1C5DA83A003461A1 /* BBGroover.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3FFF4501C5DA2C9009961A5 /* BBGroover.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C30650701C5DC59C003461A1 /* CheckForEnemyRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C306506F1C5DC59C003461A1 /* CheckForEnemyRule.swift */; };
@@ -234,6 +235,7 @@
 		4C7563181C5D464D00B1FC01 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		4C75631D1C5D6BA600B1FC01 /* Gesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gesture.swift; path = ../Gesture.swift; sourceTree = "<group>"; };
 		4C7563271C5DE18800B1FC01 /* HealthComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthComponent.swift; path = ../HealthComponent.swift; sourceTree = "<group>"; };
+		4CD9A7D21C5E8BE90094AAF5 /* SummonParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SummonParticle.sks; sourceTree = "<group>"; };
 		C306506C1C5DAAF8003461A1 /* BBGrooverBeat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBGrooverBeat.h; sourceTree = "<group>"; };
 		C306506F1C5DC59C003461A1 /* CheckForEnemyRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckForEnemyRule.swift; sourceTree = "<group>"; };
 		C30650711C5DC659003461A1 /* EntityType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityType.swift; sourceTree = "<group>"; };
@@ -485,6 +487,7 @@
 		C30650841C5E4810003461A1 /* Particles */ = {
 			isa = PBXGroup;
 			children = (
+				4CD9A7D21C5E8BE90094AAF5 /* SummonParticle.sks */,
 				C30650801C5E43F3003461A1 /* CastleDamagedParticle.sks */,
 				C30650891C5E4833003461A1 /* CastleExplosionParticle.sks */,
 			);
@@ -1046,6 +1049,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CD9A7D31C5E8BE90094AAF5 /* SummonParticle.sks in Resources */,
 				C306508F1C5E4DC3003461A1 /* CastleExplosionParticle.sks in Resources */,
 				C306508D1C5E4DC3003461A1 /* CastleDamagedParticle.sks in Resources */,
 			);
