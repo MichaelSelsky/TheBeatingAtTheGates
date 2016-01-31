@@ -35,7 +35,6 @@ class ControllerInput {
         }
         
         guard setUpController(controller) else {
-            controller.disconnect()
             return
         }
         

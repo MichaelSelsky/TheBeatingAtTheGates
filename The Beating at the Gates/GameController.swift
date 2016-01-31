@@ -8,11 +8,23 @@
 
 import Foundation
 import VirtualGameController
+import BeatingGatesCommon
 
 let VgcAppIdentifier: String = "BeatingAtTheGates"
 
+typealias Peripheral = VirtualGameController.Peripheral
+typealias PeripheralConnectionHandler = (Peripheral) -> Void
+
 class GameController {
-    init() {
+    
+    let peripheralConnectionHandler: PeripheralConnectionHandler
+    let peripheralDisconnectionHandler: PeripheralConnectionHandler
+    
+    init(connectionHandler: PeripheralConnectionHandler, disconnectionHandler: PeripheralConnectionHandler) {
+        
+        peripheralConnectionHandler = connectionHandler
+        peripheralDisconnectionHandler = disconnectionHandler
+        
         VgcManager.startAs(.Peripheral, appIdentifier: VgcAppIdentifier, includesPeerToPeer: true)
         
         VgcManager.peripheral.deviceInfo = DeviceInfo(deviceUID: "", vendorName: "", attachedToDevice: false, profileType: .Gamepad, controllerType: .Software, supportsMotion: false)
@@ -31,6 +43,39 @@ class GameController {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
+    func handleGesture(gesture: Gesture) {
+        var element: Element?
+        switch gesture {
+        case .Up:
+            element = VgcManager.elements.dpadYAxis
+            element?.value = 1.0
+        case .Down:
+            element = VgcManager.elements.dpadYAxis
+            element?.value = -1.0
+        case .Pause:
+            element = VgcManager.elements.pauseButton
+            element?.value = 1.0
+        case .Skeleton:
+            element = VgcManager.elements.buttonA
+            element?.value = 1.0
+        case .Snake:
+            element = VgcManager.elements.buttonB
+            element?.value = 1.0
+        case .Spider:
+            element = VgcManager.elements.buttonX
+            element?.value = 1.0
+        }
+        if let element = element {
+            buttonPress(element)
+        }
+    }
+    
+    private func buttonPress(element: Element) {
+        VgcManager.peripheral.sendElementState(element);
+        element.value = 0
+        VgcManager.peripheral.sendElementState(element)
+    }
+    
     func test() {
         let a = VgcManager.elements.buttonA
         a.value = 1.0
@@ -44,6 +89,9 @@ class GameController {
             return
         }
         
+        let peripheral = VgcManager.peripheral
+        peripheralConnectionHandler(peripheral)
+        
         VgcManager.peripheral.connectToService(service)
         VgcManager.peripheral.stopBrowsingForServices()
     }
@@ -53,11 +101,13 @@ class GameController {
     }
     
     @objc func peripheralDidConnect(note: NSNotification) {
-        
+        let peripheral = VgcManager.peripheral
+        peripheralConnectionHandler(peripheral)
     }
     
     @objc func peripheralDidDisconnect(note: NSNotification) {
-        
+        let peripheral = VgcManager.peripheral
+        peripheralDisconnectionHandler(peripheral)
     }
     
     deinit {

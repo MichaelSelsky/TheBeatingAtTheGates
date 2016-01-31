@@ -18,6 +18,11 @@
 		4C7563051C5D268500B1FC01 /* BeatingGatesCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4C75630D1C5D2B0500B1FC01 /* BeatingGatesCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */; };
 		4C7563111C5D2B5A00B1FC01 /* BeatingGatesCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4C7563141C5D3AFE00B1FC01 /* DrawingScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C7563131C5D3AFE00B1FC01 /* DrawingScene.sks */; };
+		4C7563161C5D423000B1FC01 /* DrawingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7563151C5D423000B1FC01 /* DrawingScene.swift */; };
+		4C7563191C5D464D00B1FC01 /* Magic.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C7563171C5D464D00B1FC01 /* Magic.sks */; };
+		4C75631A1C5D464D00B1FC01 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7563181C5D464D00B1FC01 /* spark.png */; };
+		4C7563201C5D741000B1FC01 /* Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C75631D1C5D6BA600B1FC01 /* Gesture.swift */; };
 		C362A1771C5C6AF9004667EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1761C5C6AF9004667EF /* AppDelegate.swift */; };
 		C362A1791C5C6AF9004667EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1781C5C6AF9004667EF /* ViewController.swift */; };
 		C362A17C1C5C6AF9004667EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C362A17A1C5C6AF9004667EF /* Main.storyboard */; };
@@ -97,6 +102,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4C7562EE1C5D268500B1FC01;
 			remoteInfo = BeatingGatesCommon;
+		};
+		4C75631B1C5D4F6E00B1FC01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3F473D31C5C5FD300B70519 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3FFF3C21C5D06D1009961A5;
+			remoteInfo = CMUnistrokeGestureRecognizer;
 		};
 		C362A1851C5C6AFA004667EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -179,6 +191,11 @@
 		4C7562F81C5D268500B1FC01 /* BeatingGatesCommonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeatingGatesCommonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C7562FF1C5D268500B1FC01 /* BeatingGatesCommonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatingGatesCommonTests.swift; sourceTree = "<group>"; };
 		4C7563011C5D268500B1FC01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C7563131C5D3AFE00B1FC01 /* DrawingScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DrawingScene.sks; sourceTree = "<group>"; };
+		4C7563151C5D423000B1FC01 /* DrawingScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingScene.swift; sourceTree = "<group>"; };
+		4C7563171C5D464D00B1FC01 /* Magic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Magic.sks; sourceTree = "<group>"; };
+		4C7563181C5D464D00B1FC01 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		4C75631D1C5D6BA600B1FC01 /* Gesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gesture.swift; path = ../Gesture.swift; sourceTree = "<group>"; };
 		C362A1741C5C6AF9004667EF /* The Beating of the Gates-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Beating of the Gates-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C362A1761C5C6AF9004667EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C362A1781C5C6AF9004667EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -358,6 +375,8 @@
 		4C7562F01C5D268500B1FC01 /* BeatingGatesCommon */ = {
 			isa = PBXGroup;
 			children = (
+				C3FFF4181C5D2146009961A5 /* Game.xcassets */,
+				4C75631D1C5D6BA600B1FC01 /* Gesture.swift */,
 				C3FFF4141C5D2129009961A5 /* TitleScene.swift */,
 				C3FFF4221C5D4243009961A5 /* LaneNode.swift */,
 				4C7562F11C5D268500B1FC01 /* BeatingGatesCommon.h */,
@@ -471,8 +490,12 @@
 				C362A1AB1C5C73BD004667EF /* Frameworks */,
 				C3F473DE1C5C5FD300B70519 /* AppDelegate.swift */,
 				C3F473E01C5C5FD300B70519 /* ViewController.swift */,
+				4C7563131C5D3AFE00B1FC01 /* DrawingScene.sks */,
 				4C7562BC1C5C7EDE00B1FC01 /* GameController.swift */,
 				C3F473E21C5C5FD300B70519 /* Main.storyboard */,
+				4C7563151C5D423000B1FC01 /* DrawingScene.swift */,
+				4C7563171C5D464D00B1FC01 /* Magic.sks */,
+				4C7563181C5D464D00B1FC01 /* spark.png */,
 				C3F473E51C5C5FD300B70519 /* Assets.xcassets */,
 				C3F473E71C5C5FD300B70519 /* LaunchScreen.storyboard */,
 				C3F473EA1C5C5FD300B70519 /* Info.plist */,
@@ -630,6 +653,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4C75631C1C5D4F6E00B1FC01 /* PBXTargetDependency */,
 			);
 			name = BeatingGatesCommon;
 			productName = BeatingGatesCommon;
@@ -924,7 +948,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C7563141C5D3AFE00B1FC01 /* DrawingScene.sks in Resources */,
+				4C7563191C5D464D00B1FC01 /* Magic.sks in Resources */,
 				C3F473E91C5C5FD300B70519 /* LaunchScreen.storyboard in Resources */,
+				4C75631A1C5D464D00B1FC01 /* spark.png in Resources */,
 				C3FFF41D1C5D2E7B009961A5 /* TitleScene.sks in Resources */,
 				C3F473E61C5C5FD300B70519 /* Assets.xcassets in Resources */,
 				C3FFF4211C5D4178009961A5 /* Game.xcassets in Resources */,
@@ -1001,6 +1028,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3FFF41A1C5D2C6A009961A5 /* TitleScene.swift in Sources */,
+				4C7563201C5D741000B1FC01 /* Gesture.swift in Sources */,
 				C3FFF4241C5D4394009961A5 /* LaneNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1047,6 +1075,7 @@
 				C3F473E11C5C5FD300B70519 /* ViewController.swift in Sources */,
 				4C7562BD1C5C7EDE00B1FC01 /* GameController.swift in Sources */,
 				C3F473DF1C5C5FD300B70519 /* AppDelegate.swift in Sources */,
+				4C7563161C5D423000B1FC01 /* DrawingScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1110,6 +1139,11 @@
 			isa = PBXTargetDependency;
 			target = 4C7562EE1C5D268500B1FC01 /* BeatingGatesCommon */;
 			targetProxy = 4C75630E1C5D2B1D00B1FC01 /* PBXContainerItemProxy */;
+		};
+		4C75631C1C5D4F6E00B1FC01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3FFF3C21C5D06D1009961A5 /* CMUnistrokeGestureRecognizer */;
+			targetProxy = 4C75631B1C5D4F6E00B1FC01 /* PBXContainerItemProxy */;
 		};
 		C362A1861C5C6AFA004667EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
