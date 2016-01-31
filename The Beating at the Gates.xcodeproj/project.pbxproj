@@ -22,7 +22,7 @@
 		4C7563161C5D423000B1FC01 /* DrawingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7563151C5D423000B1FC01 /* DrawingScene.swift */; };
 		4C7563191C5D464D00B1FC01 /* Magic.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C7563171C5D464D00B1FC01 /* Magic.sks */; };
 		4C75631A1C5D464D00B1FC01 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7563181C5D464D00B1FC01 /* spark.png */; };
-		4C75631E1C5D6BA600B1FC01 /* Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C75631D1C5D6BA600B1FC01 /* Gesture.swift */; };
+		4C7563201C5D741000B1FC01 /* Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C75631D1C5D6BA600B1FC01 /* Gesture.swift */; };
 		C362A1771C5C6AF9004667EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1761C5C6AF9004667EF /* AppDelegate.swift */; };
 		C362A1791C5C6AF9004667EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1781C5C6AF9004667EF /* ViewController.swift */; };
 		C362A17C1C5C6AF9004667EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C362A17A1C5C6AF9004667EF /* Main.storyboard */; };
@@ -172,7 +172,7 @@
 		4C7563151C5D423000B1FC01 /* DrawingScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingScene.swift; sourceTree = "<group>"; };
 		4C7563171C5D464D00B1FC01 /* Magic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Magic.sks; sourceTree = "<group>"; };
 		4C7563181C5D464D00B1FC01 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
-		4C75631D1C5D6BA600B1FC01 /* Gesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gesture.swift; sourceTree = "<group>"; };
+		4C75631D1C5D6BA600B1FC01 /* Gesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gesture.swift; path = ../Gesture.swift; sourceTree = "<group>"; };
 		C362A1741C5C6AF9004667EF /* The Beating of the Gates-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Beating of the Gates-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C362A1761C5C6AF9004667EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C362A1781C5C6AF9004667EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -331,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				C3FFF4181C5D2146009961A5 /* Game.xcassets */,
+				4C75631D1C5D6BA600B1FC01 /* Gesture.swift */,
 				C3FFF4141C5D2129009961A5 /* TitleScene.swift */,
 				4C7562F11C5D268500B1FC01 /* BeatingGatesCommon.h */,
 				4C7562F31C5D268500B1FC01 /* Info.plist */,
@@ -409,7 +410,6 @@
 		C3F473D21C5C5FD300B70519 = {
 			isa = PBXGroup;
 			children = (
-				4C75631D1C5D6BA600B1FC01 /* Gesture.swift */,
 				4C7562BB1C5C6B9B00B1FC01 /* tvOS */,
 				4C7562BA1C5C6B7900B1FC01 /* iOS */,
 				C3FFF3C41C5D06D1009961A5 /* CMUnistrokeGestureRecognizer */,
@@ -892,6 +892,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3FFF41A1C5D2C6A009961A5 /* TitleScene.swift in Sources */,
+				4C7563201C5D741000B1FC01 /* Gesture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -935,7 +936,6 @@
 			files = (
 				C3F473E11C5C5FD300B70519 /* ViewController.swift in Sources */,
 				4C7562BD1C5C7EDE00B1FC01 /* GameController.swift in Sources */,
-				4C75631E1C5D6BA600B1FC01 /* Gesture.swift in Sources */,
 				C3F473DF1C5C5FD300B70519 /* AppDelegate.swift in Sources */,
 				4C7563161C5D423000B1FC01 /* DrawingScene.swift in Sources */,
 			);

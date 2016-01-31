@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum Gesture {
+public enum Gesture {
     case Up, Down, Skeleton, Snake, Spider, Pause
 }

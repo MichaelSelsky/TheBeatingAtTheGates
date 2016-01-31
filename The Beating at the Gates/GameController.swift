@@ -8,6 +8,7 @@
 
 import Foundation
 import VirtualGameController
+import BeatingGatesCommon
 
 let VgcAppIdentifier: String = "BeatingAtTheGates"
 
@@ -40,6 +41,39 @@ class GameController {
     func stop() {
         VgcManager.peripheral.disconnectFromService()
         NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    func handleGesture(gesture: Gesture) {
+        var element: Element?
+        switch gesture {
+        case .Up:
+            element = VgcManager.elements.dpadYAxis
+            element?.value = 1.0
+        case .Down:
+            element = VgcManager.elements.dpadYAxis
+            element?.value = -1.0
+        case .Pause:
+            element = VgcManager.elements.pauseButton
+            element?.value = 1.0
+        case .Skeleton:
+            element = VgcManager.elements.buttonA
+            element?.value = 1.0
+        case .Snake:
+            element = VgcManager.elements.buttonB
+            element?.value = 1.0
+        case .Spider:
+            element = VgcManager.elements.buttonX
+            element?.value = 1.0
+        }
+        if let element = element {
+            buttonPress(element)
+        }
+    }
+    
+    private func buttonPress(element: Element) {
+        VgcManager.peripheral.sendElementState(element);
+        element.value = 0
+        VgcManager.peripheral.sendElementState(element)
     }
     
     func test() {

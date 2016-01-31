@@ -10,6 +10,7 @@ import UIKit
 import SpriteKit
 import CoreGraphics
 import CMUnistrokeGestureRecognizer
+import BeatingGatesCommon
 
 class DrawingScene: SKScene {
     // MARK: Touch Handling
@@ -73,10 +74,10 @@ class DrawingScene: SKScene {
         commonInit()
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        handleTouches(touches)
-    }
-    
+//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//        handleTouches(touches)
+//    }
+//    
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         handleTouches(touches)
     }
