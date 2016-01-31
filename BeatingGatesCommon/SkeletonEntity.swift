@@ -90,7 +90,9 @@ public class SkeletonEntity: GKEntity, EntityType, EntityLookAheadType, Movement
             particleNode.particleColor = .redColor()
         }
         
-        let actionSequence = SKAction.sequence([SKAction.waitForDuration(0.5), SKAction.removeFromParent()])
+        let actionSequence = SKAction.sequence([SKAction.waitForDuration(0.5),
+            SKAction.fadeAlphaTo(0.0, duration: 0.5),
+            SKAction.removeFromParent()])
         renderComponent.node.addChild(particleNode)
         particleNode.runAction(actionSequence)
 		
