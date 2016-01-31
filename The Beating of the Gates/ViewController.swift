@@ -34,8 +34,9 @@ class ViewController: UIViewController {
             skView.presentScene(scene)
 			
 			if let gridScene = GridScene(fileNamed: "GridScene") {
-				let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(5 * Double(NSEC_PER_SEC)))
+				let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
 				dispatch_after(delayTime, dispatch_get_main_queue()) {
+					self.controllerInput.inputHandler = gridScene.inputHandler
 					skView.presentScene(gridScene, transition: SKTransition.crossFadeWithDuration(1.0))
 				}
 			}

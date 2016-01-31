@@ -1,12 +1,12 @@
 //
-//  BBGroover.h
 //  BBGroover
+//  BeatBuilder
 //
-//  Created by Grant Butler on 1/30/16.
-//  Copyright © 2016 Grant J. Butler. All rights reserved.
+//  Created by Parker Wightman on 7/21/12.
+//  Copyright (c) 2012 Parker Wightman. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for BBGroover.
 FOUNDATION_EXPORT double BBGrooverVersionNumber;
@@ -14,6 +14,43 @@ FOUNDATION_EXPORT double BBGrooverVersionNumber;
 //! Project version string for BBGroover.
 FOUNDATION_EXPORT const unsigned char BBGrooverVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <BBGroover/PublicHeader.h>
+#import <BBGroover/BBGroove.h>
+#import <BBGroover/BBVoice.h>
+#import <BBGroover/BBGrooverBeat.h>
+
+@protocol BBGrooverDelegate;
+
+@class BBGroove;
+
+@interface BBGroover : NSObject
+
+@property (nonatomic, assign) NSObject<BBGrooverDelegate> *delegate;
+@property (nonatomic, strong) BBGroove *groove;
+@property (nonatomic, assign, readonly) BOOL running;
+@property (nonatomic, readonly) NSUInteger currentTick;
+@property (nonatomic, assign, readonly) BBGrooverBeat currentSubdivision;
+
+#pragma mark Delegate Blocks
+@property (nonatomic, strong) void (^didTickBlock)(NSUInteger tick);
+@property (nonatomic, strong) void (^voicesDidTickBlock)(NSArray *voices);
+
+#pragma mark Initializers
+- (id)initWithGroove:(BBGroove *)groove;
++ (id) grooverWithGroove:(BBGroove *)groove;
+	
+#pragma mark Instance Methods
+- (void) startGrooving;
+- (void) stopGrooving;
+- (void) pauseGrooving;
+- (void) resumeGrooving;
+- (NSUInteger) totalTicks;
+
+@end
 
 
+@protocol BBGrooverDelegate <NSObject>
+
+- (void) groover:(BBGroover *)groover didTick:(NSUInteger)tick;
+- (void) groover:(BBGroover *)groover voicesDidTick:(NSArray *)voices;
+
+@end
