@@ -77,6 +77,8 @@ class DrawingScene: SKScene {
         gestureRecognizer.registerUnistrokeWithName("down", bezierPath:downPath)
         gestureRecognizer.registerUnistrokeWithName("up", bezierPath:upPath)
         gestureRecognizer.registerUnistrokeWithName("pause", bezierPath:pausePath, bidirectional: true)
+        gestureRecognizer.registerUnistrokeWithName("attack", bezierPath:attackPath1)
+        gestureRecognizer.registerUnistrokeWithName("attack", bezierPath:attackPath2)
         
         gestureRecognizer.minimumScoreThreshold = 0.70
 //        gestureRecognizer.registerUnistrokeWithName("line", bezierPath:linePath)
@@ -141,6 +143,8 @@ class DrawingScene: SKScene {
             gesture = .Down
         case "pause":
             gesture = .Pause
+        case "attack":
+            gesture = .Attack
         default:
             gesture = nil
         }
