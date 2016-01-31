@@ -189,7 +189,7 @@ class GridScene: SKScene, BBGrooverDelegate, ShamanEntityDelegate {
 					component.updateWithTick(tick)
 				}
 			}
-			
+            
 			if tick > 32 {
 				groover.groove.tempo += 1
 			}
