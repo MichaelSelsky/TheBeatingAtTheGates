@@ -15,6 +15,7 @@ class GridScene: SKScene, BBGrooverDelegate {
 	
 	private var entities: Set<GKEntity> = Set()
     var previousTime = NSTimeIntervalSince1970
+	
 	private lazy var groover: BBGroover = { [unowned self] in
 		let voice = BBVoice(values: [true, true, true, true])
 		
@@ -32,20 +33,25 @@ class GridScene: SKScene, BBGrooverDelegate {
 	private let rulesComponentSystem = GKComponentSystem(componentClass: MovementRulesComponent.self)
 	
 	override func didMoveToView(view: SKView) {
+		removeAllChildren()
+		
 		setupLanes(inView: view)
+		setupCastles(inView: view)
 		
 		groover.startGrooving()
 		
 		let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
 		dispatch_after(delayTime, dispatch_get_main_queue()) {
-			self.spawnMonster(AlliedMonster(team: .Blue, monster: .Skeleton), lane: 0, column: 8)
+			self.spawnMonster(AlliedMonster(team: .Blue, monster: .Skeleton), lane: 0, column: 7)
             self.spawnMonster(AlliedMonster(team: .Red, monster: .Skeleton), lane: 0, column: 1)
+			
+			dispatch_after(delayTime, dispatch_get_main_queue()) {
+				self.spawnMonster(AlliedMonster(team: .Blue, monster: .Skeleton), lane: 3, column: 3)
+			}
 		}
     }
 	
 	private func setupLanes(inView view: SKView) {
-		removeAllChildren()
-		
 		let offset = round((view.frame.height - 640) / 2.0)
 		for laneIndex in 0 ..< 5 {
 			let laneNode = LaneNode(length: 10, alternate: laneIndex % 2 == 0)
@@ -55,6 +61,33 @@ class GridScene: SKScene, BBGrooverDelegate {
 			laneNode.position = CGPoint(x: round((view.frame.width - calculatedFrame.width) / 2.0), y: CGFloat(laneIndex) * calculatedFrame.height + offset)
 			
 			addChild(laneNode)
+		}
+	}
+	
+	private func setupCastles(inView view: SKView) {
+		for team in Team.allValues {
+			let wallEntity = WallEntity(team: team)
+			
+			entities.insert(wallEntity)
+			
+			if let renderNode = wallEntity.componentForClass(RenderComponent.self)?.node {
+				guard let middleLane = childNodeWithName("Lane3") else { return }
+			
+				let x: CGFloat = {
+					let middleLaneFrame = middleLane.calculateAccumulatedFrame()
+					switch team.direction {
+						case .Left:
+							return middleLaneFrame.maxX + renderNode.calculateAccumulatedFrame().width / 2.0 - 26.0
+						
+						case .Right:
+							return middleLaneFrame.minX - renderNode.calculateAccumulatedFrame().width / 2.0 + 26.0
+					}
+				}()
+				
+				renderNode.position = CGPoint(x: x, y: view.frame.midY)
+				renderNode.zPosition = 20
+				addChild(renderNode)
+			}
 		}
 	}
 	
@@ -87,10 +120,10 @@ class GridScene: SKScene, BBGrooverDelegate {
         previousTime = currentTime
         for entity in entities {
             entity.updateWithDeltaTime(deltaTime)
-            guard let skeletonEntity = entity as? SkeletonEntity else {
-                return
-            }
-            guard let render = skeletonEntity.componentForClass(RenderComponent.self) else {
+//            guard let skeletonEntity = entity as? SkeletonEntity else {
+//                return
+//            }
+            guard let render = entity.componentForClass(RenderComponent.self) else {
                 return
             }
             if render.node.parent == nil {

@@ -24,6 +24,12 @@
 		C306506D1C5DAB2C003461A1 /* BBGrooverBeat.h in Headers */ = {isa = PBXBuildFile; fileRef = C306506C1C5DAAF8003461A1 /* BBGrooverBeat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C30650701C5DC59C003461A1 /* CheckForEnemyRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C306506F1C5DC59C003461A1 /* CheckForEnemyRule.swift */; };
 		C30650721C5DC659003461A1 /* EntityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30650711C5DC659003461A1 /* EntityType.swift */; };
+		C30650751C5E3B34003461A1 /* WallEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30650731C5E3B30003461A1 /* WallEntity.swift */; };
+		C30650771C5E3F2E003461A1 /* TeamComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30650761C5E3F2E003461A1 /* TeamComponent.swift */; };
+		C306508D1C5E4DC3003461A1 /* CastleDamagedParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = C30650801C5E43F3003461A1 /* CastleDamagedParticle.sks */; };
+		C306508F1C5E4DC3003461A1 /* CastleExplosionParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = C30650891C5E4833003461A1 /* CastleExplosionParticle.sks */; };
+		C30650921C5E4F11003461A1 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = C30650811C5E43F3003461A1 /* spark.png */; };
+		C30650931C5E4F11003461A1 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = C30650811C5E43F3003461A1 /* spark.png */; };
 		C362A1771C5C6AF9004667EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1761C5C6AF9004667EF /* AppDelegate.swift */; };
 		C362A1791C5C6AF9004667EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1781C5C6AF9004667EF /* ViewController.swift */; };
 		C362A17C1C5C6AF9004667EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C362A17A1C5C6AF9004667EF /* Main.storyboard */; };
@@ -206,6 +212,11 @@
 		C306506C1C5DAAF8003461A1 /* BBGrooverBeat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBGrooverBeat.h; sourceTree = "<group>"; };
 		C306506F1C5DC59C003461A1 /* CheckForEnemyRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckForEnemyRule.swift; sourceTree = "<group>"; };
 		C30650711C5DC659003461A1 /* EntityType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityType.swift; sourceTree = "<group>"; };
+		C30650731C5E3B30003461A1 /* WallEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallEntity.swift; sourceTree = "<group>"; };
+		C30650761C5E3F2E003461A1 /* TeamComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamComponent.swift; sourceTree = "<group>"; };
+		C30650801C5E43F3003461A1 /* CastleDamagedParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CastleDamagedParticle.sks; sourceTree = "<group>"; };
+		C30650811C5E43F3003461A1 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = BeatingGatesCommon/spark.png; sourceTree = "<group>"; };
+		C30650891C5E4833003461A1 /* CastleExplosionParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CastleExplosionParticle.sks; sourceTree = "<group>"; };
 		C362A1741C5C6AF9004667EF /* The Beating of the Gates-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Beating of the Gates-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C362A1761C5C6AF9004667EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C362A1781C5C6AF9004667EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -395,6 +406,7 @@
 		4C7562F01C5D268500B1FC01 /* BeatingGatesCommon */ = {
 			isa = PBXGroup;
 			children = (
+				C30650841C5E4810003461A1 /* Particles */,
 				C306506E1C5DB043003461A1 /* Rules */,
 				C3FFF43B1C5D703C009961A5 /* State Machines */,
 				C3FFF4381C5D66A8009961A5 /* Nodes */,
@@ -434,6 +446,15 @@
 				C306506F1C5DC59C003461A1 /* CheckForEnemyRule.swift */,
 			);
 			name = Rules;
+			sourceTree = "<group>";
+		};
+		C30650841C5E4810003461A1 /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				C30650801C5E43F3003461A1 /* CastleDamagedParticle.sks */,
+				C30650891C5E4833003461A1 /* CastleExplosionParticle.sks */,
+			);
+			name = Particles;
 			sourceTree = "<group>";
 		};
 		C362A1751C5C6AF9004667EF /* The Beating of the Gates */ = {
@@ -584,6 +605,7 @@
 			children = (
 				C3FFF4181C5D2146009961A5 /* Game.xcassets */,
 				C3FFF4161C5D212E009961A5 /* TitleScene.sks */,
+				C30650811C5E43F3003461A1 /* spark.png */,
 			);
 			name = "Shared Resources";
 			sourceTree = "<group>";
@@ -592,6 +614,7 @@
 			isa = PBXGroup;
 			children = (
 				C3FFF4321C5D65F4009961A5 /* SkeletonEntity.swift */,
+				C30650731C5E3B30003461A1 /* WallEntity.swift */,
 				C30650711C5DC659003461A1 /* EntityType.swift */,
 			);
 			name = Entities;
@@ -605,6 +628,7 @@
 				C3FFF4341C5D6691009961A5 /* RenderComponent.swift */,
 				C3FFF4471C5D98A2009961A5 /* MovementRulesComponent.swift */,
 				C3FFF4391C5D672F009961A5 /* OrientationComponent.swift */,
+				C30650761C5E3F2E003461A1 /* TeamComponent.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -975,6 +999,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C306508F1C5E4DC3003461A1 /* CastleExplosionParticle.sks in Resources */,
+				C306508D1C5E4DC3003461A1 /* CastleDamagedParticle.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -990,6 +1016,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C362A17E1C5C6AF9004667EF /* Assets.xcassets in Resources */,
+				C30650921C5E4F11003461A1 /* spark.png in Resources */,
 				C3FFF41C1C5D2E77009961A5 /* TitleScene.sks in Resources */,
 				C362A17C1C5C6AF9004667EF /* Main.storyboard in Resources */,
 				C3FFF4201C5D4176009961A5 /* Game.xcassets in Resources */,
@@ -1016,6 +1043,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3F473E91C5C5FD300B70519 /* LaunchScreen.storyboard in Resources */,
+				C30650931C5E4F11003461A1 /* spark.png in Resources */,
 				C3FFF41D1C5D2E7B009961A5 /* TitleScene.sks in Resources */,
 				C3F473E61C5C5FD300B70519 /* Assets.xcassets in Resources */,
 				C3FFF4211C5D4178009961A5 /* Game.xcassets in Resources */,
@@ -1097,8 +1125,10 @@
 				C3FFF42D1C5D5189009961A5 /* GameStructures.swift in Sources */,
 				C3FFF4351C5D6691009961A5 /* RenderComponent.swift in Sources */,
 				C3FFF4331C5D65F4009961A5 /* SkeletonEntity.swift in Sources */,
+				C30650771C5E3F2E003461A1 /* TeamComponent.swift in Sources */,
 				C3FFF43E1C5D70C7009961A5 /* IntelligenceComponent.swift in Sources */,
 				C3FFF41A1C5D2C6A009961A5 /* TitleScene.swift in Sources */,
+				C30650751C5E3B34003461A1 /* WallEntity.swift in Sources */,
 				4C7563291C5DE19100B1FC01 /* HealthComponent.swift in Sources */,
 				C30650701C5DC59C003461A1 /* CheckForEnemyRule.swift in Sources */,
 				C30650721C5DC659003461A1 /* EntityType.swift in Sources */,

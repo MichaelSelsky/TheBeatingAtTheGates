@@ -13,6 +13,13 @@ public protocol MovementRulesComponentDelegate: class {
     func rulesComponent(rulesComponent: MovementRulesComponent, didFinishEvaluatingRuleSystem ruleSystem: GKRuleSystem)
 }
 
+struct EntitySnapshot {
+	
+	let isEnemyAhead: Bool
+	let isEmptyAhead: Bool
+	
+}
+
 public class MovementRulesComponent: GKComponent {
     // MARK: Properties
     
@@ -32,13 +39,13 @@ public class MovementRulesComponent: GKComponent {
     }
 	
 	public func updateWithTick(tick: UInt) {
-		ruleSystem.reset()
-        
-        guard let skeletonEnt = entity as? SkeletonEntity else {
+		guard let entity = entity as? EntityLookAheadType else {
             return
         }
+		
+		ruleSystem.reset()
         
-        let ahead = skeletonEnt.lookAhead()
+        let ahead = entity.lookAhead()
         ruleSystem.state["forwardIsEnemy"] = false
         ruleSystem.state["forwardIsEmpty"] = false
         

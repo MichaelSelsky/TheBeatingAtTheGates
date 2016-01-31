@@ -16,25 +16,26 @@ enum WhatsAhead {
     case Enemy(GKEntity)
 }
 
-public class SkeletonEntity: GKEntity, EntityType, MovementRulesComponentDelegate {
+public class SkeletonEntity: GKEntity, EntityType, EntityLookAheadType, MovementRulesComponentDelegate {
 	
 	var renderComponent: RenderComponent {
 		guard let renderComponent = componentForClass(RenderComponent.self) else { fatalError("A SkeletonEntity must have a RenderComponent.") }
 		return renderComponent
 	}
+	
+	var teamComponent: TeamComponent {
+		guard let teamComponent = componentForClass(TeamComponent.self) else { fatalError("A SkeletonEntity must have a TeamComponent.") }
+		return teamComponent
+	}
     
     var movementRulesComponent: MovementRulesComponent
     var intelligenceComponent: IntelligenceComponent
-	
-	public let team: Team
 	
 	var size: EntitySize {
 		return .OneByOne
 	}
 	
 	public init(team: Team) {
-		self.team = team
-		
         intelligenceComponent = IntelligenceComponent(states: [
             MonsterIdleState(),
             MonsterMoveState(),
@@ -52,12 +53,13 @@ public class SkeletonEntity: GKEntity, EntityType, MovementRulesComponentDelegat
         rules.append(emptyRule)
         
         movementRulesComponent = MovementRulesComponent(rules: rules)
-        
-        
+		
 		super.init()
 		
+		let teamComponent = TeamComponent(team: team)
+		addComponent(teamComponent)
+		
         let healthComponent = HealthComponent(health: 3)
-        
         addComponent(healthComponent)
         
 		let renderComponent = RenderComponent(entity: self)
@@ -93,16 +95,15 @@ public class SkeletonEntity: GKEntity, EntityType, MovementRulesComponentDelegat
         guard let node =  unknownNode?.parent as? EntityNode else {
             return .Empty
         }
-        guard let entity = node.entity as? SkeletonEntity else {
-            return .Empty
-        }
-        if entity.team == self.team {
+		guard let aheadTeamComponent = node.entity.componentForClass(TeamComponent.self) else {
+			return .Empty
+		}
+        if aheadTeamComponent.team == teamComponent.team {
             return .Friendly
         } else {
-            return .Enemy(entity)
+            return .Enemy(node.entity)
         }
     }
-    
     
     public override func updateWithDeltaTime(seconds: NSTimeInterval) {
         guard let state = self.intelligenceComponent.stateMachine.currentState else {
@@ -148,7 +149,7 @@ public class SkeletonEntity: GKEntity, EntityType, MovementRulesComponentDelegat
     
     private func deltaX() -> CGFloat {
         var deltaX = self.renderComponent.node.children.first!.frame.width
-        if self.team.direction == .Left {
+        if teamComponent.team.direction == .Left {
             deltaX *= -1
         }
         return deltaX

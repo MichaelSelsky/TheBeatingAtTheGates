@@ -8,8 +8,8 @@
 
 import GameKit
 
-class HealthComponent: GKComponent {
-    private var health: Int
+public class HealthComponent: GKComponent {
+    private(set) var health: Int
     private let maxHealth: Int
     
     init(health: Int) {

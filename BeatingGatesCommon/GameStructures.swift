@@ -37,6 +37,10 @@ extension Team {
 		}
 	}
 	
+	public static var allValues: [Team] {
+		return [.Red, .Blue]
+	}
+	
 }
 
 public enum Role: String {

@@ -21,3 +21,9 @@ protocol EntityType {
 	var size: EntitySize { get }
 	
 }
+
+protocol EntityLookAheadType {
+	
+	func lookAhead() -> WhatsAhead
+	
+}
