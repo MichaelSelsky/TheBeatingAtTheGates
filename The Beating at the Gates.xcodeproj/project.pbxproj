@@ -66,6 +66,17 @@
 		C3FFF4421C5D70F0009961A5 /* MonsterMoveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4411C5D70F0009961A5 /* MonsterMoveState.swift */; };
 		C3FFF4441C5D70F8009961A5 /* MonsterAttackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4431C5D70F8009961A5 /* MonsterAttackState.swift */; };
 		C3FFF4481C5D98A2009961A5 /* RulesComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4471C5D98A2009961A5 /* RulesComponent.swift */; };
+		C3FFF4531C5DA2C9009961A5 /* BBGroover.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FFF4521C5DA2C9009961A5 /* BBGroover.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3FFF4571C5DA2C9009961A5 /* BBGroover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FFF4501C5DA2C9009961A5 /* BBGroover.framework */; };
+		C3FFF4581C5DA2C9009961A5 /* BBGroover.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3FFF4501C5DA2C9009961A5 /* BBGroover.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C3FFF4651C5DA2D0009961A5 /* BBGroove.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FFF45C1C5DA2D0009961A5 /* BBGroove.h */; };
+		C3FFF4661C5DA2D0009961A5 /* BBGroove.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF45D1C5DA2D0009961A5 /* BBGroove.m */; };
+		C3FFF4671C5DA2D0009961A5 /* BBGroover.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FFF45E1C5DA2D0009961A5 /* BBGroover.h */; };
+		C3FFF4681C5DA2D0009961A5 /* BBGroover.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF45F1C5DA2D0009961A5 /* BBGroover.m */; };
+		C3FFF4691C5DA2D0009961A5 /* BBVoice.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FFF4601C5DA2D0009961A5 /* BBVoice.h */; };
+		C3FFF46A1C5DA2D0009961A5 /* BBVoice.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4611C5DA2D0009961A5 /* BBVoice.m */; };
+		C3FFF46B1C5DA2D0009961A5 /* NSNumber+Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FFF4631C5DA2D0009961A5 /* NSNumber+Utilities.h */; };
+		C3FFF46C1C5DA2D0009961A5 /* NSNumber+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4641C5DA2D0009961A5 /* NSNumber+Utilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +143,13 @@
 			remoteGlobalIDString = C3FFF3C21C5D06D1009961A5;
 			remoteInfo = CMUnistrokeGestureRecognizer;
 		};
+		C3FFF4551C5DA2C9009961A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3F473D31C5C5FD300B70519 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3FFF44F1C5DA2C9009961A5;
+			remoteInfo = BBGroover;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -152,6 +170,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C3FFF4581C5DA2C9009961A5 /* BBGroover.framework in Embed Frameworks */,
 				C3FFF3CC1C5D06D1009961A5 /* CMUnistrokeGestureRecognizer.framework in Embed Frameworks */,
 				4C7563051C5D268500B1FC01 /* BeatingGatesCommon.framework in Embed Frameworks */,
 			);
@@ -229,6 +248,17 @@
 		C3FFF4411C5D70F0009961A5 /* MonsterMoveState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterMoveState.swift; sourceTree = "<group>"; };
 		C3FFF4431C5D70F8009961A5 /* MonsterAttackState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterAttackState.swift; sourceTree = "<group>"; };
 		C3FFF4471C5D98A2009961A5 /* RulesComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesComponent.swift; sourceTree = "<group>"; };
+		C3FFF4501C5DA2C9009961A5 /* BBGroover.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BBGroover.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3FFF4521C5DA2C9009961A5 /* BBGroover.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBGroover.h; sourceTree = "<group>"; };
+		C3FFF4541C5DA2C9009961A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3FFF45C1C5DA2D0009961A5 /* BBGroove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBGroove.h; sourceTree = "<group>"; };
+		C3FFF45D1C5DA2D0009961A5 /* BBGroove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGroove.m; sourceTree = "<group>"; };
+		C3FFF45E1C5DA2D0009961A5 /* BBGroover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBGroover.h; sourceTree = "<group>"; };
+		C3FFF45F1C5DA2D0009961A5 /* BBGroover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGroover.m; sourceTree = "<group>"; };
+		C3FFF4601C5DA2D0009961A5 /* BBVoice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBVoice.h; sourceTree = "<group>"; };
+		C3FFF4611C5DA2D0009961A5 /* BBVoice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBVoice.m; sourceTree = "<group>"; };
+		C3FFF4631C5DA2D0009961A5 /* NSNumber+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Utilities.h"; sourceTree = "<group>"; };
+		C3FFF4641C5DA2D0009961A5 /* NSNumber+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Utilities.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +308,7 @@
 				C3FFF3CA1C5D06D1009961A5 /* CMUnistrokeGestureRecognizer.framework in Frameworks */,
 				C362A1AD1C5C73CE004667EF /* VirtualGameController.framework in Frameworks */,
 				4C7563041C5D268500B1FC01 /* BeatingGatesCommon.framework in Frameworks */,
+				C3FFF4571C5DA2C9009961A5 /* BBGroover.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +334,13 @@
 				C3FFF3F01C5D09AA009961A5 /* GLKit.framework in Frameworks */,
 				C3FFF3EE1C5D09A2009961A5 /* UIKit.framework in Frameworks */,
 				C3FFF3EC1C5D099D009961A5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3FFF44C1C5DA2C9009961A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,8 +466,9 @@
 			children = (
 				4C7562BB1C5C6B9B00B1FC01 /* tvOS */,
 				4C7562BA1C5C6B7900B1FC01 /* iOS */,
-				C3FFF3C41C5D06D1009961A5 /* CMUnistrokeGestureRecognizer */,
 				4C75630C1C5D268D00B1FC01 /* Common */,
+				C3FFF4491C5DA2A0009961A5 /* Vendor */,
+				C3FFF4511C5DA2C9009961A5 /* BBGroover */,
 				C3F473DC1C5C5FD300B70519 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -446,6 +485,7 @@
 				C3FFF3C31C5D06D1009961A5 /* CMUnistrokeGestureRecognizer.framework */,
 				4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */,
 				4C7562F81C5D268500B1FC01 /* BeatingGatesCommonTests.xctest */,
+				C3FFF4501C5DA2C9009961A5 /* BBGroover.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -568,6 +608,47 @@
 			name = "Monster States";
 			sourceTree = "<group>";
 		};
+		C3FFF4491C5DA2A0009961A5 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				C3FFF44A1C5DA2AB009961A5 /* BBGroover */,
+				C3FFF3C41C5D06D1009961A5 /* CMUnistrokeGestureRecognizer */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		C3FFF44A1C5DA2AB009961A5 /* BBGroover */ = {
+			isa = PBXGroup;
+			children = (
+				C3FFF45C1C5DA2D0009961A5 /* BBGroove.h */,
+				C3FFF45D1C5DA2D0009961A5 /* BBGroove.m */,
+				C3FFF45E1C5DA2D0009961A5 /* BBGroover.h */,
+				C3FFF45F1C5DA2D0009961A5 /* BBGroover.m */,
+				C3FFF4601C5DA2D0009961A5 /* BBVoice.h */,
+				C3FFF4611C5DA2D0009961A5 /* BBVoice.m */,
+				C3FFF4621C5DA2D0009961A5 /* Categories */,
+			);
+			name = BBGroover;
+			sourceTree = "<group>";
+		};
+		C3FFF4511C5DA2C9009961A5 /* BBGroover */ = {
+			isa = PBXGroup;
+			children = (
+				C3FFF4521C5DA2C9009961A5 /* BBGroover.h */,
+				C3FFF4541C5DA2C9009961A5 /* Info.plist */,
+			);
+			path = BBGroover;
+			sourceTree = "<group>";
+		};
+		C3FFF4621C5DA2D0009961A5 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C3FFF4631C5DA2D0009961A5 /* NSNumber+Utilities.h */,
+				C3FFF4641C5DA2D0009961A5 /* NSNumber+Utilities.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -589,6 +670,18 @@
 				C3FFF3DF1C5D0760009961A5 /* CMUnistrokeRecognizer.h in Headers */,
 				C3FFF3D41C5D073B009961A5 /* CMUnistrokeGestureRecognizer.h in Headers */,
 				C3FFF3E01C5D0760009961A5 /* CMUnistrokeRecognizerPrivate.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3FFF44D1C5DA2C9009961A5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3FFF4651C5DA2D0009961A5 /* BBGroove.h in Headers */,
+				C3FFF4691C5DA2D0009961A5 /* BBVoice.h in Headers */,
+				C3FFF4671C5DA2D0009961A5 /* BBGroover.h in Headers */,
+				C3FFF46B1C5DA2D0009961A5 /* NSNumber+Utilities.h in Headers */,
+				C3FFF4531C5DA2C9009961A5 /* BBGroover.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,6 +796,7 @@
 			dependencies = (
 				C3FFF3C91C5D06D1009961A5 /* PBXTargetDependency */,
 				4C7563031C5D268500B1FC01 /* PBXTargetDependency */,
+				C3FFF4561C5DA2C9009961A5 /* PBXTargetDependency */,
 			);
 			name = "The Beating at the Gates-iOS";
 			productName = "The Beating at the Gates";
@@ -763,6 +857,24 @@
 			productReference = C3FFF3C31C5D06D1009961A5 /* CMUnistrokeGestureRecognizer.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		C3FFF44F1C5DA2C9009961A5 /* BBGroover */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3FFF4591C5DA2C9009961A5 /* Build configuration list for PBXNativeTarget "BBGroover" */;
+			buildPhases = (
+				C3FFF44B1C5DA2C9009961A5 /* Sources */,
+				C3FFF44C1C5DA2C9009961A5 /* Frameworks */,
+				C3FFF44D1C5DA2C9009961A5 /* Headers */,
+				C3FFF44E1C5DA2C9009961A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BBGroover;
+			productName = BBGroover;
+			productReference = C3FFF4501C5DA2C9009961A5 /* BBGroover.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -805,6 +917,9 @@
 					C3FFF3C21C5D06D1009961A5 = {
 						CreatedOnToolsVersion = 7.2;
 					};
+					C3FFF44F1C5DA2C9009961A5 = {
+						CreatedOnToolsVersion = 7.2;
+					};
 				};
 			};
 			buildConfigurationList = C3F473D61C5C5FD300B70519 /* Build configuration list for PBXProject "The Beating at the Gates" */;
@@ -829,6 +944,7 @@
 				C3FFF3C21C5D06D1009961A5 /* CMUnistrokeGestureRecognizer */,
 				4C7562EE1C5D268500B1FC01 /* BeatingGatesCommon */,
 				4C7562F71C5D268500B1FC01 /* BeatingGatesCommonTests */,
+				C3FFF44F1C5DA2C9009961A5 /* BBGroover */,
 			);
 		};
 /* End PBXProject section */
@@ -901,6 +1017,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C3FFF3C11C5D06D1009961A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3FFF44E1C5DA2C9009961A5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1034,6 +1157,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C3FFF44B1C5DA2C9009961A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3FFF46C1C5DA2D0009961A5 /* NSNumber+Utilities.m in Sources */,
+				C3FFF4681C5DA2D0009961A5 /* BBGroover.m in Sources */,
+				C3FFF4661C5DA2D0009961A5 /* BBGroove.m in Sources */,
+				C3FFF46A1C5DA2D0009961A5 /* BBVoice.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1081,6 +1215,11 @@
 			isa = PBXTargetDependency;
 			target = C3FFF3C21C5D06D1009961A5 /* CMUnistrokeGestureRecognizer */;
 			targetProxy = C3FFF3C81C5D06D1009961A5 /* PBXContainerItemProxy */;
+		};
+		C3FFF4561C5DA2C9009961A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3FFF44F1C5DA2C9009961A5 /* BBGroover */;
+			targetProxy = C3FFF4551C5DA2C9009961A5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1489,6 +1628,44 @@
 			};
 			name = Release;
 		};
+		C3FFF45A1C5DA2C9009961A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BBGroover/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.grantjbutler.BBGroover;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C3FFF45B1C5DA2C9009961A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BBGroover/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.grantjbutler.BBGroover;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1581,6 +1758,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		C3FFF4591C5DA2C9009961A5 /* Build configuration list for PBXNativeTarget "BBGroover" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3FFF45A1C5DA2C9009961A5 /* Debug */,
+				C3FFF45B1C5DA2C9009961A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
