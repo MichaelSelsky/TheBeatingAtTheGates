@@ -18,13 +18,15 @@ FOUNDATION_EXPORT const unsigned char BBGrooverVersionString[];
 #import <BBGroover/BBVoice.h>
 #import <BBGroover/BBGrooverBeat.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol BBGrooverDelegate;
 
 @class BBGroove;
 
 @interface BBGroover : NSObject
 
-@property (nonatomic, assign) NSObject<BBGrooverDelegate> *delegate;
+@property (nonatomic, assign, null_unspecified) NSObject<BBGrooverDelegate> *delegate;
 @property (nonatomic, strong) BBGroove *groove;
 @property (nonatomic, assign, readonly) BOOL running;
 @property (nonatomic, readonly) NSUInteger currentTick;
@@ -32,11 +34,11 @@ FOUNDATION_EXPORT const unsigned char BBGrooverVersionString[];
 
 #pragma mark Delegate Blocks
 @property (nonatomic, strong) void (^didTickBlock)(NSUInteger tick);
-@property (nonatomic, strong) void (^voicesDidTickBlock)(NSArray *voices);
+@property (nonatomic, strong) void (^voicesDidTickBlock)(NSArray <BBVoice *> *voices);
 
 #pragma mark Initializers
-- (id)initWithGroove:(BBGroove *)groove;
-+ (id) grooverWithGroove:(BBGroove *)groove;
+- (instancetype)initWithGroove:(BBGroove *)groove;
++ (instancetype)grooverWithGroove:(BBGroove *)groove;
 	
 #pragma mark Instance Methods
 - (void) startGrooving;
@@ -51,6 +53,8 @@ FOUNDATION_EXPORT const unsigned char BBGrooverVersionString[];
 @protocol BBGrooverDelegate <NSObject>
 
 - (void) groover:(BBGroover *)groover didTick:(NSUInteger)tick;
-- (void) groover:(BBGroover *)groover voicesDidTick:(NSArray *)voices;
+- (void) groover:(BBGroover *)groover voicesDidTick:(NSArray <BBVoice *> *)voices;
 
 @end
+
+NS_ASSUME_NONNULL_END

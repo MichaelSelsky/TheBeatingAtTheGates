@@ -41,6 +41,10 @@
 		C306509B1C5E6554003461A1 /* BBGrooverBeat.h in Headers */ = {isa = PBXBuildFile; fileRef = C306506C1C5DAAF8003461A1 /* BBGrooverBeat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C30650A81C5E698B003461A1 /* ShamanEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30650A71C5E698B003461A1 /* ShamanEntity.swift */; };
 		C30650AA1C5E6A96003461A1 /* ControllerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30650A91C5E6A96003461A1 /* ControllerComponent.swift */; };
+		C30650B01C5E8DBE003461A1 /* DrumInstrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30650AF1C5E8DBE003461A1 /* DrumInstrument.swift */; };
+		C30650BD1C5E96DE003461A1 /* UpBeat.wav in Resources */ = {isa = PBXBuildFile; fileRef = C30650B71C5E922D003461A1 /* UpBeat.wav */; };
+		C30650BE1C5E96E0003461A1 /* DownBeat.wav in Resources */ = {isa = PBXBuildFile; fileRef = C30650B51C5E922D003461A1 /* DownBeat.wav */; };
+		C30650BF1C5E96E0003461A1 /* MidBeat.wav in Resources */ = {isa = PBXBuildFile; fileRef = C30650B61C5E922D003461A1 /* MidBeat.wav */; };
 		C362A1771C5C6AF9004667EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1761C5C6AF9004667EF /* AppDelegate.swift */; };
 		C362A1791C5C6AF9004667EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1781C5C6AF9004667EF /* ViewController.swift */; };
 		C362A17C1C5C6AF9004667EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C362A17A1C5C6AF9004667EF /* Main.storyboard */; };
@@ -48,6 +52,8 @@
 		C362A1891C5C6AFA004667EF /* The_Beating_of_the_GatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1881C5C6AFA004667EF /* The_Beating_of_the_GatesTests.swift */; };
 		C362A1941C5C6AFA004667EF /* The_Beating_of_the_GatesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1931C5C6AFA004667EF /* The_Beating_of_the_GatesUITests.swift */; };
 		C362A1AD1C5C73CE004667EF /* VirtualGameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C362A1AC1C5C73CE004667EF /* VirtualGameController.framework */; };
+		C3B30A501C5E9CB4009AB79D /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30650B31C5E8FD3003461A1 /* AudioKit.framework */; };
+		C3B30A511C5E9CB4009AB79D /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C30650B31C5E8FD3003461A1 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C3F473DF1C5C5FD300B70519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F473DE1C5C5FD300B70519 /* AppDelegate.swift */; };
 		C3F473E11C5C5FD300B70519 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F473E01C5C5FD300B70519 /* ViewController.swift */; };
 		C3F473E41C5C5FD300B70519 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F473E21C5C5FD300B70519 /* Main.storyboard */; };
@@ -190,6 +196,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C3B30A511C5E9CB4009AB79D /* AudioKit.framework in Embed Frameworks */,
 				4C7563111C5D2B5A00B1FC01 /* BeatingGatesCommon.framework in Embed Frameworks */,
 				C306506B1C5DA83A003461A1 /* BBGroover.framework in Embed Frameworks */,
 			);
@@ -238,6 +245,11 @@
 		C30650941C5E5E1C003461A1 /* Game.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Game.xcassets; path = "The Beating of the Gates/Game.xcassets"; sourceTree = "<group>"; };
 		C30650A71C5E698B003461A1 /* ShamanEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShamanEntity.swift; sourceTree = "<group>"; };
 		C30650A91C5E6A96003461A1 /* ControllerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerComponent.swift; sourceTree = "<group>"; };
+		C30650AF1C5E8DBE003461A1 /* DrumInstrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrumInstrument.swift; sourceTree = "<group>"; };
+		C30650B31C5E8FD3003461A1 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
+		C30650B51C5E922D003461A1 /* DownBeat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = DownBeat.wav; sourceTree = "<group>"; };
+		C30650B61C5E922D003461A1 /* MidBeat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = MidBeat.wav; sourceTree = "<group>"; };
+		C30650B71C5E922D003461A1 /* UpBeat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = UpBeat.wav; sourceTree = "<group>"; };
 		C362A1741C5C6AF9004667EF /* The Beating of the Gates-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Beating of the Gates-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C362A1761C5C6AF9004667EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C362A1781C5C6AF9004667EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -328,6 +340,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3B30A501C5E9CB4009AB79D /* AudioKit.framework in Frameworks */,
 				C306506A1C5DA83A003461A1 /* BBGroover.framework in Frameworks */,
 				4C7562C51C5CFED400B1FC01 /* VirtualGameController.framework in Frameworks */,
 				4C75630D1C5D2B0500B1FC01 /* BeatingGatesCommon.framework in Frameworks */,
@@ -485,6 +498,7 @@
 				C362A1761C5C6AF9004667EF /* AppDelegate.swift */,
 				4C7562C01C5C856B00B1FC01 /* ControllerInput.swift */,
 				C362A1781C5C6AF9004667EF /* ViewController.swift */,
+				C30650AF1C5E8DBE003461A1 /* DrumInstrument.swift */,
 				C3FFF4251C5D4476009961A5 /* GridScene.sks */,
 				C3FFF4271C5D448A009961A5 /* GridScene.swift */,
 				C362A17A1C5C6AF9004667EF /* Main.storyboard */,
@@ -515,6 +529,7 @@
 		C362A1AA1C5C73B6004667EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C30650B31C5E8FD3003461A1 /* AudioKit.framework */,
 				4C7562C21C5C859300B1FC01 /* GameController.framework */,
 				C362A1AE1C5C73D4004667EF /* VirtualGameController.framework */,
 			);
@@ -628,6 +643,9 @@
 		C3FFF41E1C5D2E8A009961A5 /* Shared Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C30650B51C5E922D003461A1 /* DownBeat.wav */,
+				C30650B61C5E922D003461A1 /* MidBeat.wav */,
+				C30650B71C5E922D003461A1 /* UpBeat.wav */,
 				C30650941C5E5E1C003461A1 /* Game.xcassets */,
 				C3FFF4161C5D212E009961A5 /* TitleScene.sks */,
 				C30650811C5E43F3003461A1 /* spark.png */,
@@ -1046,10 +1064,13 @@
 			files = (
 				C362A17E1C5C6AF9004667EF /* Assets.xcassets in Resources */,
 				C30650921C5E4F11003461A1 /* spark.png in Resources */,
+				C30650BD1C5E96DE003461A1 /* UpBeat.wav in Resources */,
 				C3FFF41C1C5D2E77009961A5 /* TitleScene.sks in Resources */,
+				C30650BE1C5E96E0003461A1 /* DownBeat.wav in Resources */,
 				C362A17C1C5C6AF9004667EF /* Main.storyboard in Resources */,
 				C3FFF42A1C5D4492009961A5 /* GridScene.sks in Resources */,
 				C30650961C5E5E1C003461A1 /* Game.xcassets in Resources */,
+				C30650BF1C5E96E0003461A1 /* MidBeat.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1187,6 +1208,7 @@
 			files = (
 				C362A1791C5C6AF9004667EF /* ViewController.swift in Sources */,
 				C362A1771C5C6AF9004667EF /* AppDelegate.swift in Sources */,
+				C30650B01C5E8DBE003461A1 /* DrumInstrument.swift in Sources */,
 				C3FFF4291C5D448E009961A5 /* GridScene.swift in Sources */,
 				4C7562C41C5CFE7700B1FC01 /* ControllerInput.swift in Sources */,
 			);
@@ -1426,6 +1448,17 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/The",
+					Beating,
+					of,
+					the,
+					Gates,
+					"$(PROJECT_DIR)/The",
+					Beating,
+					of,
+					the,
+					Gates,
 				);
 				INFOPLIST_FILE = "The Beating of the Gates/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1450,6 +1483,17 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/The",
+					Beating,
+					of,
+					the,
+					Gates,
+					"$(PROJECT_DIR)/The",
+					Beating,
+					of,
+					the,
+					Gates,
 				);
 				INFOPLIST_FILE = "The Beating of the Gates/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

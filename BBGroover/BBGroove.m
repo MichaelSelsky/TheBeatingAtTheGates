@@ -30,7 +30,12 @@
 }
 
 - (void) addVoice:(BBVoice *)object {
-    NSMutableArray *newVoices = [NSMutableArray arrayWithArray:_voices];
+	NSParameterAssert(object);
+	if (!object) {
+		return;
+	}
+	
+	NSMutableArray *newVoices = [NSMutableArray arrayWithArray:_voices];
     [newVoices addObject:object];
     
     _voices = newVoices;

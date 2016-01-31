@@ -9,26 +9,30 @@
 #import <Foundation/Foundation.h>
 #import <BBGroover/BBGrooverBeat.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface BBVoice : NSObject
 
-@property (nonatomic, strong, readonly) NSArray         *values;
-@property (nonatomic, strong, readonly) NSArray         *velocities;
-@property (nonatomic, strong) NSString                  *name;
-@property (nonatomic, strong) NSString                  *audioPath;
-@property (nonatomic, assign, readonly) BBGrooverBeat   subdivision;
+@property (nonatomic, strong, readonly) NSArray <NSNumber *>	*values;
+@property (nonatomic, strong, readonly) NSArray <NSNumber *>	*velocities;
+@property (nonatomic, strong) NSString							*name;
+@property (nonatomic, strong) NSString							*audioPath;
+@property (nonatomic, assign, readonly) BBGrooverBeat			subdivision;
 
 #pragma mark Initializers
-- (id) initWithValues:(NSArray *)values;
-- (id) initWithValues:(NSArray *)values andVelocities:(NSArray *)velocities;
-- (id) initWithSubdivision:(BBGrooverBeat)subdivision;
+- (instancetype) initWithValues:(NSArray <NSNumber *> *)values;
+- (instancetype) initWithValues:(NSArray <NSNumber *> *)values andVelocities:(NSArray <NSNumber *> *)velocities;
+- (instancetype) initWithSubdivision:(BBGrooverBeat)subdivision;
 
 #pragma mark Convenience Contructors
-+ (id) voiceWithValues:(NSArray *)values;
-+ (id) voiceWithValues:(NSArray *)values andVelocities:(NSArray *)velocities;
-+ (id) voiceWithSubdivision:(BBGrooverBeat)subdivision;
++ (instancetype) voiceWithValues:(NSArray <NSNumber *> *)values;
++ (instancetype) voiceWithValues:(NSArray <NSNumber *> *)values andVelocities:(NSArray <NSNumber *> *)velocities;
++ (instancetype) voiceWithSubdivision:(BBGrooverBeat)subdivision;
 
 #pragma mark Instance Methods
 - (void) setValue:(BOOL)value forIndex:(NSUInteger)index;
 - (void) setVelocity:(float)velocity forIndex:(NSUInteger)index;
 
 @end
+
+NS_ASSUME_NONNULL_END

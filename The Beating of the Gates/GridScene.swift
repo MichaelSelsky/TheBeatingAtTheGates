@@ -10,6 +10,7 @@ import SpriteKit
 import BeatingGatesCommon
 import GameplayKit
 import BBGroover
+import AudioKit
 
 private let MaxLaneCount = 5
 private let MaxTileCount = 10
@@ -26,7 +27,7 @@ class GridScene: SKScene, BBGrooverDelegate, ShamanEntityDelegate {
 	}
 	
 	private lazy var groover: BBGroover = { [unowned self] in
-		let voice = BBVoice(values: [true, true, true, true])
+		let voice = BBVoice(values: [true, true, true, true], andVelocities: [127, 80, 40, 80])
 		
 		let groove = BBGroove()
 		groove.tempo = 105
@@ -39,18 +40,32 @@ class GridScene: SKScene, BBGrooverDelegate, ShamanEntityDelegate {
 		return groover
 	}()
 	
+	private let drumMachine = DrumMachine()
+	
 	private let rulesComponentSystem = GKComponentSystem(componentClass: MovementRulesComponent.self)
 	private let controllerComponentSystem = GKComponentSystem(componentClass: ControllerComponent.self)
 	
 	override func didMoveToView(view: SKView) {
+		AudioKit.output = drumMachine
+		AudioKit.start()
+		
+		reset()
+    }
+	
+	func reset() {
 		removeAllChildren()
 		
-		setupLanes(inView: view)
-		setupCastles(inView: view)
-		setupShamans(inView: view)
+		entities = Set()
 		
+		if let view = view {
+			setupLanes(inView: view)
+			setupCastles(inView: view)
+			setupShamans(inView: view)
+		}
+		
+		groover.groove.tempo = 105
 		groover.startGrooving()
-    }
+	}
 	
 	private func setupLanes(inView view: SKView) {
 		let offset = round((view.frame.height - 640) / 2.0)
@@ -145,7 +160,7 @@ class GridScene: SKScene, BBGrooverDelegate, ShamanEntityDelegate {
 		
 		if let renderNode = entity.componentForClass(RenderComponent.self)?.node {
 			renderNode.position = entityCenter
-			renderNode.zPosition = 10
+			renderNode.zPosition = 25
 			addChild(renderNode)
 		}
 		
@@ -175,29 +190,49 @@ class GridScene: SKScene, BBGrooverDelegate, ShamanEntityDelegate {
                 return
             }
             if render.node.parent == nil {
-                entities.remove(entity)
+				if entity is WallEntity {
+					win()
+				}
+				
+				entities.remove(entity)
             }
         }
     }
 	
-	func groover(groover: BBGroover!, didTick tick: UInt) {
+	func win() {
+		groover.groove.tempo = 200
+		
+		let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(3.3 * Double(NSEC_PER_SEC)))
+		dispatch_after(delayTime, dispatch_get_main_queue()) {
+			self.reset()
+		}
+	}
+	
+	func groover(groover: BBGroover, didTick tick: UInt) {
 		// TODO: Trigger idle?
 		
-		if tick % 4 == 1 {
+		let voice = groover.groove.voices.first!
+		let velocity = voice.velocities[Int(tick % 4)] as Int
+		drumMachine.playNote(60, velocity: velocity)
+		
+		if tick % 4 == 0 {
 			if let components = rulesComponentSystem.components as? [MovementRulesComponent] {
 				for component in components {
 					component.updateWithTick(tick)
 				}
 			}
 			
-			if tick > 32 {
+//			print("\(tick)")
+//			
+//			if tick > 16 {
 				groover.groove.tempo += 1
-			}
+				print("Increasing tempo to \(groover.groove.tempo)")
+//			}
 		}
 	}
 	
-	func groover(groover: BBGroover!, voicesDidTick voices: [AnyObject]!) {
-		// Do nothing.
+	func groover(groover: BBGroover, voicesDidTick voices: [BBVoice]) {
+		
 	}
 	
 	private func handleInput(input: InputButton, playerIndex: Int) {
