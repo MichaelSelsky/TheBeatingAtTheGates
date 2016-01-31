@@ -14,6 +14,7 @@ import BBGroover
 class GridScene: SKScene, BBGrooverDelegate {
 	
 	private var entities: Set<GKEntity> = Set()
+    var previousTime = NSTimeIntervalSince1970
 	private lazy var groover: BBGroover = { [unowned self] in
 		let voice = BBVoice(values: [true, true, true, true])
 		
@@ -28,7 +29,7 @@ class GridScene: SKScene, BBGrooverDelegate {
 		return groover
 	}()
 	
-	private let rulesComponentSystem = GKComponentSystem(componentClass: RulesComponent.self)
+	private let rulesComponentSystem = GKComponentSystem(componentClass: MovementRulesComponent.self)
 	
 	override func didMoveToView(view: SKView) {
 		setupLanes(inView: view)
@@ -38,6 +39,7 @@ class GridScene: SKScene, BBGrooverDelegate {
 		let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
 		dispatch_after(delayTime, dispatch_get_main_queue()) {
 			self.spawnMonster(AlliedMonster(team: .Blue, monster: .Skeleton), lane: 0, column: 8)
+            self.spawnMonster(AlliedMonster(team: .Red, monster: .Skeleton), lane: 0, column: 1)
 		}
     }
 	
@@ -67,7 +69,7 @@ class GridScene: SKScene, BBGrooverDelegate {
 		
 		let entity = SkeletonEntity(team: monster.team)
 		
-		if let rulesComponent = entity.componentForClass(RulesComponent.self) {
+		if let rulesComponent = entity.componentForClass(MovementRulesComponent.self) {
 			rulesComponentSystem.addComponent(rulesComponent)
 		}
 		
@@ -79,12 +81,28 @@ class GridScene: SKScene, BBGrooverDelegate {
 			addChild(renderNode)
 		}
 	}
-	
+    
+    override func update(currentTime: NSTimeInterval) {
+        let deltaTime = currentTime - previousTime
+        previousTime = currentTime
+        for entity in entities {
+            entity.updateWithDeltaTime(deltaTime)
+            guard let skeletonEntity = entity as? SkeletonEntity else {
+                return
+            }
+            guard let render = skeletonEntity.componentForClass(RenderComponent.self) else {
+                return
+            }
+            if render.node.parent == nil {
+                entities.remove(entity)
+            }
+        }
+    }
 	func groover(groover: BBGroover!, didTick tick: UInt) {
 		// TODO: Trigger idle?
 		
 		if tick % 4 == 1 {
-			if let components = rulesComponentSystem.components as? [RulesComponent] {
+			if let components = rulesComponentSystem.components as? [MovementRulesComponent] {
 				for component in components {
 					component.updateWithTick(tick)
 				}

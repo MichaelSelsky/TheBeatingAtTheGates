@@ -18,6 +18,7 @@
 		4C7563051C5D268500B1FC01 /* BeatingGatesCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4C75630D1C5D2B0500B1FC01 /* BeatingGatesCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */; };
 		4C7563111C5D2B5A00B1FC01 /* BeatingGatesCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4C7563291C5DE19100B1FC01 /* HealthComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7563271C5DE18800B1FC01 /* HealthComponent.swift */; };
 		C306506A1C5DA83A003461A1 /* BBGroover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FFF4501C5DA2C9009961A5 /* BBGroover.framework */; };
 		C306506B1C5DA83A003461A1 /* BBGroover.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3FFF4501C5DA2C9009961A5 /* BBGroover.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C306506D1C5DAB2C003461A1 /* BBGrooverBeat.h in Headers */ = {isa = PBXBuildFile; fileRef = C306506C1C5DAAF8003461A1 /* BBGrooverBeat.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -70,7 +71,7 @@
 		C3FFF4401C5D70E5009961A5 /* MonsterIdleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF43F1C5D70E5009961A5 /* MonsterIdleState.swift */; };
 		C3FFF4421C5D70F0009961A5 /* MonsterMoveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4411C5D70F0009961A5 /* MonsterMoveState.swift */; };
 		C3FFF4441C5D70F8009961A5 /* MonsterAttackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4431C5D70F8009961A5 /* MonsterAttackState.swift */; };
-		C3FFF4481C5D98A2009961A5 /* RulesComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4471C5D98A2009961A5 /* RulesComponent.swift */; };
+		C3FFF4481C5D98A2009961A5 /* MovementRulesComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4471C5D98A2009961A5 /* MovementRulesComponent.swift */; };
 		C3FFF4571C5DA2C9009961A5 /* BBGroover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FFF4501C5DA2C9009961A5 /* BBGroover.framework */; };
 		C3FFF4581C5DA2C9009961A5 /* BBGroover.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3FFF4501C5DA2C9009961A5 /* BBGroover.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C3FFF4651C5DA2D0009961A5 /* BBGroove.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FFF45C1C5DA2D0009961A5 /* BBGroove.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -201,6 +202,7 @@
 		4C7562F81C5D268500B1FC01 /* BeatingGatesCommonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeatingGatesCommonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C7562FF1C5D268500B1FC01 /* BeatingGatesCommonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatingGatesCommonTests.swift; sourceTree = "<group>"; };
 		4C7563011C5D268500B1FC01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C7563271C5DE18800B1FC01 /* HealthComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthComponent.swift; path = ../HealthComponent.swift; sourceTree = "<group>"; };
 		C306506C1C5DAAF8003461A1 /* BBGrooverBeat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBGrooverBeat.h; sourceTree = "<group>"; };
 		C306506F1C5DC59C003461A1 /* CheckForEnemyRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckForEnemyRule.swift; sourceTree = "<group>"; };
 		C30650711C5DC659003461A1 /* EntityType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityType.swift; sourceTree = "<group>"; };
@@ -262,7 +264,7 @@
 		C3FFF43F1C5D70E5009961A5 /* MonsterIdleState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterIdleState.swift; sourceTree = "<group>"; };
 		C3FFF4411C5D70F0009961A5 /* MonsterMoveState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterMoveState.swift; sourceTree = "<group>"; };
 		C3FFF4431C5D70F8009961A5 /* MonsterAttackState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterAttackState.swift; sourceTree = "<group>"; };
-		C3FFF4471C5D98A2009961A5 /* RulesComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesComponent.swift; sourceTree = "<group>"; };
+		C3FFF4471C5D98A2009961A5 /* MovementRulesComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementRulesComponent.swift; sourceTree = "<group>"; };
 		C3FFF4501C5DA2C9009961A5 /* BBGroover.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BBGroover.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3FFF4541C5DA2C9009961A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = BBGroover/Info.plist; sourceTree = "<group>"; };
 		C3FFF45C1C5DA2D0009961A5 /* BBGroove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBGroove.h; path = BBGroover/BBGroove.h; sourceTree = "<group>"; };
@@ -598,9 +600,10 @@
 		C3FFF4311C5D65A6009961A5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				4C7563271C5DE18800B1FC01 /* HealthComponent.swift */,
 				C3FFF43D1C5D70C7009961A5 /* IntelligenceComponent.swift */,
 				C3FFF4341C5D6691009961A5 /* RenderComponent.swift */,
-				C3FFF4471C5D98A2009961A5 /* RulesComponent.swift */,
+				C3FFF4471C5D98A2009961A5 /* MovementRulesComponent.swift */,
 				C3FFF4391C5D672F009961A5 /* OrientationComponent.swift */,
 			);
 			name = Components;
@@ -1090,12 +1093,13 @@
 			files = (
 				C3FFF4401C5D70E5009961A5 /* MonsterIdleState.swift in Sources */,
 				C3FFF43A1C5D672F009961A5 /* OrientationComponent.swift in Sources */,
-				C3FFF4481C5D98A2009961A5 /* RulesComponent.swift in Sources */,
+				C3FFF4481C5D98A2009961A5 /* MovementRulesComponent.swift in Sources */,
 				C3FFF42D1C5D5189009961A5 /* GameStructures.swift in Sources */,
 				C3FFF4351C5D6691009961A5 /* RenderComponent.swift in Sources */,
 				C3FFF4331C5D65F4009961A5 /* SkeletonEntity.swift in Sources */,
 				C3FFF43E1C5D70C7009961A5 /* IntelligenceComponent.swift in Sources */,
 				C3FFF41A1C5D2C6A009961A5 /* TitleScene.swift in Sources */,
+				4C7563291C5DE19100B1FC01 /* HealthComponent.swift in Sources */,
 				C30650701C5DC59C003461A1 /* CheckForEnemyRule.swift in Sources */,
 				C30650721C5DC659003461A1 /* EntityType.swift in Sources */,
 				C3FFF4371C5D66A5009961A5 /* EntityNode.swift in Sources */,

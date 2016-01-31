@@ -8,15 +8,15 @@
 
 import GameplayKit
 
-public protocol RulesComponentDelegate: class {
+public protocol MovementRulesComponentDelegate: class {
     // Called whenever the rules component finishes evaluating its rules.
-    func rulesComponent(rulesComponent: RulesComponent, didFinishEvaluatingRuleSystem ruleSystem: GKRuleSystem)
+    func rulesComponent(rulesComponent: MovementRulesComponent, didFinishEvaluatingRuleSystem ruleSystem: GKRuleSystem)
 }
 
-public class RulesComponent: GKComponent {
+public class MovementRulesComponent: GKComponent {
     // MARK: Properties
     
-    public weak var delegate: RulesComponentDelegate?
+    public weak var delegate: MovementRulesComponentDelegate?
     
     public var ruleSystem: GKRuleSystem
     
@@ -33,11 +33,27 @@ public class RulesComponent: GKComponent {
 	
 	public func updateWithTick(tick: UInt) {
 		ruleSystem.reset()
-		
-//		ruleSystem.state["snapshot"] = entitySnapshot
+        
+        guard let skeletonEnt = entity as? SkeletonEntity else {
+            return
+        }
+        
+        let ahead = skeletonEnt.lookAhead()
+        ruleSystem.state["forwardIsEnemy"] = false
+        ruleSystem.state["forwardIsEmpty"] = false
+        
+        switch ahead {
+        case .Enemy(_):
+           ruleSystem.state["forwardIsEnemy"] = true
+        case .Empty:
+            ruleSystem.state["forwardIsEmpty"] = true
+        default:
+            break
+        }
 		
 		ruleSystem.evaluate()
 		
 		delegate?.rulesComponent(self, didFinishEvaluatingRuleSystem: ruleSystem)
     }
+    
 }
