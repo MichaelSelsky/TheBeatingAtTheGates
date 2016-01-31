@@ -64,6 +64,9 @@ class GameController {
         case .Spider:
             element = VgcManager.elements.buttonX
             element?.value = 1.0
+        case .Attack:
+            element = VgcManager.elements.buttonY
+            element?.value = 1.0
         }
         if let element = element {
             buttonPress(element)
