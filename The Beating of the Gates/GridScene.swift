@@ -14,7 +14,13 @@ import BBGroover
 class GridScene: SKScene, BBGrooverDelegate {
 	
 	private var entities: Set<GKEntity> = Set()
-    var previousTime = NSTimeIntervalSince1970
+	var previousTime = NSTimeIntervalSince1970
+	
+	var inputHandler: ControllerInputHandler {
+		return { (input: InputButton, playerIndex: Int) -> Void in
+			self.handleInput(input, playerIndex: playerIndex)
+		}
+	}
 	
 	private lazy var groover: BBGroover = { [unowned self] in
 		let voice = BBVoice(values: [true, true, true, true])
@@ -37,6 +43,8 @@ class GridScene: SKScene, BBGrooverDelegate {
 		
 		setupLanes(inView: view)
 		setupCastles(inView: view)
+		
+		
 		
 		groover.startGrooving()
 		
@@ -145,6 +153,10 @@ class GridScene: SKScene, BBGrooverDelegate {
 	
 	func groover(groover: BBGroover!, voicesDidTick voices: [AnyObject]!) {
 		// Do nothing.
+	}
+	
+	private func handleInput(input: InputButton, playerIndex: Int) {
+		print("Got \(input) from player \(playerIndex)")
 	}
 	
 }

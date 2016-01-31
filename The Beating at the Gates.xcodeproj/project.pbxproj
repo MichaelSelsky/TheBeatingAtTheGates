@@ -18,10 +18,14 @@
 		4C7563051C5D268500B1FC01 /* BeatingGatesCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4C75630D1C5D2B0500B1FC01 /* BeatingGatesCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */; };
 		4C7563111C5D2B5A00B1FC01 /* BeatingGatesCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7562EF1C5D268500B1FC01 /* BeatingGatesCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4C7563141C5D3AFE00B1FC01 /* DrawingScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C7563131C5D3AFE00B1FC01 /* DrawingScene.sks */; };
+		4C7563161C5D423000B1FC01 /* DrawingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7563151C5D423000B1FC01 /* DrawingScene.swift */; };
+		4C7563191C5D464D00B1FC01 /* Magic.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C7563171C5D464D00B1FC01 /* Magic.sks */; };
+		4C75631A1C5D464D00B1FC01 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7563181C5D464D00B1FC01 /* spark.png */; };
+		4C7563201C5D741000B1FC01 /* Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C75631D1C5D6BA600B1FC01 /* Gesture.swift */; };
 		4C7563291C5DE19100B1FC01 /* HealthComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7563271C5DE18800B1FC01 /* HealthComponent.swift */; };
 		C306506A1C5DA83A003461A1 /* BBGroover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FFF4501C5DA2C9009961A5 /* BBGroover.framework */; };
 		C306506B1C5DA83A003461A1 /* BBGroover.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3FFF4501C5DA2C9009961A5 /* BBGroover.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C306506D1C5DAB2C003461A1 /* BBGrooverBeat.h in Headers */ = {isa = PBXBuildFile; fileRef = C306506C1C5DAAF8003461A1 /* BBGrooverBeat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C30650701C5DC59C003461A1 /* CheckForEnemyRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C306506F1C5DC59C003461A1 /* CheckForEnemyRule.swift */; };
 		C30650721C5DC659003461A1 /* EntityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30650711C5DC659003461A1 /* EntityType.swift */; };
 		C30650751C5E3B34003461A1 /* WallEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30650731C5E3B30003461A1 /* WallEntity.swift */; };
@@ -29,11 +33,12 @@
 		C306508D1C5E4DC3003461A1 /* CastleDamagedParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = C30650801C5E43F3003461A1 /* CastleDamagedParticle.sks */; };
 		C306508F1C5E4DC3003461A1 /* CastleExplosionParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = C30650891C5E4833003461A1 /* CastleExplosionParticle.sks */; };
 		C30650921C5E4F11003461A1 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = C30650811C5E43F3003461A1 /* spark.png */; };
-		4C7563141C5D3AFE00B1FC01 /* DrawingScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C7563131C5D3AFE00B1FC01 /* DrawingScene.sks */; };
-		4C7563161C5D423000B1FC01 /* DrawingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7563151C5D423000B1FC01 /* DrawingScene.swift */; };
-		4C7563191C5D464D00B1FC01 /* Magic.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C7563171C5D464D00B1FC01 /* Magic.sks */; };
-		4C75631A1C5D464D00B1FC01 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7563181C5D464D00B1FC01 /* spark.png */; };
-		4C7563201C5D741000B1FC01 /* Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C75631D1C5D6BA600B1FC01 /* Gesture.swift */; };
+		C30650951C5E5E1C003461A1 /* Game.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C30650941C5E5E1C003461A1 /* Game.xcassets */; };
+		C30650961C5E5E1C003461A1 /* Game.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C30650941C5E5E1C003461A1 /* Game.xcassets */; };
+		C30650981C5E6554003461A1 /* BBGroove.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FFF45C1C5DA2D0009961A5 /* BBGroove.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C30650991C5E6554003461A1 /* BBGroover.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FFF45E1C5DA2D0009961A5 /* BBGroover.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C306509A1C5E6554003461A1 /* BBVoice.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FFF4601C5DA2D0009961A5 /* BBVoice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C306509B1C5E6554003461A1 /* BBGrooverBeat.h in Headers */ = {isa = PBXBuildFile; fileRef = C306506C1C5DAAF8003461A1 /* BBGrooverBeat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C362A1771C5C6AF9004667EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1761C5C6AF9004667EF /* AppDelegate.swift */; };
 		C362A1791C5C6AF9004667EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1781C5C6AF9004667EF /* ViewController.swift */; };
 		C362A17C1C5C6AF9004667EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C362A17A1C5C6AF9004667EF /* Main.storyboard */; };
@@ -67,8 +72,6 @@
 		C3FFF41A1C5D2C6A009961A5 /* TitleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4141C5D2129009961A5 /* TitleScene.swift */; };
 		C3FFF41C1C5D2E77009961A5 /* TitleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C3FFF4161C5D212E009961A5 /* TitleScene.sks */; };
 		C3FFF41D1C5D2E7B009961A5 /* TitleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C3FFF4161C5D212E009961A5 /* TitleScene.sks */; };
-		C3FFF4201C5D4176009961A5 /* Game.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3FFF4181C5D2146009961A5 /* Game.xcassets */; };
-		C3FFF4211C5D4178009961A5 /* Game.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3FFF4181C5D2146009961A5 /* Game.xcassets */; };
 		C3FFF4241C5D4394009961A5 /* LaneNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4221C5D4243009961A5 /* LaneNode.swift */; };
 		C3FFF4291C5D448E009961A5 /* GridScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4271C5D448A009961A5 /* GridScene.swift */; };
 		C3FFF42A1C5D4492009961A5 /* GridScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C3FFF4251C5D4476009961A5 /* GridScene.sks */; };
@@ -84,11 +87,8 @@
 		C3FFF4481C5D98A2009961A5 /* MovementRulesComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4471C5D98A2009961A5 /* MovementRulesComponent.swift */; };
 		C3FFF4571C5DA2C9009961A5 /* BBGroover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FFF4501C5DA2C9009961A5 /* BBGroover.framework */; };
 		C3FFF4581C5DA2C9009961A5 /* BBGroover.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3FFF4501C5DA2C9009961A5 /* BBGroover.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C3FFF4651C5DA2D0009961A5 /* BBGroove.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FFF45C1C5DA2D0009961A5 /* BBGroove.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3FFF4661C5DA2D0009961A5 /* BBGroove.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF45D1C5DA2D0009961A5 /* BBGroove.m */; };
-		C3FFF4671C5DA2D0009961A5 /* BBGroover.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FFF45E1C5DA2D0009961A5 /* BBGroover.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3FFF4681C5DA2D0009961A5 /* BBGroover.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF45F1C5DA2D0009961A5 /* BBGroover.m */; };
-		C3FFF4691C5DA2D0009961A5 /* BBVoice.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FFF4601C5DA2D0009961A5 /* BBVoice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3FFF46A1C5DA2D0009961A5 /* BBVoice.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4611C5DA2D0009961A5 /* BBVoice.m */; };
 		C3FFF46B1C5DA2D0009961A5 /* NSNumber+Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FFF4631C5DA2D0009961A5 /* NSNumber+Utilities.h */; };
 		C3FFF46C1C5DA2D0009961A5 /* NSNumber+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4641C5DA2D0009961A5 /* NSNumber+Utilities.m */; };
@@ -123,19 +123,19 @@
 			remoteGlobalIDString = 4C7562EE1C5D268500B1FC01;
 			remoteInfo = BeatingGatesCommon;
 		};
-		C30650681C5DA832003461A1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C3F473D31C5C5FD300B70519 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C3FFF44F1C5DA2C9009961A5;
-			remoteInfo = BBGroover;
-		};
 		4C75631B1C5D4F6E00B1FC01 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C3F473D31C5C5FD300B70519 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C3FFF3C21C5D06D1009961A5;
 			remoteInfo = CMUnistrokeGestureRecognizer;
+		};
+		C30650681C5DA832003461A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3F473D31C5C5FD300B70519 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3FFF44F1C5DA2C9009961A5;
+			remoteInfo = BBGroover;
 		};
 		C362A1851C5C6AFA004667EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -219,6 +219,11 @@
 		4C7562F81C5D268500B1FC01 /* BeatingGatesCommonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeatingGatesCommonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C7562FF1C5D268500B1FC01 /* BeatingGatesCommonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatingGatesCommonTests.swift; sourceTree = "<group>"; };
 		4C7563011C5D268500B1FC01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C7563131C5D3AFE00B1FC01 /* DrawingScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DrawingScene.sks; sourceTree = "<group>"; };
+		4C7563151C5D423000B1FC01 /* DrawingScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingScene.swift; sourceTree = "<group>"; };
+		4C7563171C5D464D00B1FC01 /* Magic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Magic.sks; sourceTree = "<group>"; };
+		4C7563181C5D464D00B1FC01 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		4C75631D1C5D6BA600B1FC01 /* Gesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gesture.swift; path = ../Gesture.swift; sourceTree = "<group>"; };
 		4C7563271C5DE18800B1FC01 /* HealthComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthComponent.swift; path = ../HealthComponent.swift; sourceTree = "<group>"; };
 		C306506C1C5DAAF8003461A1 /* BBGrooverBeat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBGrooverBeat.h; sourceTree = "<group>"; };
 		C306506F1C5DC59C003461A1 /* CheckForEnemyRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckForEnemyRule.swift; sourceTree = "<group>"; };
@@ -228,11 +233,7 @@
 		C30650801C5E43F3003461A1 /* CastleDamagedParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CastleDamagedParticle.sks; sourceTree = "<group>"; };
 		C30650811C5E43F3003461A1 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = BeatingGatesCommon/spark.png; sourceTree = "<group>"; };
 		C30650891C5E4833003461A1 /* CastleExplosionParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CastleExplosionParticle.sks; sourceTree = "<group>"; };
-		4C7563131C5D3AFE00B1FC01 /* DrawingScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DrawingScene.sks; sourceTree = "<group>"; };
-		4C7563151C5D423000B1FC01 /* DrawingScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingScene.swift; sourceTree = "<group>"; };
-		4C7563171C5D464D00B1FC01 /* Magic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Magic.sks; sourceTree = "<group>"; };
-		4C7563181C5D464D00B1FC01 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
-		4C75631D1C5D6BA600B1FC01 /* Gesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gesture.swift; path = ../Gesture.swift; sourceTree = "<group>"; };
+		C30650941C5E5E1C003461A1 /* Game.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Game.xcassets; path = "The Beating of the Gates/Game.xcassets"; sourceTree = "<group>"; };
 		C362A1741C5C6AF9004667EF /* The Beating of the Gates-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Beating of the Gates-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C362A1761C5C6AF9004667EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C362A1781C5C6AF9004667EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -278,7 +279,6 @@
 		C3FFF3F11C5D09B0009961A5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C3FFF4141C5D2129009961A5 /* TitleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitleScene.swift; path = "../The Beating of the Gates/TitleScene.swift"; sourceTree = "<group>"; };
 		C3FFF4161C5D212E009961A5 /* TitleScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = TitleScene.sks; path = "The Beating of the Gates/TitleScene.sks"; sourceTree = "<group>"; };
-		C3FFF4181C5D2146009961A5 /* Game.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Game.xcassets; path = "The Beating of the Gates/Game.xcassets"; sourceTree = "<group>"; };
 		C3FFF4221C5D4243009961A5 /* LaneNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaneNode.swift; sourceTree = "<group>"; };
 		C3FFF4251C5D4476009961A5 /* GridScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GridScene.sks; sourceTree = "<group>"; };
 		C3FFF4271C5D448A009961A5 /* GridScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridScene.swift; sourceTree = "<group>"; };
@@ -428,7 +428,6 @@
 				C3FFF4381C5D66A8009961A5 /* Nodes */,
 				C3FFF4311C5D65A6009961A5 /* Components */,
 				C3FFF4301C5D659E009961A5 /* Entities */,
-				C3FFF4181C5D2146009961A5 /* Game.xcassets */,
 				4C75631D1C5D6BA600B1FC01 /* Gesture.swift */,
 				C3FFF4141C5D2129009961A5 /* TitleScene.swift */,
 				C3FFF4221C5D4243009961A5 /* LaneNode.swift */,
@@ -625,7 +624,7 @@
 		C3FFF41E1C5D2E8A009961A5 /* Shared Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C3FFF4181C5D2146009961A5 /* Game.xcassets */,
+				C30650941C5E5E1C003461A1 /* Game.xcassets */,
 				C3FFF4161C5D212E009961A5 /* TitleScene.sks */,
 				C30650811C5E43F3003461A1 /* spark.png */,
 			);
@@ -743,10 +742,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3FFF4651C5DA2D0009961A5 /* BBGroove.h in Headers */,
-				C306506D1C5DAB2C003461A1 /* BBGrooverBeat.h in Headers */,
-				C3FFF4691C5DA2D0009961A5 /* BBVoice.h in Headers */,
-				C3FFF4671C5DA2D0009961A5 /* BBGroover.h in Headers */,
+				C30650981C5E6554003461A1 /* BBGroove.h in Headers */,
+				C306509B1C5E6554003461A1 /* BBGrooverBeat.h in Headers */,
+				C306509A1C5E6554003461A1 /* BBVoice.h in Headers */,
+				C30650991C5E6554003461A1 /* BBGroover.h in Headers */,
 				C3FFF46B1C5DA2D0009961A5 /* NSNumber+Utilities.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -962,6 +961,7 @@
 					};
 					C362A1731C5C6AF9004667EF = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 7PG2EZ6N2N;
 					};
 					C362A1831C5C6AFA004667EF = {
 						CreatedOnToolsVersion = 7.2;
@@ -1042,8 +1042,8 @@
 				C30650921C5E4F11003461A1 /* spark.png in Resources */,
 				C3FFF41C1C5D2E77009961A5 /* TitleScene.sks in Resources */,
 				C362A17C1C5C6AF9004667EF /* Main.storyboard in Resources */,
-				C3FFF4201C5D4176009961A5 /* Game.xcassets in Resources */,
 				C3FFF42A1C5D4492009961A5 /* GridScene.sks in Resources */,
+				C30650961C5E5E1C003461A1 /* Game.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1068,11 +1068,10 @@
 				4C7563141C5D3AFE00B1FC01 /* DrawingScene.sks in Resources */,
 				4C7563191C5D464D00B1FC01 /* Magic.sks in Resources */,
 				C3F473E91C5C5FD300B70519 /* LaunchScreen.storyboard in Resources */,
-				C30650931C5E4F11003461A1 /* spark.png in Resources */,
+				C30650951C5E5E1C003461A1 /* Game.xcassets in Resources */,
 				4C75631A1C5D464D00B1FC01 /* spark.png in Resources */,
 				C3FFF41D1C5D2E7B009961A5 /* TitleScene.sks in Resources */,
 				C3F473E61C5C5FD300B70519 /* Assets.xcassets in Resources */,
-				C3FFF4211C5D4178009961A5 /* Game.xcassets in Resources */,
 				C3F473E41C5C5FD300B70519 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1273,15 +1272,15 @@
 			target = 4C7562EE1C5D268500B1FC01 /* BeatingGatesCommon */;
 			targetProxy = 4C75630E1C5D2B1D00B1FC01 /* PBXContainerItemProxy */;
 		};
-		C30650691C5DA832003461A1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C3FFF44F1C5DA2C9009961A5 /* BBGroover */;
-			targetProxy = C30650681C5DA832003461A1 /* PBXContainerItemProxy */;
-        };
 		4C75631C1C5D4F6E00B1FC01 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C3FFF3C21C5D06D1009961A5 /* CMUnistrokeGestureRecognizer */;
 			targetProxy = 4C75631B1C5D4F6E00B1FC01 /* PBXContainerItemProxy */;
+		};
+		C30650691C5DA832003461A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3FFF44F1C5DA2C9009961A5 /* BBGroover */;
+			targetProxy = C30650681C5DA832003461A1 /* PBXContainerItemProxy */;
 		};
 		C362A1861C5C6AFA004667EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1412,6 +1411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -1435,6 +1435,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -1596,6 +1597,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1613,6 +1615,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1723,6 +1726,7 @@
 		C3FFF45A1C5DA2C9009961A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1745,6 +1749,7 @@
 		C3FFF45B1C5DA2C9009961A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;

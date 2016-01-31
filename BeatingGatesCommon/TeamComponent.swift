@@ -10,7 +10,7 @@ import GameplayKit
 
 class TeamComponent: GKComponent {
 	
-	public let team: Team
+	let team: Team
 	
 	init(team: Team) {
 		self.team = team

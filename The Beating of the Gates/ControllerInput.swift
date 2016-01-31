@@ -13,10 +13,24 @@ import VirtualGameController
 
 let VgcAppIdentifier: String = "BeatingAtTheGates"
 
+enum InputButton {
+	
+	case A
+	case B
+	case X
+	case Y
+	case DpadUp
+	case DpadDown
+	
+}
+
+typealias ControllerInputHandler = (input: InputButton, playerIndex: Int) -> Void
+
 class ControllerInput {
     
     var controllers: Set<VgcController> = []
-    
+	var inputHandler: ControllerInputHandler? = nil
+	
     func start() {
         startLooking()
     }
@@ -63,26 +77,33 @@ class ControllerInput {
             return false
         }
         
-        profile.valueChangedHandler = { (gamepad: GCGamepad, element: GCControllerElement) in
-            if gamepad.buttonA == element && gamepad.buttonA.pressed {
-                print("a")
-            }
-            if gamepad.buttonB == element && gamepad.buttonB.pressed {
-                print("b")
-            }
-            if gamepad.buttonX == element && gamepad.buttonX.pressed {
-                print("x")
-            }
-            if gamepad.buttonY == element && gamepad.buttonY.pressed {
-                print("y")
-            }
-            if gamepad.dpad.up == element && gamepad.dpad.up.pressed {
-                print("up")
-            }
-            if gamepad.dpad.down == element && gamepad.dpad.down.pressed {
-                print("down")
-            }
+        profile.valueChangedHandler = { [weak controller] (gamepad: GCGamepad, element: GCControllerElement) in
+			guard let controller = controller else { return }
+			self.handleInput(controller, gamepad: gamepad, element: element)
         }
         return true
     }
+	
+	private func handleInput(controller: VgcController, gamepad: GCGamepad, element: GCControllerElement) {
+		let playerIndex = controller.playerIndex.rawValue
+		
+		if gamepad.buttonA == element && gamepad.buttonA.pressed {
+			inputHandler?(input: .A, playerIndex: playerIndex)
+		}
+		if gamepad.buttonB == element && gamepad.buttonB.pressed {
+			inputHandler?(input: .B, playerIndex: playerIndex)
+		}
+		if gamepad.buttonX == element && gamepad.buttonX.pressed {
+			inputHandler?(input: .X, playerIndex: playerIndex)
+		}
+		if gamepad.buttonY == element && gamepad.buttonY.pressed {
+			inputHandler?(input: .Y, playerIndex: playerIndex)
+		}
+		if gamepad.dpad.yAxis == element && gamepad.dpad.yAxis.value > 0.25 {
+			inputHandler?(input: .DpadUp, playerIndex: playerIndex)
+		}
+		if gamepad.dpad.yAxis == element && gamepad.dpad.yAxis.value < -0.25{
+			inputHandler?(input: .DpadDown, playerIndex: playerIndex)
+		}
+	}
 }
