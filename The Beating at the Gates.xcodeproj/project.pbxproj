@@ -39,6 +39,8 @@
 		C30650991C5E6554003461A1 /* BBGroover.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FFF45E1C5DA2D0009961A5 /* BBGroover.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C306509A1C5E6554003461A1 /* BBVoice.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FFF4601C5DA2D0009961A5 /* BBVoice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C306509B1C5E6554003461A1 /* BBGrooverBeat.h in Headers */ = {isa = PBXBuildFile; fileRef = C306506C1C5DAAF8003461A1 /* BBGrooverBeat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C30650A81C5E698B003461A1 /* ShamanEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30650A71C5E698B003461A1 /* ShamanEntity.swift */; };
+		C30650AA1C5E6A96003461A1 /* ControllerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30650A91C5E6A96003461A1 /* ControllerComponent.swift */; };
 		C362A1771C5C6AF9004667EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1761C5C6AF9004667EF /* AppDelegate.swift */; };
 		C362A1791C5C6AF9004667EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1781C5C6AF9004667EF /* ViewController.swift */; };
 		C362A17C1C5C6AF9004667EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C362A17A1C5C6AF9004667EF /* Main.storyboard */; };
@@ -234,6 +236,8 @@
 		C30650811C5E43F3003461A1 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = BeatingGatesCommon/spark.png; sourceTree = "<group>"; };
 		C30650891C5E4833003461A1 /* CastleExplosionParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CastleExplosionParticle.sks; sourceTree = "<group>"; };
 		C30650941C5E5E1C003461A1 /* Game.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Game.xcassets; path = "The Beating of the Gates/Game.xcassets"; sourceTree = "<group>"; };
+		C30650A71C5E698B003461A1 /* ShamanEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShamanEntity.swift; sourceTree = "<group>"; };
+		C30650A91C5E6A96003461A1 /* ControllerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerComponent.swift; sourceTree = "<group>"; };
 		C362A1741C5C6AF9004667EF /* The Beating of the Gates-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Beating of the Gates-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C362A1761C5C6AF9004667EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C362A1781C5C6AF9004667EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -637,6 +641,7 @@
 				C3FFF4321C5D65F4009961A5 /* SkeletonEntity.swift */,
 				C30650731C5E3B30003461A1 /* WallEntity.swift */,
 				C30650711C5DC659003461A1 /* EntityType.swift */,
+				C30650A71C5E698B003461A1 /* ShamanEntity.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -650,6 +655,7 @@
 				C3FFF4471C5D98A2009961A5 /* MovementRulesComponent.swift */,
 				C3FFF4391C5D672F009961A5 /* OrientationComponent.swift */,
 				C30650761C5E3F2E003461A1 /* TeamComponent.swift */,
+				C30650A91C5E6A96003461A1 /* ControllerComponent.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -1150,6 +1156,8 @@
 				C3FFF42D1C5D5189009961A5 /* GameStructures.swift in Sources */,
 				C3FFF4351C5D6691009961A5 /* RenderComponent.swift in Sources */,
 				C3FFF4331C5D65F4009961A5 /* SkeletonEntity.swift in Sources */,
+				C30650A81C5E698B003461A1 /* ShamanEntity.swift in Sources */,
+				C30650AA1C5E6A96003461A1 /* ControllerComponent.swift in Sources */,
 				C30650771C5E3F2E003461A1 /* TeamComponent.swift in Sources */,
 				C3FFF43E1C5D70C7009961A5 /* IntelligenceComponent.swift in Sources */,
 				C3FFF41A1C5D2C6A009961A5 /* TitleScene.swift in Sources */,

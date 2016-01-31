@@ -10,19 +10,9 @@ import Foundation
 
 import GameController
 import VirtualGameController
+import BeatingGatesCommon
 
 let VgcAppIdentifier: String = "BeatingAtTheGates"
-
-enum InputButton {
-	
-	case A
-	case B
-	case X
-	case Y
-	case DpadUp
-	case DpadDown
-	
-}
 
 typealias ControllerInputHandler = (input: InputButton, playerIndex: Int) -> Void
 

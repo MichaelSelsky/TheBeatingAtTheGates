@@ -11,7 +11,10 @@ import BeatingGatesCommon
 import GameplayKit
 import BBGroover
 
-class GridScene: SKScene, BBGrooverDelegate {
+private let MaxLaneCount = 5
+private let MaxTileCount = 10
+
+class GridScene: SKScene, BBGrooverDelegate, ShamanEntityDelegate {
 	
 	private var entities: Set<GKEntity> = Set()
 	var previousTime = NSTimeIntervalSince1970
@@ -37,32 +40,22 @@ class GridScene: SKScene, BBGrooverDelegate {
 	}()
 	
 	private let rulesComponentSystem = GKComponentSystem(componentClass: MovementRulesComponent.self)
+	private let controllerComponentSystem = GKComponentSystem(componentClass: ControllerComponent.self)
 	
 	override func didMoveToView(view: SKView) {
 		removeAllChildren()
 		
 		setupLanes(inView: view)
 		setupCastles(inView: view)
-		
-		
+		setupShamans(inView: view)
 		
 		groover.startGrooving()
-		
-		let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
-		dispatch_after(delayTime, dispatch_get_main_queue()) {
-			self.spawnMonster(AlliedMonster(team: .Blue, monster: .Skeleton), lane: 0, column: 7)
-            self.spawnMonster(AlliedMonster(team: .Red, monster: .Skeleton), lane: 0, column: 1)
-			
-			dispatch_after(delayTime, dispatch_get_main_queue()) {
-				self.spawnMonster(AlliedMonster(team: .Blue, monster: .Skeleton), lane: 3, column: 3)
-			}
-		}
     }
 	
 	private func setupLanes(inView view: SKView) {
 		let offset = round((view.frame.height - 640) / 2.0)
-		for laneIndex in 0 ..< 5 {
-			let laneNode = LaneNode(length: 10, alternate: laneIndex % 2 == 0)
+		for laneIndex in 0 ..< MaxLaneCount {
+			let laneNode = LaneNode(length: MaxTileCount, alternate: laneIndex % 2 == 0)
 			laneNode.name = "Lane\(laneIndex)"
 			
 			let calculatedFrame = laneNode.calculateAccumulatedFrame()
@@ -99,14 +92,48 @@ class GridScene: SKScene, BBGrooverDelegate {
 		}
 	}
 	
-	func spawnMonster(monster: AlliedMonster, lane: Int, column: Int) {
-		guard let laneNode = childNodeWithName("Lane\(lane)") as? LaneNode else { return }
-		guard column < laneNode.length else { return }
-		guard let tileNode = laneNode.childNodeWithName("Tile\(column)") else { return }
+	private func setupShamans(inView view: SKView) {
+		for team in Team.allValues {
+			let shamanEntity = ShamanEntity(team: team)
+			shamanEntity.delegate = self
+			
+			entities.insert(shamanEntity)
+			
+			if let renderNode = shamanEntity.componentForClass(RenderComponent.self)?.node {
+				guard let middleLane = childNodeWithName("Lane3") else { return }
+			
+				let x: CGFloat = {
+					let middleLaneFrame = middleLane.calculateAccumulatedFrame()
+					switch team.direction {
+						case .Left:
+							return middleLaneFrame.maxX + renderNode.calculateAccumulatedFrame().width
+						
+						case .Right:
+							return middleLaneFrame.minX - renderNode.calculateAccumulatedFrame().width
+					}
+				}()
+				
+				renderNode.position = CGPoint(x: x, y: view.frame.midY)
+				renderNode.zPosition = 15
+				addChild(renderNode)
+			}
+			
+			if let controllerComponent = shamanEntity.componentForClass(ControllerComponent.self) {
+				controllerComponentSystem.addComponent(controllerComponent)
+			}
+		}
+	}
+	
+	func spawnMonster(monster: AlliedMonster, lane: Int, column: Int) -> Bool {
+		guard let laneNode = childNodeWithName("Lane\(lane)") as? LaneNode else { return false }
+		guard column < laneNode.length else { return false }
+		guard let tileNode = laneNode.childNodeWithName("Tile\(column)") else { return false }
 		
 		let calculatedTileNode = tileNode.calculateAccumulatedFrame()
 		let tileNodeCenter = CGPoint(x: calculatedTileNode.midX, y: calculatedTileNode.midY)
 		let entityCenter = self.convertPoint(tileNodeCenter, fromNode: laneNode)
+		
+		guard let nodeName = self.nodeAtPoint(entityCenter).name where nodeName.hasPrefix("Tile") else { return false }
 		
 		let entity = SkeletonEntity(team: monster.team)
 		
@@ -120,6 +147,19 @@ class GridScene: SKScene, BBGrooverDelegate {
 			renderNode.position = entityCenter
 			renderNode.zPosition = 10
 			addChild(renderNode)
+		}
+		
+		return true
+	}
+	
+	func summonMonster(monster: Monster, team: Team, laneIndex: Int) -> Bool {
+		let alliedMonster = AlliedMonster(team: team, monster: monster)
+		switch team {
+			case .Blue:
+				return spawnMonster(alliedMonster, lane: laneIndex, column: MaxTileCount - 1)
+			
+			case .Red:
+				return spawnMonster(alliedMonster, lane: laneIndex, column: 0)
 		}
 	}
     
@@ -139,6 +179,7 @@ class GridScene: SKScene, BBGrooverDelegate {
             }
         }
     }
+	
 	func groover(groover: BBGroover!, didTick tick: UInt) {
 		// TODO: Trigger idle?
 		
@@ -148,6 +189,10 @@ class GridScene: SKScene, BBGrooverDelegate {
 					component.updateWithTick(tick)
 				}
 			}
+			
+			if tick > 32 {
+				groover.groove.tempo += 1
+			}
 		}
 	}
 	
@@ -156,6 +201,13 @@ class GridScene: SKScene, BBGrooverDelegate {
 	}
 	
 	private func handleInput(input: InputButton, playerIndex: Int) {
+		if let components = controllerComponentSystem.components as? [ControllerComponent] {
+			for component in components {
+				guard component.playerIndex == playerIndex else { continue }
+				component.handleInput(input)
+			}
+		}
+		
 		print("Got \(input) from player \(playerIndex)")
 	}
 	

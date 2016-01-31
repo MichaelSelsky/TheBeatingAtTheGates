@@ -41,6 +41,16 @@ extension Team {
 		return [.Red, .Blue]
 	}
 	
+	public var playerIndex: Int {
+		switch self {
+			case .Blue:
+				return 1
+			
+			case .Red:
+				return 2
+		}
+	}
+	
 }
 
 public enum Role: String {
