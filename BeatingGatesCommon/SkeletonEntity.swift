@@ -78,6 +78,21 @@ public class SkeletonEntity: GKEntity, EntityType, EntityLookAheadType, Movement
         
 		let renderComponent = RenderComponent(entity: self)
 		addComponent(renderComponent)
+        
+        guard let summonParticle = NSBundle(forClass: self.dynamicType).pathForResource("SummonParticle", ofType: "sks") else { fatalError("Missing CastleExplosionParticle") }
+        let particleNode = NSKeyedUnarchiver.unarchiveObjectWithFile(summonParticle) as! SKEmitterNode
+        
+        particleNode.particleColorSequence = nil
+        switch team {
+        case .Blue:
+            particleNode.particleColor = .blueColor()
+        case .Red:
+            particleNode.particleColor = .redColor()
+        }
+        
+        let actionSequence = SKAction.sequence([SKAction.waitForDuration(0.5), SKAction.removeFromParent()])
+        renderComponent.node.addChild(particleNode)
+        particleNode.runAction(actionSequence)
 		
 		let orientationComponent = OrientationComponent(node: renderComponent.node)
 		orientationComponent.direction = team.direction
