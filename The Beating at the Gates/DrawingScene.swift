@@ -40,20 +40,35 @@ class DrawingScene: SKScene {
         squigglePath.addLineToPoint(CGPoint(x:15.0, y: 0.0))
         squigglePath.addLineToPoint(CGPoint(x:20.0, y: 10.0))
         
-        let downPath = UIBezierPath()
-        downPath.moveToPoint(CGPointZero)
-        downPath.addLineToPoint(CGPoint(x: 5.0, y: 5.0))
-        downPath.addLineToPoint(CGPoint(x: 1.0, y: 0.0))
-        
         let upPath = UIBezierPath()
-        upPath.moveToPoint(CGPoint(x: 0.0, y: 5.0))
-        upPath.addLineToPoint(CGPoint(x: 5.0, y: 0.0))
+        upPath.moveToPoint(CGPoint(x: 5.0, y: 0.0))
+        upPath.addLineToPoint(CGPoint(x: 5.0, y: 10.0))
         upPath.addLineToPoint(CGPoint(x: 10.0, y: 5.0))
+        upPath.addLineToPoint(CGPoint(x: 5.0, y: 10.0))
+        upPath.addLineToPoint(CGPoint(x: 0.0, y: 5.0))
+        
+        let downPath = UIBezierPath()
+        downPath.moveToPoint(CGPoint(x: 5.0, y: 10.0))
+        downPath.addLineToPoint(CGPoint(x: 5.0, y: 0.0))
+        downPath.addLineToPoint(CGPoint(x: 10.0, y: 5.0))
+        downPath.addLineToPoint(CGPoint(x: 5.0, y: 0.0))
+        downPath.addLineToPoint(CGPoint(x: 0.0, y: 5.0))
         
         let pausePath = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 3, height: 3))
         pausePath.addLineToPoint(CGPoint(x:3.0, y:6.0))
         let mirrorTransform = CGAffineTransformMakeScale(1.0, -1.0)
         pausePath.applyTransform(mirrorTransform)
+        
+        let attackPath1 = UIBezierPath()
+        attackPath1.moveToPoint(CGPoint(x: 5.0, y: 0.0))
+        attackPath1.addLineToPoint(CGPoint(x: 0.0, y: 5.0))
+        attackPath1.addLineToPoint(CGPoint(x: 5.0, y: 10.0))
+        
+        let attackPath2 = UIBezierPath()
+        attackPath2.moveToPoint(CGPoint(x: 0.0, y: 0.0))
+        attackPath2.addLineToPoint(CGPoint(x: 5.0, y: 5.0))
+        attackPath2.addLineToPoint(CGPoint(x: 0.0, y: 10.0))
+        
         
         gestureRecognizer = CMUnistrokeGestureRecognizer(target: self, action: "recognizedShape:")
         gestureRecognizer.registerUnistrokeWithName("cross", bezierPath:crossPath, bidirectional: true)
