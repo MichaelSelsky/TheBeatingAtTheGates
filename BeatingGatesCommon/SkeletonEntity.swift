@@ -8,6 +8,7 @@
 
 import GameplayKit
 import SpriteKit
+import Foundation
 
 enum WhatsAhead {
     case Empty
@@ -55,7 +56,7 @@ public class SkeletonEntity: GKEntity, EntityType, MovementRulesComponentDelegat
         
 		super.init()
 		
-        let healthComponent = HealthComponent(health: 10)
+        let healthComponent = HealthComponent(health: 3)
         
         addComponent(healthComponent)
         
@@ -111,19 +112,28 @@ public class SkeletonEntity: GKEntity, EntityType, MovementRulesComponentDelegat
             self.intelligenceComponent.enterInitialState()
         }
         if let _ = state as? MonsterMoveState {
-            self.renderComponent.node.position = ahead()
+            let f = SKAction.moveByX(deltaX(), y: 0.0, duration: 1.0)
+            self.renderComponent.node.runAction(f)
         }
         else if let _ = state as? MonsterAttackState {
             let enemyAhead = lookAhead()
             switch enemyAhead{
             case .Enemy(let entity):
-                let healthComponent = entity.componentForClass(HealthComponent.self)
-                healthComponent?.damage(1)
+                let f = SKAction.moveByX(deltaX()/3.0, y: 0, duration: 0.5)
+                let b = SKAction.moveByX(-1*deltaX()/3.0, y: 0, duration: 0.5)
+                self.renderComponent.node.runAction(SKAction.sequence([f, b])) {
+                    let healthComponent = entity.componentForClass(HealthComponent.self)
+                    healthComponent?.damage(1)
+                }
             default:
                 return
             }
             if let health = self.componentForClass(HealthComponent.self) where health.isDead() {
-                self.renderComponent.node.removeFromParent()
+                let d = SKAction.rotateByAngle(CGFloat(M_PI_2), duration: 0.5)
+                let resize = SKAction.scaleBy(0.5, duration: 0.5)
+                let combo = SKAction.group([d, resize])
+                let r = SKAction.removeFromParent()
+                self.renderComponent.node.runAction(SKAction.sequence([combo, r]))
                 
             }
         }
@@ -131,12 +141,17 @@ public class SkeletonEntity: GKEntity, EntityType, MovementRulesComponentDelegat
     
     public func ahead() -> CGPoint {
         let currentX = self.renderComponent.node.position.x
+        let dX = deltaX()
+        let x = currentX + dX
+        return CGPoint(x: x, y: self.renderComponent.node.position.y)
+    }
+    
+    private func deltaX() -> CGFloat {
         var deltaX = self.renderComponent.node.children.first!.frame.width
         if self.team.direction == .Left {
             deltaX *= -1
         }
-        let x = currentX + deltaX
-        return CGPoint(x: x, y: self.renderComponent.node.position.y)
+        return deltaX
     }
 
 	
