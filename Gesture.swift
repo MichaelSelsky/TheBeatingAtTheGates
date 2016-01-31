@@ -9,5 +9,5 @@
 import Foundation
 
 public enum Gesture {
-    case Up, Down, Skeleton, Snake, Spider, Pause
+    case Up, Down, Skeleton, Snake, Spider, Attack, Pause
 }
