@@ -29,7 +29,11 @@
 		C306508D1C5E4DC3003461A1 /* CastleDamagedParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = C30650801C5E43F3003461A1 /* CastleDamagedParticle.sks */; };
 		C306508F1C5E4DC3003461A1 /* CastleExplosionParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = C30650891C5E4833003461A1 /* CastleExplosionParticle.sks */; };
 		C30650921C5E4F11003461A1 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = C30650811C5E43F3003461A1 /* spark.png */; };
-		C30650931C5E4F11003461A1 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = C30650811C5E43F3003461A1 /* spark.png */; };
+		4C7563141C5D3AFE00B1FC01 /* DrawingScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C7563131C5D3AFE00B1FC01 /* DrawingScene.sks */; };
+		4C7563161C5D423000B1FC01 /* DrawingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7563151C5D423000B1FC01 /* DrawingScene.swift */; };
+		4C7563191C5D464D00B1FC01 /* Magic.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C7563171C5D464D00B1FC01 /* Magic.sks */; };
+		4C75631A1C5D464D00B1FC01 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7563181C5D464D00B1FC01 /* spark.png */; };
+		4C7563201C5D741000B1FC01 /* Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C75631D1C5D6BA600B1FC01 /* Gesture.swift */; };
 		C362A1771C5C6AF9004667EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1761C5C6AF9004667EF /* AppDelegate.swift */; };
 		C362A1791C5C6AF9004667EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A1781C5C6AF9004667EF /* ViewController.swift */; };
 		C362A17C1C5C6AF9004667EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C362A17A1C5C6AF9004667EF /* Main.storyboard */; };
@@ -126,6 +130,13 @@
 			remoteGlobalIDString = C3FFF44F1C5DA2C9009961A5;
 			remoteInfo = BBGroover;
 		};
+		4C75631B1C5D4F6E00B1FC01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3F473D31C5C5FD300B70519 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3FFF3C21C5D06D1009961A5;
+			remoteInfo = CMUnistrokeGestureRecognizer;
+		};
 		C362A1851C5C6AFA004667EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C3F473D31C5C5FD300B70519 /* Project object */;
@@ -217,6 +228,11 @@
 		C30650801C5E43F3003461A1 /* CastleDamagedParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CastleDamagedParticle.sks; sourceTree = "<group>"; };
 		C30650811C5E43F3003461A1 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = BeatingGatesCommon/spark.png; sourceTree = "<group>"; };
 		C30650891C5E4833003461A1 /* CastleExplosionParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CastleExplosionParticle.sks; sourceTree = "<group>"; };
+		4C7563131C5D3AFE00B1FC01 /* DrawingScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DrawingScene.sks; sourceTree = "<group>"; };
+		4C7563151C5D423000B1FC01 /* DrawingScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingScene.swift; sourceTree = "<group>"; };
+		4C7563171C5D464D00B1FC01 /* Magic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Magic.sks; sourceTree = "<group>"; };
+		4C7563181C5D464D00B1FC01 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		4C75631D1C5D6BA600B1FC01 /* Gesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gesture.swift; path = ../Gesture.swift; sourceTree = "<group>"; };
 		C362A1741C5C6AF9004667EF /* The Beating of the Gates-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Beating of the Gates-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C362A1761C5C6AF9004667EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C362A1781C5C6AF9004667EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -412,6 +428,8 @@
 				C3FFF4381C5D66A8009961A5 /* Nodes */,
 				C3FFF4311C5D65A6009961A5 /* Components */,
 				C3FFF4301C5D659E009961A5 /* Entities */,
+				C3FFF4181C5D2146009961A5 /* Game.xcassets */,
+				4C75631D1C5D6BA600B1FC01 /* Gesture.swift */,
 				C3FFF4141C5D2129009961A5 /* TitleScene.swift */,
 				C3FFF4221C5D4243009961A5 /* LaneNode.swift */,
 				4C7562F11C5D268500B1FC01 /* BeatingGatesCommon.h */,
@@ -542,8 +560,12 @@
 				C362A1AB1C5C73BD004667EF /* Frameworks */,
 				C3F473DE1C5C5FD300B70519 /* AppDelegate.swift */,
 				C3F473E01C5C5FD300B70519 /* ViewController.swift */,
+				4C7563131C5D3AFE00B1FC01 /* DrawingScene.sks */,
 				4C7562BC1C5C7EDE00B1FC01 /* GameController.swift */,
 				C3F473E21C5C5FD300B70519 /* Main.storyboard */,
+				4C7563151C5D423000B1FC01 /* DrawingScene.swift */,
+				4C7563171C5D464D00B1FC01 /* Magic.sks */,
+				4C7563181C5D464D00B1FC01 /* spark.png */,
 				C3F473E51C5C5FD300B70519 /* Assets.xcassets */,
 				C3F473E71C5C5FD300B70519 /* LaunchScreen.storyboard */,
 				C3F473EA1C5C5FD300B70519 /* Info.plist */,
@@ -744,6 +766,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4C75631C1C5D4F6E00B1FC01 /* PBXTargetDependency */,
 			);
 			name = BeatingGatesCommon;
 			productName = BeatingGatesCommon;
@@ -1042,8 +1065,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C7563141C5D3AFE00B1FC01 /* DrawingScene.sks in Resources */,
+				4C7563191C5D464D00B1FC01 /* Magic.sks in Resources */,
 				C3F473E91C5C5FD300B70519 /* LaunchScreen.storyboard in Resources */,
 				C30650931C5E4F11003461A1 /* spark.png in Resources */,
+				4C75631A1C5D464D00B1FC01 /* spark.png in Resources */,
 				C3FFF41D1C5D2E7B009961A5 /* TitleScene.sks in Resources */,
 				C3F473E61C5C5FD300B70519 /* Assets.xcassets in Resources */,
 				C3FFF4211C5D4178009961A5 /* Game.xcassets in Resources */,
@@ -1133,6 +1159,7 @@
 				C30650701C5DC59C003461A1 /* CheckForEnemyRule.swift in Sources */,
 				C30650721C5DC659003461A1 /* EntityType.swift in Sources */,
 				C3FFF4371C5D66A5009961A5 /* EntityNode.swift in Sources */,
+				4C7563201C5D741000B1FC01 /* Gesture.swift in Sources */,
 				C3FFF4241C5D4394009961A5 /* LaneNode.swift in Sources */,
 				C3FFF4421C5D70F0009961A5 /* MonsterMoveState.swift in Sources */,
 				C3FFF4441C5D70F8009961A5 /* MonsterAttackState.swift in Sources */,
@@ -1181,6 +1208,7 @@
 				C3F473E11C5C5FD300B70519 /* ViewController.swift in Sources */,
 				4C7562BD1C5C7EDE00B1FC01 /* GameController.swift in Sources */,
 				C3F473DF1C5C5FD300B70519 /* AppDelegate.swift in Sources */,
+				4C7563161C5D423000B1FC01 /* DrawingScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1249,6 +1277,11 @@
 			isa = PBXTargetDependency;
 			target = C3FFF44F1C5DA2C9009961A5 /* BBGroover */;
 			targetProxy = C30650681C5DA832003461A1 /* PBXContainerItemProxy */;
+        };
+		4C75631C1C5D4F6E00B1FC01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3FFF3C21C5D06D1009961A5 /* CMUnistrokeGestureRecognizer */;
+			targetProxy = 4C75631B1C5D4F6E00B1FC01 /* PBXContainerItemProxy */;
 		};
 		C362A1861C5C6AFA004667EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
