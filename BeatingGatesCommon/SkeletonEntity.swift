@@ -51,7 +51,21 @@ public class SkeletonEntity: GKEntity, EntityType, EntityLookAheadType, Movement
         let emptyPredicate = NSPredicate(format: "$forwardIsEmpty==true")
         let emptyRule = GKRule(predicate: emptyPredicate, assertingFact: "move", grade: 1.0)
         rules.append(emptyRule)
-        
+		
+		switch team {
+//			case .Red:
+//				let twoAheadEnemyRule = GKRule(predicate: twoAheadEnemyPredicate, assertingFact: "move", grade: 1.0)
+//				rules.append(twoAheadEnemyRule)
+//			
+			case .Blue:
+				let twoAheadEnemyPredicate = NSPredicate(format: "$twoForwardIsEnemy==true")
+				let twoAheadEnemyRule = GKRule(predicate: twoAheadEnemyPredicate, assertingFact: "twoAhead", grade: 1.0)
+				rules.append(twoAheadEnemyRule)
+			
+			default:
+				break
+		}
+				
         movementRulesComponent = MovementRulesComponent(rules: rules)
 		
 		super.init()
@@ -84,16 +98,16 @@ public class SkeletonEntity: GKEntity, EntityType, EntityLookAheadType, Movement
         if ruleSystem.gradeForFact("attack") == 1.0 {
             self.intelligenceComponent.stateMachine.enterState(MonsterAttackState.self)
         }
-        if ruleSystem.gradeForFact("move") == 1.0 {
+        if ruleSystem.gradeForFact("move") == 1.0 && ruleSystem.gradeForFact("twoAhead") != 1.0 {
             self.intelligenceComponent.stateMachine.enterState(MonsterMoveState.self)
         }
     }
     
-    func lookAhead() -> WhatsAhead {
-        let point = ahead()
+    func lookAhead(tileCount: Int = 1) -> WhatsAhead {
+        let point = ahead(tileCount)
         let unknownNode = self.renderComponent.node.parent?.nodeAtPoint(point)
         guard let node =  unknownNode?.parent as? EntityNode else {
-            return .Empty
+			return .Empty
         }
 		guard let aheadTeamComponent = node.entity.componentForClass(TeamComponent.self) else {
 			return .Empty
@@ -140,9 +154,9 @@ public class SkeletonEntity: GKEntity, EntityType, EntityLookAheadType, Movement
         }
     }
     
-    public func ahead() -> CGPoint {
+    public func ahead(tileCount: Int = 1) -> CGPoint {
         let currentX = self.renderComponent.node.position.x
-        let dX = deltaX()
+        let dX = deltaX() * CGFloat(tileCount)
         let x = currentX + dX
         return CGPoint(x: x, y: self.renderComponent.node.position.y)
     }

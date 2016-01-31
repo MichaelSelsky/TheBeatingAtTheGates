@@ -45,10 +45,10 @@ public class MovementRulesComponent: GKComponent {
 		
 		ruleSystem.reset()
         
-        let ahead = entity.lookAhead()
+        let ahead = entity.lookAhead(1)
         ruleSystem.state["forwardIsEnemy"] = false
         ruleSystem.state["forwardIsEmpty"] = false
-        
+		
         switch ahead {
         case .Enemy(_):
            ruleSystem.state["forwardIsEnemy"] = true
@@ -57,6 +57,16 @@ public class MovementRulesComponent: GKComponent {
         default:
             break
         }
+		
+		let twoAhead = entity.lookAhead(2)
+		ruleSystem.state["twoForwardIsEnemy"] = false
+		switch twoAhead {
+			case let .Enemy(enemy):
+				let enemyCanMove = enemy.componentForClass(MovementRulesComponent.self) != nil
+				ruleSystem.state["twoForwardIsEnemy"] = enemyCanMove
+			default:
+				break
+		}
 		
 		ruleSystem.evaluate()
 		

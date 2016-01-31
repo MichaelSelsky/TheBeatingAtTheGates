@@ -24,6 +24,6 @@ protocol EntityType {
 
 protocol EntityLookAheadType {
 	
-	func lookAhead() -> WhatsAhead
+	func lookAhead(tileCount: Int) -> WhatsAhead 
 	
 }
