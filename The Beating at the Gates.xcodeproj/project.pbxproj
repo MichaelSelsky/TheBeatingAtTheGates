@@ -56,6 +56,16 @@
 		C3FFF4241C5D4394009961A5 /* LaneNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4221C5D4243009961A5 /* LaneNode.swift */; };
 		C3FFF4291C5D448E009961A5 /* GridScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4271C5D448A009961A5 /* GridScene.swift */; };
 		C3FFF42A1C5D4492009961A5 /* GridScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C3FFF4251C5D4476009961A5 /* GridScene.sks */; };
+		C3FFF42D1C5D5189009961A5 /* GameStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF42B1C5D5130009961A5 /* GameStructures.swift */; };
+		C3FFF4331C5D65F4009961A5 /* SkeletonEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4321C5D65F4009961A5 /* SkeletonEntity.swift */; };
+		C3FFF4351C5D6691009961A5 /* RenderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4341C5D6691009961A5 /* RenderComponent.swift */; };
+		C3FFF4371C5D66A5009961A5 /* EntityNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4361C5D66A5009961A5 /* EntityNode.swift */; };
+		C3FFF43A1C5D672F009961A5 /* OrientationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4391C5D672F009961A5 /* OrientationComponent.swift */; };
+		C3FFF43E1C5D70C7009961A5 /* IntelligenceComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF43D1C5D70C7009961A5 /* IntelligenceComponent.swift */; };
+		C3FFF4401C5D70E5009961A5 /* MonsterIdleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF43F1C5D70E5009961A5 /* MonsterIdleState.swift */; };
+		C3FFF4421C5D70F0009961A5 /* MonsterMoveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4411C5D70F0009961A5 /* MonsterMoveState.swift */; };
+		C3FFF4441C5D70F8009961A5 /* MonsterAttackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4431C5D70F8009961A5 /* MonsterAttackState.swift */; };
+		C3FFF4481C5D98A2009961A5 /* RulesComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFF4471C5D98A2009961A5 /* RulesComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +219,16 @@
 		C3FFF4221C5D4243009961A5 /* LaneNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaneNode.swift; sourceTree = "<group>"; };
 		C3FFF4251C5D4476009961A5 /* GridScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GridScene.sks; sourceTree = "<group>"; };
 		C3FFF4271C5D448A009961A5 /* GridScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridScene.swift; sourceTree = "<group>"; };
+		C3FFF42B1C5D5130009961A5 /* GameStructures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStructures.swift; sourceTree = "<group>"; };
+		C3FFF4321C5D65F4009961A5 /* SkeletonEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkeletonEntity.swift; sourceTree = "<group>"; };
+		C3FFF4341C5D6691009961A5 /* RenderComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderComponent.swift; sourceTree = "<group>"; };
+		C3FFF4361C5D66A5009961A5 /* EntityNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityNode.swift; sourceTree = "<group>"; };
+		C3FFF4391C5D672F009961A5 /* OrientationComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrientationComponent.swift; sourceTree = "<group>"; };
+		C3FFF43D1C5D70C7009961A5 /* IntelligenceComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntelligenceComponent.swift; sourceTree = "<group>"; };
+		C3FFF43F1C5D70E5009961A5 /* MonsterIdleState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterIdleState.swift; sourceTree = "<group>"; };
+		C3FFF4411C5D70F0009961A5 /* MonsterMoveState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterMoveState.swift; sourceTree = "<group>"; };
+		C3FFF4431C5D70F8009961A5 /* MonsterAttackState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterAttackState.swift; sourceTree = "<group>"; };
+		C3FFF4471C5D98A2009961A5 /* RulesComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,10 +340,15 @@
 		4C7562F01C5D268500B1FC01 /* BeatingGatesCommon */ = {
 			isa = PBXGroup;
 			children = (
+				C3FFF43B1C5D703C009961A5 /* State Machines */,
+				C3FFF4381C5D66A8009961A5 /* Nodes */,
+				C3FFF4311C5D65A6009961A5 /* Components */,
+				C3FFF4301C5D659E009961A5 /* Entities */,
 				C3FFF4141C5D2129009961A5 /* TitleScene.swift */,
 				C3FFF4221C5D4243009961A5 /* LaneNode.swift */,
 				4C7562F11C5D268500B1FC01 /* BeatingGatesCommon.h */,
 				4C7562F31C5D268500B1FC01 /* Info.plist */,
+				C3FFF42B1C5D5130009961A5 /* GameStructures.swift */,
 			);
 			path = BeatingGatesCommon;
 			sourceTree = "<group>";
@@ -496,6 +521,51 @@
 				C3FFF4161C5D212E009961A5 /* TitleScene.sks */,
 			);
 			name = "Shared Resources";
+			sourceTree = "<group>";
+		};
+		C3FFF4301C5D659E009961A5 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				C3FFF4321C5D65F4009961A5 /* SkeletonEntity.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		C3FFF4311C5D65A6009961A5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C3FFF43D1C5D70C7009961A5 /* IntelligenceComponent.swift */,
+				C3FFF4341C5D6691009961A5 /* RenderComponent.swift */,
+				C3FFF4471C5D98A2009961A5 /* RulesComponent.swift */,
+				C3FFF4391C5D672F009961A5 /* OrientationComponent.swift */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		C3FFF4381C5D66A8009961A5 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				C3FFF4361C5D66A5009961A5 /* EntityNode.swift */,
+			);
+			name = Nodes;
+			sourceTree = "<group>";
+		};
+		C3FFF43B1C5D703C009961A5 /* State Machines */ = {
+			isa = PBXGroup;
+			children = (
+				C3FFF43C1C5D70B0009961A5 /* Monster States */,
+			);
+			name = "State Machines";
+			sourceTree = "<group>";
+		};
+		C3FFF43C1C5D70B0009961A5 /* Monster States */ = {
+			isa = PBXGroup;
+			children = (
+				C3FFF43F1C5D70E5009961A5 /* MonsterIdleState.swift */,
+				C3FFF4411C5D70F0009961A5 /* MonsterMoveState.swift */,
+				C3FFF4431C5D70F8009961A5 /* MonsterAttackState.swift */,
+			);
+			name = "Monster States";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -877,8 +947,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3FFF4401C5D70E5009961A5 /* MonsterIdleState.swift in Sources */,
+				C3FFF43A1C5D672F009961A5 /* OrientationComponent.swift in Sources */,
+				C3FFF4481C5D98A2009961A5 /* RulesComponent.swift in Sources */,
+				C3FFF42D1C5D5189009961A5 /* GameStructures.swift in Sources */,
+				C3FFF4351C5D6691009961A5 /* RenderComponent.swift in Sources */,
+				C3FFF4331C5D65F4009961A5 /* SkeletonEntity.swift in Sources */,
+				C3FFF43E1C5D70C7009961A5 /* IntelligenceComponent.swift in Sources */,
 				C3FFF41A1C5D2C6A009961A5 /* TitleScene.swift in Sources */,
+				C3FFF4371C5D66A5009961A5 /* EntityNode.swift in Sources */,
 				C3FFF4241C5D4394009961A5 /* LaneNode.swift in Sources */,
+				C3FFF4421C5D70F0009961A5 /* MonsterMoveState.swift in Sources */,
+				C3FFF4441C5D70F8009961A5 /* MonsterAttackState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
