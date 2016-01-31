@@ -30,8 +30,14 @@ class ViewController: UIViewController {
 	}
     
     func connected() {
+        playSummoner()
+    }
+    
+    func playSummoner() {
         if let gameScene = DrawingScene(fileNamed: "DrawingScene") {
-            
+            gameScene.gestureHandler = { (gesture) in
+                self.gameController.handleGesture(gesture)
+            }
             let skView = self.view as! SKView
             skView.showsFPS = true
             skView.showsNodeCount = true
@@ -41,7 +47,6 @@ class ViewController: UIViewController {
             gameScene.scaleMode = .AspectFill
             skView.presentScene(gameScene)
         }
-
     }
     
     func showTitleScene() {
